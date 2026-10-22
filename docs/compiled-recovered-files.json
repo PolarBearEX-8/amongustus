@@ -1,0 +1,49 @@
+{
+  "result": "passed",
+  "compiled_source_file_count": 5,
+  "source_units_total_in_recovery_project": 5721,
+  "compiler": "Gradle Java 8 toolchain (build recorded as passed)",
+  "source_and_class_pairs": [
+    {
+      "source": "src/main/java/nick/Augustus.java",
+      "source_sha256": "d2b93ed82ab9383800beabe53df17a0d8ae06a756ab1ff3b938020ddbd34165b",
+      "compiled_class": "build/classes/java/main/nick/Augustus.class",
+      "class_sha256": "97bc11d36df2c01b2dd1f7e134bc74f7d061c6ebdaf54571ba4d6d55d3392157",
+      "class_bytes": 6166,
+      "class_major_version": 52
+    },
+    {
+      "source": "src/main/java/nick/AugustusClassLoader.java",
+      "source_sha256": "4e973a836953a33e48091cadd1e39023e1fdbe46f445c5a48de52b19476c5819",
+      "compiled_class": "build/classes/java/main/nick/AugustusClassLoader.class",
+      "class_sha256": "24d16fd495ee3eeda0c5a4cce05a767a2a9d83b3232aba4d30f316ed05e5d20b",
+      "class_bytes": 7180,
+      "class_major_version": 52
+    },
+    {
+      "source": "src/main/java/nick/Connection.java",
+      "source_sha256": "94af17e15f055b9b6566fd687dc77ff7bef8f0e5e1e9166bd40af97cf2cf23df",
+      "compiled_class": "build/classes/java/main/nick/Connection.class",
+      "class_sha256": "6685d342d1116247affc88cd5a7f36f06179ea2a5685e6af0e69e9944736a8c1",
+      "class_bytes": 3494,
+      "class_major_version": 52
+    },
+    {
+      "source": "src/main/java/nick/Data.java",
+      "source_sha256": "d64149d0cc58f581eb890982d51b6771994d09c2c1cbbdeb0d84a978cdb12a3d",
+      "compiled_class": "build/classes/java/main/nick/Data.class",
+      "class_sha256": "5cc2a2351d309affe6e15d07da22caca13d5053f8357e71643c70c7050ea0140",
+      "class_bytes": 4433,
+      "class_major_version": 52
+    },
+    {
+      "source": "src/main/java/nick/Libraries.java",
+      "source_sha256": "c92685a2a87bbf6096b52b86c800401cc10a6e493ffdbc503c61a78cad2d1311",
+      "compiled_class": "build/classes/java/main/nick/Libraries.class",
+      "class_sha256": "78fda9fd1c51e4574a9b55d046ec4a509600d2298d730713bfe2e7d5103a0ddc",
+      "class_bytes": 4467,
+      "class_major_version": 52
+    }
+  ],
+  "provenance": "Copied from Augustus-Build; build/classes/java/main outputs correspond to the five source paths recorded under compiled_sources in docs/BUILD_STATUS.json. The separate full recovered source build remains failing."
+}
