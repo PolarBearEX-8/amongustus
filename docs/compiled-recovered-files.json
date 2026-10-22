@@ -1,6 +1,6 @@
 {
   "result": "passed",
-  "compiled_source_file_count": 6,
+  "compiled_source_file_count": 12,
   "source_units_total_in_recovery_project": 5721,
   "compiler": "Gradle Java 8 toolchain (build recorded as passed)",
   "source_and_class_pairs": [
@@ -55,7 +55,79 @@
       "compiler": "OpenJDK 21 javac --release 8",
       "compile_log": "build/generated/reports/javac-focused-Class_472l-r727.log",
       "classpath": "recovery-workspace dependencies.jar and mapped readable client, launcher, and protected jars"
+    },
+    {
+      "source": "src/main/java/cc/Class_415.java",
+      "source_sha256": "c801f610e4cd3287942309eaedb7260272039adf5c7ff0cba45b7a60f42e09d6",
+      "compiled_class": "build/classes/java/main/cc/Class_415.class",
+      "class_sha256": "ff2649a456047e1775d6fc3642d1a335ddaf85f02646af17089f54e12e719591",
+      "class_bytes": 12267,
+      "class_major_version": 53,
+      "compile_mode": "focused individual source compile",
+      "compiler": "OpenJDK 21 javac --release 9",
+      "compile_output": "upstream build/generated/javac-focused-Class_415-r638b/cc/Class_415.class",
+      "compile_log": "docs/compile-evidence.md (recompiled from committed source)"
+    },
+    {
+      "source": "src/main/java/cc/Class_41I.java",
+      "source_sha256": "51e66ce073da043949c8cf7dbe47b0788095d53b1b8ee1b8d535a45daa839e1d",
+      "compiled_class": "build/classes/java/main/cc/Class_41I.class",
+      "class_sha256": "4b4e832ad175bd7da60af613c708db2cd549e3e0615b367afa599c8d6d93eca9",
+      "class_bytes": 5537,
+      "class_major_version": 53,
+      "compile_mode": "focused individual source compile",
+      "compiler": "OpenJDK 21 javac --release 9",
+      "compile_output": "upstream build/generated/javac-focused-Class_41I-r636b/cc/Class_41I.class",
+      "compile_log": "docs/compile-evidence.md (recompiled from committed source)"
+    },
+    {
+      "source": "src/main/java/cc/Class_45O.java",
+      "source_sha256": "af2116bcc71403afefb3452e3c50334b0730132ff3d4d79f4d50b96751801ed5",
+      "compiled_class": "build/classes/java/main/cc/Class_45O.class",
+      "class_sha256": "10d9749ca5c6685185cd0314145ee287fe2d69d26f14fc37b719f1f8b35f9c33",
+      "class_bytes": 4490,
+      "class_major_version": 53,
+      "compile_mode": "focused individual source compile",
+      "compiler": "OpenJDK 21 javac --release 9",
+      "compile_output": "upstream build/generated/javac-focused-Class_45O-r636/cc/Class_45O.class",
+      "compile_log": "docs/compile-evidence.md (recompiled from committed source)"
+    },
+    {
+      "source": "src/main/java/cc/Class_45S.java",
+      "source_sha256": "07716d117431885c73138c399fb53df3409eec0d39a973160b2ce9726d6f3398",
+      "compiled_class": "build/classes/java/main/cc/Class_45S.class",
+      "class_sha256": "2450052b518dc109948ae65f6e93de6f40e98782ed310e6517b2579cd002ddec",
+      "class_bytes": 5150,
+      "class_major_version": 53,
+      "compile_mode": "focused individual source compile",
+      "compiler": "OpenJDK 21 javac --release 9",
+      "compile_output": "upstream build/generated/javac-focused-Class_45S-r636b/cc/Class_45S.class",
+      "compile_log": "docs/compile-evidence.md (recompiled from committed source)"
+    },
+    {
+      "source": "src/main/java/cc/Class_45w.java",
+      "source_sha256": "1a0038d2c3fd84effc113709ab6d3a2f6ceb34b6dd02ff2d725f4cd9c9f16620",
+      "compiled_class": "build/classes/java/main/cc/Class_45w.class",
+      "class_sha256": "47722ec3e41f5f17ca62ae95f508e1480cbfb0ac03e24753e35663645a7b0440",
+      "class_bytes": 7115,
+      "class_major_version": 53,
+      "compile_mode": "focused individual source compile",
+      "compiler": "OpenJDK 21 javac --release 9",
+      "compile_output": "upstream build/generated/javac-focused-Class_45w-r637/cc/Class_45w.class",
+      "compile_log": "docs/compile-evidence.md (recompiled from committed source)"
+    },
+    {
+      "source": "src/main/java/cc/Class_47.java",
+      "source_sha256": "a64a427705e22dd72dda8e9a56a783c246c5980c7d3fc4e070e794a86ad76b4f",
+      "compiled_class": "build/classes/java/main/cc/Class_47.class",
+      "class_sha256": "1f9990c485d73f03f935b8a85ab9c30059cdb7a64a72881b3aa68146940b8d68",
+      "class_bytes": 4957,
+      "class_major_version": 53,
+      "compile_mode": "focused individual source compile",
+      "compiler": "OpenJDK 21 javac --release 9",
+      "compile_output": "upstream build/generated/javac-focused-Class_47-r636/cc/Class_47.class",
+      "compile_log": "docs/compile-evidence.md (recompiled from committed source)"
     }
   ],
-  "provenance": "Copied from Augustus-Build; build/classes/java/main outputs correspond to the five source paths recorded under compiled_sources in docs/BUILD_STATUS.json. The separate full recovered source build remains failing. Class_472l was compiled independently against the mapped dependency jars; the complete recovered source tree still does not compile."
+  "provenance": "Compiled source units recorded here passed the focused javac invocations cited per file. This is not a full-project build: the 5,721-unit readable recovery source tree remains failing. The original launcher sources and Class_472l pair were already present; six independently compiled cc classes were added from the recorded successful focused outputs."
 }
