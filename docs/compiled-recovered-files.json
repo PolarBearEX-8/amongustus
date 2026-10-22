@@ -1,6 +1,6 @@
 {
   "result": "passed",
-  "compiled_source_file_count": 5,
+  "compiled_source_file_count": 6,
   "source_units_total_in_recovery_project": 5721,
   "compiler": "Gradle Java 8 toolchain (build recorded as passed)",
   "source_and_class_pairs": [
@@ -43,7 +43,19 @@
       "class_sha256": "78fda9fd1c51e4574a9b55d046ec4a509600d2298d730713bfe2e7d5103a0ddc",
       "class_bytes": 4467,
       "class_major_version": 52
+    },
+    {
+      "source": "src/main/java/net/Class_472l.java",
+      "source_sha256": "339ee400efb8b73f265f92fd6a0134b4e242d6bb1c4a1c559c8a4356f7c7ca53",
+      "compiled_class": "build/classes/java/main/net/Class_472l.class",
+      "class_sha256": "8a5da2186b517d658db3cf91768fa5bc35f3c925353b014682b9852f7b08194c",
+      "class_bytes": 19629,
+      "class_major_version": 52,
+      "compile_mode": "focused individual source compile",
+      "compiler": "OpenJDK 21 javac --release 8",
+      "compile_log": "build/generated/reports/javac-focused-Class_472l-r727.log",
+      "classpath": "recovery-workspace dependencies.jar and mapped readable client, launcher, and protected jars"
     }
   ],
-  "provenance": "Copied from Augustus-Build; build/classes/java/main outputs correspond to the five source paths recorded under compiled_sources in docs/BUILD_STATUS.json. The separate full recovered source build remains failing."
+  "provenance": "Copied from Augustus-Build; build/classes/java/main outputs correspond to the five source paths recorded under compiled_sources in docs/BUILD_STATUS.json. The separate full recovered source build remains failing. Class_472l was compiled independently against the mapped dependency jars; the complete recovered source tree still does not compile."
 }
