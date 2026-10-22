@@ -1,14 +1,5 @@
 # Compile evidence
 
-Six recovered `cc` classes were compiled from the source files in this repository with OpenJDK 21 `javac --release 9`. The focused compile completed with exit code 0 and emitted all six class files:
+Twelve recovered source/class pairs in this repository have successful focused compile evidence recorded in `compiled-recovered-files.json`. Six `cc` classes were compiled from their committed sources with OpenJDK 21 `javac --release 9`; that focused compile exited 0 and emitted all six class files. Earlier focused compile results for the other six files are documented in the same manifest.
 
-- `Class_415`
-- `Class_41I`
-- `Class_45O`
-- `Class_45S`
-- `Class_45w`
-- `Class_47`
-
-The compile used the mapped readable client, launcher, and protected jars plus `dependencies.jar`, `original-payload.jar`, and `ElectricLauncher.jar` from the recovery workspace. The committed `.class` outputs were emitted by this successful compile. SHA-256 hashes are recorded in `compiled-recovered-files.json`.
-
-This focused result does not mean the complete 5,721-unit recovered source tree builds: its latest full compile still reports 116 errors.
+These focused results do not mean the complete recovered project builds. The latest full-tree compile status is documented in [full-tree-status-2026-10-22.md](full-tree-status-2026-10-22.md): 74,236 compiler errors across 2,497 files, 67 warnings, exit code 1, and no emitted class files. The source recovery worktree reports zero remaining `** GOTO` markers and zero `return outside method` diagnostics after the latest control-flow repairs.
