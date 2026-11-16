@@ -1,0 +1,38 @@
+[
+  {
+    "target": "lib/launcher-base.jar",
+    "sha256": "fd3b9e2a1fd1d4ec712da9e498b550a14c89c19c2ab1f545108f5094c96ec6ed",
+    "parts": [
+      {
+        "path": "build-inputs/parts/launcher-base.jar.part000",
+        "bytes": 50331648,
+        "sha256": "53be063fd1b8fa49c999a812bc3fcddd5c2b91fe77520b8294d724ec71b65aae"
+      },
+      {
+        "path": "build-inputs/parts/launcher-base.jar.part001",
+        "bytes": 50331648,
+        "sha256": "0f377860b7f4043bc602e90fef392054167cd1f026ec4205317a5df93dc677ac"
+      },
+      {
+        "path": "build-inputs/parts/launcher-base.jar.part002",
+        "bytes": 50331648,
+        "sha256": "d0af9454839576e0e1a9120599a4d18436332ebd1a11b1ace4f3f013ccd0faca"
+      },
+      {
+        "path": "build-inputs/parts/launcher-base.jar.part003",
+        "bytes": 50331648,
+        "sha256": "1cdacc021e8a820a38ac945562d72a48067184de339b293178d4a32c2cccd28e"
+      },
+      {
+        "path": "build-inputs/parts/launcher-base.jar.part004",
+        "bytes": 50331648,
+        "sha256": "a9ac6fd36034aa120d208ee18074d896d75c5cbb5d5b011379543f2ab3328d3e"
+      },
+      {
+        "path": "build-inputs/parts/launcher-base.jar.part005",
+        "bytes": 34027764,
+        "sha256": "0007969682c74cd5a48ec3afbc13430f8cbb6cbb0f5deb7974e4ab1a8283dbae"
+      }
+    ]
+  }
+]

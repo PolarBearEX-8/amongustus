@@ -1,0 +1,16 @@
+[
+  {
+    "runtime_class": "net/474N",
+    "readable_class": "net/C_474N",
+    "source_file": "src/dependency/java/complete/net/C_474N.java",
+    "ordinary_methods": 9,
+    "constructors": 1
+  },
+  {
+    "runtime_class": "net/4747",
+    "readable_class": "net/C_4747",
+    "source_file": "src/dependency/java/complete/net/C_4747.java",
+    "ordinary_methods": 4,
+    "constructors": 2
+  }
+]

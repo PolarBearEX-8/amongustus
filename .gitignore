@@ -1,0 +1,16 @@
+/build/
+/dist/
+/build-tools/
+/lib/launcher-base.jar
+/lib/launcher-base.jar.tmp
+/augustus/
+/configs/
+/logs/
+/crash-reports/
+/saves/
+options.txt
+optionsof.txt
+usercache.json
+usernamecache.json
+__pycache__/
+*.pyc
