@@ -1,0 +1,10 @@
+*.dll
+*.jar
+*.class
+*.bc
+*.ll
+*.dsm
+*.log
+**/__pycache__/
+**/ghidra_project/
+**/angr_rtdb/

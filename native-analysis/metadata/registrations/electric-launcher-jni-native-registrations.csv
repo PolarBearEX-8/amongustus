@@ -1,0 +1,13 @@
+owner,table_order,method_name,descriptor,native_va,ghidra_function,ghidra_c_line,mapping_status
+launcher/41,0,46,(J[B)Ljava/util/HashMap;,0x18004a8c0,FUN_18004a8c0,52763,verified against release bytecode
+launcher/41,1,44,(SLjava/io/InputStream;ISI)[B,0x180068f20,FUN_180068f20,75531,verified against release bytecode
+launcher/41,2,44,(J)V,0x1800a1420,FUN_1800a1420,75724,verified against release bytecode
+launcher/41,3,47,(Ljava/io/File;J)V,0x1800eba90,FUN_1800eba90,76442,verified against release bytecode
+launcher/41,4,run,()V,0x1800fa7c0,FUN_1800fa7c0,86684,verified against release bytecode
+launcher/41,5,46,([Ljava/lang/Object;[Ljava/lang/Object;ISS)[Ljava/lang/Object;,0x1800fb230,FUN_1800fb230,87106,verified against release bytecode
+launcher/46z,0,44,(Llauncher/44y;SLlauncher/44y;IIC)Llauncher/44y;,0x18002ac50,FUN_18002ac50,30481,verified against release bytecode
+launcher/46z,1,44,(JLlauncher/46Y;Llauncher/44y;I)V,0x180030d00,FUN_180030d00,34028,verified against release bytecode
+launcher/46z,2,49,(Ljava/util/ArrayList;J)Ljava/util/ArrayList;,0x180033360,FUN_180033360,35498,verified against release bytecode
+launcher/44p,0,46,(JLjava/lang/String;)V,0x180001000,FUN_180001000,4,verified against release bytecode
+launcher/44p,1,42,(JLjava/lang/String;)V,0x180029b20,FUN_180029b20,29687,verified against release bytecode
+launcher/46e,0,48,(JLlauncher/463;)[Llauncher/46g;,0x180103600,FUN_180103600,92677,verified against release bytecode
