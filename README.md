@@ -1,15 +1,62 @@
-# Amongustus
+<p align="center">
+  <img src="assets/ss.png" alt="Skid Solutions Banner" width="350" />
+  <br><br>
+  <a href="https://discord.gg/skidsolutions">
+    <img src="https://img.shields.io/badge/Discord-Skid%20Solutions-18181b?style=for-the-badge&logo=discord&logoColor=ffffff&labelColor=09090b" alt="Discord" />
+  </a>
+  <img src="https://img.shields.io/badge/Version-b4.23.3-27272a?style=for-the-badge&labelColor=09090b" alt="Version b4.23.3" />
+  <img src="https://img.shields.io/badge/Java-21-3f3f46?style=for-the-badge&logo=openjdk&logoColor=ffffff&labelColor=09090b" alt="Java 21" />
+  <img src="https://img.shields.io/badge/Gradle-8.14.3-52525b?style=for-the-badge&logo=gradle&logoColor=ffffff&labelColor=09090b" alt="Gradle 8.14.3" />
+</p>
 
-Recovery and analysis workspace for the Augustus Minecraft client. The repository contains selected recovered Java files, compile evidence, and a curated native-analysis set intended for continued decoding and review.
+<p align="center">
+  <a href="https://discord.gg/skidsolutions">https://discord.gg/skidsolutions</a>
+</p>
 
-## Project areas
+<p align="center">
+  <img src="assets/divider.svg" alt="" width="720" />
+</p>
 
-- `src/main/java/` contains recovered Java sources that have focused compile evidence.
-- `docs/` records the source-recovery and build status. A successful hybrid build uses original bytecode for most classes; the complete recovered source tree is not buildable yet.
-- [`native-analysis/`](native-analysis/README.md) contains registration maps, decompiler pseudocode, bounded function slices, CFG metadata, and scripts. It does not include the original DLLs or large temporary decompiler outputs.
+<p align="center">
+  <img src="assets/jak.jpg" alt="jak" height="150" />
+  <img src="assets/hack.jpg" alt="hack" height="150" />
+  <img src="assets/deobf2.png" alt="deobf2" height="150" />
+  <img src="assets/deobf.jpg" alt="deobf" height="150" />
+</p>
 
-## Current limitations
+<p align="center">
+  <img src="assets/divider.svg" alt="" width="720" />
+</p>
 
-Native pseudocode is inferred output, not original C. Four large registered native methods still lack whole-function bodies; their bounded slices preserve useful analysis evidence but have cut control-flow edges. See [`native-analysis/docs/native-recovery-status.md`](native-analysis/docs/native-recovery-status.md) for coverage and caveats.
+## How to build
 
-This repository does not include the original Augustus or ElectricLauncher binaries. Re-running extraction or decompilation requires the matching input files and the tools listed in `native-analysis/README.md`.
+### Prerequisites
+- **Java Development Kit**: JDK 8 (used via Gradle toolchain to compile and run the Minecraft 1.8.9 client)
+- **Gradle Runtime**: JDK 17 or JDK 21 (Gradle wrapper 8.14.3 does not run on JDK 25+)
+
+### Building OpenAugustus
+
+Run from this folder:
+
+```powershell
+.\gradlew.bat clean build
+```
+
+Generated `build/libs/`:
+- `openaugustus-b4.23.3.jar`
+
+### Running
+
+```powershell
+# Run in local run/ directory (extracts natives and downloads Minecraft 1.8 assets automatically)
+.\gradlew.bat runClient
+
+# Or run using your system .minecraft directory
+.\gradlew.bat runClientMinecraftDir
+```
+
+Or run `Start.java` / `StartMinecraftDirectory.java` directly from your IDE.
+
+---
+
+Credits to https://github.com/yxzeroo/openaugustus, all features, issues and bugs fixed on this version with our b4.20.3 internal deobfuscated version. Just compare everything.

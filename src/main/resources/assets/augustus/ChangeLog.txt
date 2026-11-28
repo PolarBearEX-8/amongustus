@@ -1,0 +1,1989 @@
+b4.23.3 (04.06.2026):
+-added KBDisplacement module
+-added GenerateNewRandomizationOnlyAfterAccountchange to ClientSpoofer
+-added FishingRod to Crafter
+-added OptifineHitbox to Hitbox module
+-added OptifineHitbox to Killaura
+-added scale option to 2DItems
+-added background option to 2DItems
+-added DisableWhileLookingDown settings to many combat related modules
+-added minimum health option to CombatPearl
+-added UnsupportedDeviceWarningMessage to MotionBlur
+-added BlockExpand to BlockOverlay
+-recoded Crafter module
+-improved overall stability
+-improved proxy connections
+-fixed bug in Intave velocity mode with "XZOnHitKnockbackItem" setting applied without knockback stick
+
+b4.23.2 (13.04.2026):
+-added DeleteAllFriends button and command to MidClick
+-added IgnoreBadPotions to Stealer/ChestStealer
+-added StealZeroStackSizeItems to Stealer and ChestStealer
+-added Strech option to Picture mode in ESP
+-added Scale option to Picture ESP mode
+-improved FriendMyBlock option in Fucker module
+-fixed some crashes
+-fixed bug in Teleport it was only usable one time if AutoDisable option was disabled.
+-fixed bug with recored mode pattern selection (-> you have to update your config with the clickpattern you had selected in the Distribution/RecordedClickMode)
+-fixed bug that the "Remove Invalid" option in the AccountManager was not saving.
+-fixed bugs in NameTags with the blur option
+
+b4.23.1 (20.03.2026):
+-added NotInLiquid to TimerRange, TimerRangeV2, LagRange
+-added PlayerNameTags and OtherNameTags to AntiStike
+-added Mode to Hotbar module
+-added TargetESP mode "HitBox"
+-added PotionsToDisplay to PotionHud
+-added PotionIcon option to PotionHud
+-added alpha sliders at the esp to the team color option
+-recoded TargetESP mode values (-> you have to update your config if you use TargetESP)
+-recoded Velocity module. You can now use all velocity modes together.
+-renamed FailDelay -> FailInterval (in MoreKB)
+-renamed OutlierDelay -> OutlierInterval (in all modules that have outlier options)
+-fixed bug with key toggles in chat
+-fixed hovering over true/false in boolean settings and groups (now its like before last update)
+-fixed bug in invmanager sorting
+-fixed issue with AutoEat/AutoGapple and SpoofInv InvManager mode
+-fixed WaitForDamage in MoreKB
+-fixed crash in textfields
+-fixed crash in Spammer module
+-removed NameTags from AntiStrike
+-removed CustomHotbar option in Hotbar module
+-removed Jump options from Intave velocity mode with the recode.
+
+b4.23.0 (23.02.2026):
+-added color sliders to every color int the clickgui so you can create your own clickgui visuals
+-added NoPotionParticles module
+-added "BoxShadow" mode to Shadow
+-added "NameTags" option to get the health of an Target
+-added other new options to NameTags
+-added BedPlates module
+-added Token login to Clipboard
+-added AllDirectionSprint option to the 45Degree Speed mode
+-added NotWhileFly to FastStop module
+-added auto deleting in AccountManager for all invalid access token accounts
+-added separate selections in NoArmorOverlay for myself and other players
+-added "Minimum distance to show player model" to FreeCam
+-added silent option for slot switching to 14 other modules. (before that, it was always silent)
+-added "Avoid landing near other players" to AutoEnderPearl
+-added ArmorPartsToShowStatus to ArmorStatus module
+-added vertical option to FenceVelocity mode
+-added an option to fix bug in AutoReconnect module (some users need this bug)
+-added remove invalid button to account manager to remove invalid accounts if you try to login into that account
+-added UserWaterBlockBounds to SolidJesus Jesus mode
+-added QuickTurn module
+-recoded flick modes (they are now mode values)
+-recoded many parts of the render system to fix the bug with the one frame delay of Shadow and Blur
+-recoded parts of the rendersystem for 2D rect rendering. Please report any new render issues if there are some (I did not find any so far)
+-recoded click implementation of all click modes in KillAura and AutoClicker (they use the same base now, i hope there are no new bugs, I fixed all i found)
+-recoded ThroughWalls option in Killaura (you have to update your config)
+-improved tellybridge mode in scaffold
+-improved blocksearch of scaffold
+-improved performance of Box, HitBox, CollisionBox, Picture, Corner ESP modes
+-improved performance of Box and Gaussian blur modes drastically
+-improved textfields in ClickGui
+-improved HealthDisplay module
+-improved VanillaFly2 mode in Fly
+-fixed an issue where editable settings were not saved if the client was closed while a protected config was loaded.
+-fixed renderbug with playermodel in inventory
+-fixed broken multi attack mode in KillAura
+-fixed bug in clickrecording
+-fixed other render bugs
+-fixed Gamster mode in AutoPlay was broken
+-fixed bug in LegitVelocity mode that it nearly never jumped in a fight (IMPORTANT, UPDATE YOUR CONFIG)
+-fixed bug in IntaveVelocity mode that it nearly never jumped (if jump enabled) in a fight (IMPORTANT, UPDATE YOUR CONFIG)
+-renamed RenderPotion module to PotionHUD
+-removed support for loading motionModifier scripts, clientsettings or configs with the old format created before May 2024 (they should be outdated anyway)
+
+b4.22.5 (03.02.2026):
+-added Fence mode to Velocity module
+-added Blink2 to NowSlow module
+-added support for teleports in AutoPlay SetSlotAfterRespawn
+-added boolean to restore old rotation distance behaviour in fov arrows
+-added import option for proxies. format: (type://ip:port:username:password)
+-added option to disabler vines in FastLadder
+-added MinDamageToBlock to TntBlock module
+-recoded some render stuff. Please report any new render issues if there are some (I did not find any so far)
+-improved kick messages when authentication servers are down
+-improved SmartBlock in KillAura
+-fixed connecting information rendering bug if re-connecting servers too fast
+-fixed game crash when tab completing in chat while baritone is enabled
+-fixed scoreboard width being too big when custom scoreboard is enabled
+-fixed bug with AutoEnderPearl and Scaffold
+-fixed bug with possible desyncs at the stealer calculation
+-fixed AquaMessenger
+-fixed bug with some texture packs
+-removed open auth mod which has been removed in ViaProxy for a while now
+
+b4.22.4 (26.01.2026):
+-added PolarFly2 and PolarFly3 as modes too
+-added DisableAtSetback to Blink
+-fixed bug that the config saving time was not displayed correctly
+-fixed bug with the width of the Scoreboard
+-fixed issue with "Sleeping" option of for example the KillAura targets
+
+b4.22.3 (24.01.2026):
+-added GroundSpoof option to TpAura
+-added DisableAtSetback to Fly
+-added web and water options to GroundCollision fly mode
+-improved fov calculation in MoreKB, NewAutoRod, AutoRod, ProjectileAimbot, ThrowRod
+-improved fastplace rest and potions category to exclude food and stuff like that
+-improved some stuff in Legit Nofall mode
+-fixed bug in the blocksearch of the Scaffold
+-fixed bug with Cosmetics always on
+-fixed sorting modes in KillAura
+-fixed bug in the BlockESP
+-fixed bug in the new Target options
+-fixed bug in AutoJump module with top half slabs
+-fixed visibility of clickpatterns in AutoClicker
+-fixed client crash in AutoEnderPearl
+-fixed bug that max fps where not saving correctly
+-fixed PolarBlock velocity mode not working
+-fixed bug in InvManager merge option if items are the same type but have different names
+
+b4.22.2 (19.01.2026):
+-added BlockAllActionsWhileInInventory to Scaffold
+-added WorldChange FlushCondition to Blink and PulseBlink
+-added SneakWhileItemPlace to Legit mode in NoFall
+-added IgnoreWalls to MidClick
+-added SelectTargetThroughWalls to AimAssist and AimBot
+-added RotateNametags option to Freelook
+-added LeaveIfInLava and LeaveIfInWater to AutoLeave
+-recoded target selection of most modules where you can select targets
+-fixed bugs in AutoGapple, Nofall, AirplaceFly, AutoRod, NewAutoRod
+-fixed that the scaffold was sneaking while you are in an inventory
+-fixed flickering in NameTags at your own with mode custom
+
+b4.22.1 (09.01.2026):
+-added differentiated ItemRemoval option to CustomGlint
+-added command "resetbinds" to reset your module bindings
+-added option to Cosmetics module to hide the cosmetics of other users
+-added new stuff to Noise3
+-added OnlyWhileKBItem to MoreKB
+-added "No double sprintreset when reducing needed" to MoreKB
+-added CustomFonts to NameTags
+-added RightClickIfRodOnTarget to AutoRod/AutoRodNew
+-added ability to use mousebuttons in Hotkeys module
+-added oneColor option to BlockESP
+-added RodExtendReactionTime to ThrowRod module
+-added ForceRenderHeads to TabList module
+-added Food category to FastPlace module
+-added ActivateWhileJumpKeyPressed to Highjump
+-added LineWidth to ArrowHitboxes
+-added NoLoopHit to AutoClicker
+-improved AntiStrike name replacements
+-improved prioritization of item switching in AutoRod, NewAutoRod and ThrowRod
+-fixed AutomatedSlotSwitching was always active in ThrowRod module
+-fixed custom fonts
+
+b4.22.0 (19.11.2025):
+-added XZOnHitKnockbackItem to IntaveVelocityMode
+-added module descriptions for all modules that where missing so far
+-added NoLine option to Trajectories
+-added some new options to Scaffold
+-added BoxColor to ArrowHitboxes
+-added Merge category to InvManager (merges stacks to hotbar if possible)
+-added SimpleV2 click mode (AutoClicker/KillAura)
+-added SameYBlock to Scaffold
+-added UseWebs option to Legit mode in NoFall
+-recoded Description system (better rendering and now in yaml format)
+-recoded reloading (now live updating) from OfflineConfigs, ClickPatterns, Descriptions, SettingsNames, CustomCapes, CustomSkins, Motionmodifierscript loading for all of these modules (speed, fly, etc.)
+-recoded AirStuck module. It will break old configurations of that module.
+-recoded parts of AutoEnderPearl
+-recoded cape physics CustomCape
+-improved MoonWalkMode in AutoEagle
+-improved sword option in AutoTool
+-fixed bug with settings saving of DeathCommand, Hotkeys, KillMessage, Spammer
+-fixed Hotkeys module
+-fixed shadow/blur with optifine shaders on 3D objects
+-fixed broken entity color with optifine shaders
+-fixed render bugs with blur/shadow if "ItemsToShadow" was enabled
+-fixed motion blur not disabling if GPU is not supported (some GPUs might still work with it)
+-fixed bug in AutoReconnect
+-fixed bug with antialiased rounded rects
+-fixed bug with SnapTap and InvMove/SaveMoveKeys
+-fixed crash if you press enter with an empty string while editing values in sliders
+-fixed UpwardsSteps/DownwardsSteps in phase not working. You might have to adjust your old configs
+-fixed CombatPearl module
+-fixed AutoJumpAndRun module
+-fixed rendering bug in TargetHud mode "LiquidGlass"
+-fixed not working party friends in MidClick
+-fixed bug in InvManager with shears
+-fixed bug with Ambiance not working well on some servers
+-fixed scrolling in the augustus menu if you are ingame
+-fixed bug in the Rainbow, Astolfo and Fade color Distance calculation. YOU MAY HAVE TO ADJUST YOUR VISUALS BECAUSE OF THAT.
+
+b4.21.6 (30.10.2025):
+-added ThrowRod Module
+-added AccessToken login (use the email field and press login)
+-added Custom motion option to BoundingBox spider mode
+-added WeaponWhitelist to AutoRod/NewAutoRod
+-added LimitFrameRateIfScreenNotFocused (30 fps) to ClientSettings
+-improved clickablity of empty textfields
+-improved SmartClicking
+-fixed MotionBlur
+-fixed bug in ArmorStatus
+-fixed bug in AutoRod, NewAutoRod
+-fixed bug with invisible signs in Chams (Chest)
+-fixed bug with InvMove and TextFields in the ClickGUI
+
+b4.21.5 (13.10.2025):
+-added 1.21.9 / 1.21.10 support
+-added OnlyIngame option to Radio module
+-added AutoReconnect module
+-added Hotkeys module
+-added addable text boxes to CustomKillMessage
+-added addable text boxes to Spammer
+-added addable text boxes to DeathMessage
+-added UseAntialiasedRoundRects to Clientsettings (If you encounter any issues with round rects after this update, please disable this setting)
+-added SkinDerp module
+-added physics option to custom cape
+-added separation of upwards and downwards movement in phase
+-recoded CustomSkin
+-recoded TargetHud (changed internal structure, renamed modes and added LiquidGlass mode)
+-fixed AutoRegister for Twerion
+-fixed Stick option in the scoreboard module
+-fixed bug with CustomGlint at equipped armor (color, speed, removing)
+-fixed bug in NoSlow with throwable potions
+-fixed bug in Fastbreak
+-fixed bug in SpinBot
+-removed unused/old gui elements from various Minecraft screens
+-removed Minecraft snooper
+
+b4.21.4 (30.09.2025):
+-added SlotsToApplyBuildRange to Range
+-added missing capes to CustomCape
+-changed augustus menu; don't scissor blurred areas anymore
+-fixed Founders cape in CustomCape
+-fixed bug in the NameTags module
+-fixed bug with the priority in ESP
+
+b4.21.3 (07.09.2025):
+-added "not while jumpboost" to combobreaker
+-added random adstrafetime in AutoWalk
+-added mxexperience and founderscape to mojang capes in CustomCapes module
+-added the reset of the afktimer in AutoLeave at worldchange
+-added IgnoreEnderChests to Stealer and ChestStealer
+-added customBlockHitDelay to FastBreak
+-added Picture mode to ESP (you have to add you own custom pictures in the folder)
+-added XZOnHitAtDoubleHit to Intave Velocity mode (Now you are able to allow reduces at double/triple hits)
+-added ForceDoubleHit to Intave Velocity to force these double hits
+-added proper target selection to AutoBlock module
+-added CritFixPacketCheck to AutoClicker
+-added FontShadow option to Chat, Scoreboard and TabList module
+-added ActivateOnlyIfLookingDown to SafeWalk
+-added FastStop module
+-improved performance of BowAimbot while aiming through water with mode "New" by ~60%
+-improved FriendMyBlock option in Fucker module
+-fixed the bug that the "SpoofInv" option in InvManager was not recognized as an open inventory from all other modules (If you still want that modules do things while SpoofInv is doing stuff in the inventory, activate InInv option in the modules)
+-fixed bug where permanent added friends in the MidClick module were not able to be loaded from a config
+-fixed bug with unicode font option in minecraft in Arraylist
+-fixed visual bug in Line module if standing still
+-removed NoBlockHitDelay from FastBreak
+-removed config protection from MovementRecorder, AutoLeave, AutoPlay, AutoDisable, FastPlace and FlagDetector
+
+b4.21.2 (14.08.2025):
+-added LeaveIfAfk to AutoLeave
+-added StopWhileJumpBoost to AutoWalk
+-added "min teleport distance to start replay" to Movement Recorder
+-added ability to use Fucker with Remove escape option in AutoPlay
+-added "In inventory" option to Spammer
+-added OnlyAtPlayers to AutoBlock
+-updated x, y, z coordinates to block coordinates in every module that uses them
+-fixed bug with settings visibility in speed module
+-fixed bug with accounts does not save correctly
+
+b4.21.1 (03.08.2025):
+-added HealthDisplay module
+-added ability to use InvManager modes with Remove escape option in AutoPlay
+-added "Motion" speed mode
+-added "SilentSlotSwitching" to AutoRod, NewAutoRod, InvManager
+-added BlockMarker module
+-added TextField for Spammer message to ClickGUI
+-added TextField for AutoRegister custom password to ClickGUI
+-added TextField for ClientSpoofer mode custom to ClickGUI
+-added TextField for KillMessage custom message to ClickGUI
+-added TextField for CustomName custom mode to ClickGUI
+-added TextField for DeathCommand message to ClickGUI
+-added TextField for CustomSuffix to ClickGUI
+-added #player for playernames and #random for random part to Spammer
+-fixed bug with axes in InvManager
+-fixed a bug with Fucker and AutoTool using the wrong tools
+-fixed a bug that could cause you to lose your module settings after client restart
+-fixed bug in the settings system accidentally added in the last update
+-fixed possible client crash at screenshots
+-fixed scrolling bug in Friends menu
+-fixed bug in AutoTool
+
+b4.21.0 (20.07.2025):
+-added the ability to use multiple MoreKB modes at the same time with different chances for usage each.
+-added SlotSwitch abort criterion to Ping an PulseBlink module
+-added AutoClose ability to InvManager
+-added "synchronisation" of the AutoClose between Refill, AutoSoup and InvManager.
+-added "Min teleport distance to reset recording" to MovementRecorder
+-added HurtColor and ShadowHurtColor option to SkeletonESP
+-added MarkMurder to SkeletonESP
+-added BoundingBox spider mode
+-added MinPitchToEagle to AutoEagle
+-added NoWeb mode Polar1
+-added NotWhileKillAura to InvManager
+-added NotWhileEating, StopMouseMovement and StopAllOtherKeyAndMouseInputs to InvManager if SpoofInv is selected
+-added the ability to use ArmorHotbar in InvManager together with the SpoofInv modes
+-added NotWhileInCobweb and NotWhileInWater to Speed
+-added new Settings to Noise3
+-added Spacing option to ArrayList
+-added OnlyAtSprinting to MoreKB
+-added MaxPitchCorrectionAtBlockClutch to Scaffold
+-added MaxYawRotationDeltaToPlaceBlocksAtBlockClutch and MaxPitchRotationDeltaToPlaceBlocksAtBlockClutch to Scaffold
+-added AdvancedRotsNotAtTarget to KillAura
+-added SubtractOwnPingFromLagDuration to AutoBlock
+-added Helmet, Chestplate, Trousers, Boots, Pickaxe, Axe, Shovel, Shear, LavaBucket and WaterBucket to the sort option in InvManager
+-added AutoUse module (for some talisman plugins)
+-added EditMotion option to sprint to manipulate the sprint motion for all directions.
+-added EarlySneakCalculationOnlyAtSpeedEffect to Scaffold
+-added LagDurationExplosion to Velocity
+-added "Aim tick delay after digging" to AimAssist and AimBot
+-added "Target sorting" to AimAssist
+-added MinibloxMoveFix to Disabler
+-fixed bug with horizontal/vertical percentage in KillAura
+-fixed bug with LockView in KillAura
+-fixed "Legit" mode in TargetESP
+-removed IgnoreMaxPitchCorrectionIfBlockClutch from Scaffold
+-removed RemoveRotationDeltaLimitAtBlockClutch from Scaffold
+
+b4.20.7 (05.07.2025):
+-added author to config info
+-added SkeletonESP
+-added "Rest" option to FastPlace
+
+b4.20.6 (29.06.2025):
+-added "AdditionalRadius" to "Sigma" mode in TargetESP
+-added "OnlyWhileSpeedModule" to Place1, Place2 and Place3 disabler mode
+-added "Friends" to targets in ESP
+-added "Friends" and "Teammates" to targets in Chams
+-improved "protected" mode for configs
+-fixed DataWatcher fix causing the bug with all items on ground are stones
+-fixed major bug in moveFix added in March :/ (-> Grim flags fixed)
+
+b4.20.5 (28.06.2025):
+-added the ability to upload and share up to 10 configs with your augustus friends
+-added LagTimings to Velocity (Now you can only lag on ground or in air)
+-added IgnoreTeammates to NameTags
+-added ReverseInterval option to many modes in Disabler
+-added ColorPicker and FontShadow options to DebugInformation module
+-added option to "protect" configs
+-recoded onlineconfig system
+-fixed massive bugs in FastBreak
+
+b4.20.4 (25.05.2025):
+-added Stealer as a "Recode" from cheststealer
+-added custom font support to Arraylist
+-added portal screens
+-updated libs
+-fixed some small bugs
+
+b4.20.3 (08.05.2025):
+-added Serverside option to SpinBot (now you can apply the rotations only clientside)
+-added VanishNotification options to Notifications module and to StaffDetector module (StaffDetector has to be enabled for the Notifications)
+-added clipboard copy functionality to altmanager login links when using CTRL+click.
+-added button to reset a module to the default settings in the right corner of the clickgui
+-added CustomHurtCam
+-added new options to Ping module
+-added AutoBlock module
+-added ArmorStatus module
+-added "Alerted" as target to Tracers so you can use them for stream sniping
+-recoded DistanceMultiplier in ChestStealer / InvManager
+-recoded slot switch behavior in AutoRod / AutoRodNew
+-fixed bug in Vanilla rotation mode
+-removed AntiHurtCam
+-removed AutoBlock option from AutoClicker module
+
+b4.20.2 (23.04.2025):
+-added proxy support for the Augustus server connection, especially for our russian part of the community. You can configure that in the proxy.txt in the "Electriclauncher" folder in "AppData"
+-fixed many bugs and instabilities
+
+b4.20.1 (27.03.2025):
+-added DedicatedItemHandling to FastBreak
+
+b4.20.0 (25.03.2025):
+-added noise3 as new rotationmode in killaura
+-added "no horizontal bruteforce" to bowaimbot
+-added back old rodaimbot
+-fixed many instabilities / crashes
+
+b4.19.3 (24.03.2025):
+-added Experimental mode to AimAssist
+-added MaximumRenderDistance to ESP, Tracers, NameTags
+-added Teammates option (target selection) to ESP, Tracers
+-added CritVisualizerColor to TargetESP
+-added setSlotAfterRespawn to AutoPlay
+-added stopWhileSlowness to AutoWalk
+-added fakeAttacks to SmartClicking
+-added Autologin feature (Client automatically tries to log in your last account)
+-added Group export/import
+-improved BowAimbot prediction
+-improved RodAimbot prediction
+-improved ProjectileAimbot
+-fixed name replacing bugs in chat
+-fixed some bugs and crashes
+-fixed one gomme join bug in ViaVersion (please note that ViaVersion does not supply a full implementation of higher versions. Expect bugs!)
+-fixed Augustus messages being broken when across multiple lines
+
+b4.19.2 (27.02.2025):
+-added itemsToDrop to InvManager
+-added itemBlackList to ChestStealer ("intelligent" option is needed)
+-added Fireballs to Trajectories
+-added DontSprintResetIfYouAlreadyDidLegit to MoreKB
+
+b4.19.1 (07.02.2025):
+-added "Side" main menu (can be reverted in the ClientSettings)
+-slightly improved styling of information in screens
+-added StopSprinting to InvManager
+-added SmartRaytrace
+-added Expert mode to Push Velocity mode
+-added Baritone (use with # commands, type in #help for more information)
+-added Timing option to AutoClicker
+-added DistanceMultiplier to InventoryManager and ChestStealer
+-added Intave/PolarFlag velocity mode ~fyxar (big thanks to him)
+-added PolarBlock velocity
+-added row/column size settings to TabList module
+-updated ViaVersion
+-updated Credits menu
+-improved block selection in BlockESP module
+-fixed several bugs with shaders
+
+b4.19.0 (18.01.2025):
+-ported to Minecraft 1.8.9
+-ported Optifine to HD_U_M5
+-added onlyOnGround to ChestAura
+-added Pathfinder as rendermodule
+-added xray
+-improved pathfinder
+-improved freecam
+-improved silentmurder
+-improved autoregister
+-improved fastplace
+-improved itemesp
+-updated ViaVersion
+-changed default value of MouseInputsOnBackgrounds in ClientSettings to false
+-fixed playermodel rotation in inventory
+-fixed bugs at shadow rendering for Entities
+-fixed singleplayer not working with minimap enabled
+-fixed typo in centered potion inventory module name
+-fixed CustomItemPos module with map items in hand
+-fixed debug overlay being layered below other hud elements
+-fixed optifine<->vanilla lagometer behaviour
+
+b4.18.5 (17.12.2024):
+-added color option for the ESP mode in AutoRod
+-added option to nearly all modules with a shadow option, to set a custom shadow color for the specific module ("CustomColor" in shadow module has to be disabled)
+-fixed render bug in Hud mode "Simple"
+-fixed render bug in "Model" module
+
+b4.18.4 (17.12.2024):
+-added wiki page quick action to module context menu in ClickGUI ~EnZaXD
+-added extra diagonal option to static Pitch in scaffold
+-added LeaveIfStaffArrives to AutoLeave (StaffDetector has to be enabled for this)
+-added GrimDrop Noslow for Food
+-recoded shader backend (performance increase up to 10%)
+-fixed fanart mode in hud using wrong scale setting ~EnZaXD
+-fixed crash
+-fixed signs
+-fixed bug in ClickGUI
+
+b4.18.3 (15.12.2024):
+-added fan art mode to HUD module ~EnZaXD
+-added "Delete selected Proxy" button to Proxy menu
+-added SnapTap
+-added small indicator for protocol selection in multiplayer ~EnZaXD
+-recoded NoMiningTrace module
+-recoded Sneak module
+-improved performance
+-improved minimap ~DasNeueUpdate
+-fixed texturepack and customsky issues
+-fixed broken category import (deleting keybinds and ignored module toggle states)
+-fixed bug with AimAssist/AimBot was not working while using FreeLook
+-fixed some other small bugs
+
+b4.18.2 (30.11.2024):
+-added Kawase option to Blur ~EnZaXD
+-added new fixes to ExploitFixer module ~EnZaXD
+-added Date & Time to DebugInformation module ~EnZaXD
+-added new command prefixes to ClientSettings ~EnZaXD
+-added height option to Cosmetics
+-improved Credits menu ~EnZaXD
+-improved shitty Sign rendering from Minecraft
+-fixed some small bugs
+
+b4.18.1 (30.11.2024):
+-added MiniMap ~LCA_MODZ & E-sound
+-added CustomGuiBGColor module
+-fixed LevelSystem
+-fixed Quests
+-fixed Cape synchronisation on Gomme
+
+b4.18.0 (27.11.2024):
+-added daily quests (beta)
+-added Cosmetics
+-added margin option to RenderPotion
+-added check if the display is selected to the shortcuts in the clickgui
+-added ServerPinger module ~EnZaXD
+-added some quality of life features to the multiplayer menu
+-added Weapons setting to KillAura, AutoClicker, AimAssist, AimBot
+-added changing the slider value using the mouse wheel and ctrl
+-added Outline option to ClickGui
+-added "Spin" mode to BlockAnimation ~LCA_MODZ
+-recoded notification system ~EnZaXD
+-recoded FastBreak module (added much more settings)
+-recoded AutoDisable module (added much more settings)
+-improved texture pack screen loading time
+-fixed bug in AutoDisable
+-fixed a rare issue with settings exporting
+
+b4.17.7 (25.10.2024):
+-improved performance in ClickGUI (up to 3 times faster now)
+-fixed bug with desynchronized module descriptions
+-fixed bug in BlockESP and BlockTraceESP
+-fixed Disabler
+-fixed some irc exploits
+-fixed some small internal errors
+
+b4.17.6 (16.10.2024):
+-added STRG S so save the selected config
+-added grimSpec disabler
+-recoded the deleting option for configs: now they get moved to the trash bin of the os instead of being deleted
+-recoded AutoDisable
+-improved error handling if you join on a premium server with a cracked account
+-fixed HurttimesToHit in KillAura
+-fixed Mobs and Animals in AntiInvisibles
+-fixed Protocol saving
+-fixed loading bug with MultiSelection values
+-fixed some small internal errors
+-fixed render bug in TargetHud
+
+b4.17.5 (14.10.2024):
+-added color codes to AutoClicker Debug
+-added ConditionsToTargetStrafe to TargetStrafe
+-added DelayClicksAfterClosingGuiScreen to AutoClicker
+-added OnlyOnGround to FastUse
+-added background speed/mouse settings to ClientSettings ~EnZaXD
+-added tons of new backgrounds ~EnZaXD
+-added STRG C/X and STRG V shortcuts to import/export module settings
+-added DisplayBlockMaterialYouAreLookingAt to Debug module
+-recoded config loading: new settings are now reset to default values instead of being ignored, preventing broken configs
+-fixed bug in rotation system
+-fixed ESCAPE key in minecraft screens
+-fixed the cause of some random client freezes
+
+b4.17.4 (29.09.2024):
+-added StopClickingAtSouping to AutoSoup
+-added DelayBeforeSwitch and DelayAtItemSwitch to AutoTool
+-added IRC menu ~EnZaXD
+-added Direct connect option to ingame menu ~EnZaXD
+-improved Scaffold
+-fixed heavy performance drops in ClickGui
+-fixed bug in RotationHandler at smooth back rotate
+-fixed client freeze in main menu
+-fixed crash at account login
+
+b4.17.3 (22.09.2024):
+-added velocity strength to Reverse Velocity mode
+-added more rotation options to BowAimBot, ProjectileAimBot, AutoRod, NoFall (Legit)
+-added more target options to AimBot
+-added AugustusMenu to ingame menu ~EnZaXD
+-added Sneak mode to Disabler
+-added "debug information" setting to Hotbar module ~EnZaXD
+-added "Linear" animation type mode ~EnZaXD
+-added sidebar widget to multiplayer screen (can be opened by hovering at the right edge of the screen) ~EnZaXD
+-added setting to disable framerate limit in screens to ClientSettings ~EnZaXD
+-added ChunkAnimator module ~EnZaXD
+-added Vulcan mode to FastLadder ~DasNeueUpdate
+-fixed bug in BugUp
+-fixed bug in Speed
+-fixed Mouse3/4/5 bug ~DasNeueUpdate
+-fixed client freezes
+-removed protocol selection from client menu (now in multiplayer screen) ~EnZaXD
+
+b4.17.2 (18.09.2024):
+-added many other new settings to Scaffold
+-added more settings to Noise2 ~DasNeueUpdate
+-added fall damage buffer to Velocity mode "Legit" and "Intave" ~DasNeueUpdate
+-fixed bug with inInv in KillAura
+-fixed bug with MoonWalk in Scaffold
+-fixed InvManager Bug ~DasNeueUpdate
+
+b4.17.1 (13.09.2024):
+-added StopRotationInsideTarget
+-fixed Fov for PreHit in KillAura
+-fixed Launcher login bug
+
+b4.17.0 (12.09.2024):
+-added Noise2 KillAura mode (made for Intave) ~DasNeueUpdate
+-added StrictYawIncorrectFactor to Scaffold
+-added PitchSelection to Scaffold
+-added ForcePlaceIfYouWouldFallDown to Scaffold
+-added correctStrafeWithKeyBinds to Scaffold
+-added Simple click mode to AutoClicker and KillAura
+-added new HitDelayFix modes
+-added Protocol Version saving (If you want to disable config loading disable it in the ProtocolVersion module)
+-added thirdPersonMode to TargetStrafe
+-added Badlion to ClientSpoofer
+-added Panic Command
+-added EntitySpeed to Speed
+-added OnlyWhileKillaura to AutoRod
+-added AntiHunger
+-added OnlyIfAfk to AntiAFK
+-recoded Recorded Click modes in KillAura and AutoClicker (old patterns will not work correctly!)
+-recoded silent modes in Scaffold
+-improved Basic Velocity mode
+-improved Armor calculations ~DasNeueUpdate
+-improved FlushConditions in Ping module
+-fixed Crash in CustomCapes
+-fixed bug in Scaffold (Silent mode "exploit" was only working with expand)
+-fixed bug with KillAura and TargetStrafe
+-fixed bug without move correction in the scaffold
+-fixed bug in EntityColor module
+-fixed heights in ClickGUI
+
+b4.16.3 (09.08.2024):
+-added ChatCopy mod to ClientSettings
+-added Solid mode to NoWeb
+-added Timer option to MovementRecorder
+-added Debug option to MovementRecorder
+-added Loop option to MovementRecorder
+-added option to ClientSettings to load key binds from configs
+-fixed bug in ClientSpoofer Custom mode
+-fixed bug in AutoExtinguish
+-fixed bug with packet canceling in Velocity
+-fixed bug in AimAssist
+-fixed bug in AimBot
+-fixed bug in Crafter
+-fixed bug in TimeManipulation
+-fixed client crashes
+
+b4.16.2 (03.08.2024):
+-added HealPot support to Refill Module
+-added CombatPearl
+-added ItemLimit (blocks, food, lava bucket, water bucket, throwables) to InvManager
+-added new Backgrounds
+-added ConsiderTargetHealth to AutoGapple
+-added more packets to cancel in Velocity
+-added CustomSwitch to Bow and Rest in NoSlow
+-added MinMax to Scaffold Speed
+-added MovementRecorder
+-added DelayClick to AutoEagle and Scaffold
+-fixed Bug in ArrowDodger
+
+b4.16.1 (25.07.2024):
+-added JumpAndPressS to AutoGapple
+-added MaxDuration and Chance option to SmartClicking module
+-added "Xanax2" IRC formatting
+-added CancelTransactions modes to Velocity
+-improved SmoothBackRotate mode "New" in RotationHandler
+-improved Pathfinder
+-improved compatibility between AutoSoup, Refill and InventoryManager in inventory.
+-improved Refill module
+-improved MoreKB module
+-recoded Radio module
+-fixed crash in Scaffold, Step
+-fixed bugs with the sprint modes in Sprint, GuiMove and Scaffold
+-fixed bug in Refill module
+-fixed bug in Sprint mode LegitRotationAllDirection
+-fixed bug in MidClick
+
+b4.16.0 (16.07.2024):
+-added OnlyWhileJumpKeyPressed, OnlyInWater, OnlyInWeb and OnlyAtLadder to MotionModifier
+-added MotionModifier support to LongJump, HighJump, FastLadder, NoWeb and Jesus (also changed the paths of the MotionModifier folders)
+-added NotWhileKillAura to AutoExtinguish
+-added ModelRenderer ~LCA_MODZ
+-added DelayAfterRespawn to AutoWalk
+-added MaxTargetLookFovDiff to AutoRod (180 = rod everytime, 90 = rod only if target is looking at you)
+-added MaxTargetLookFovDiff to ProjectileAimBot
+-added LegitRotationAllDirection to Sprint
+-added AutoJump (merged JumpOnSlime into it)
+-added NotWhileSpeed to legit and intave velocity mode
+-added NotWhileJumpBoost to legit and intave velocity mode
+-added Grim noslow mode for swords (thx to ZDibLO)
+-added Disable for x ms to AutoDisable ~DasNeueUpdate
+-recoded Jesus, FastLadder, HighJump, NoWeb
+-improved AutoClose in Refill
+-improved AutoClose in AutoSoup
+-fixed bugs in File loading and writing system
+-fixed bugs at item rendering
+-fixed bug in soup recrafting
+-fixed Position mode in FastLadder
+-fixed crash in AutoLeave module
+-removed JumpOnSlime
+
+b4.15.2 (18.06.2024):
+-added BetterAcceleration to KillAura
+-fixed bug in Acceleration over all in KillAura and every other module with acceleration.
+
+b4.15.1 (17.06.2024):
+-improved BackTrack
+-added NotWhileKB to motionModifier
+-fixed bugs in BackTrack
+-fixed bug in FovModifier
+
+b4.15.0 (17.06.2024):
+-added "Turbo" Aura mode (optimized for Intave)<
+-added 45Degree Speed
+-added Diagonal mode to Parkour
+-added Attack flush condition to Ping module
+-added Fast MoreKB mode
+-improved PerfectHit module
+-fixed Bug in MoreKB
+
+b4.14.5 (15.06.2024):
+-added support for the new config format to MotionModifier
+-added onlyInThirdPerson to Ping and PulseBlink
+-added Astolfo Color to ChinaHat ~DasNeueUpdate
+-added Criticals mode "Lag"
+-improved PulseBlink a little bit
+-improved Legit mode in TargetESP
+-fixed possible crashes with wrong file formats put into the folder of the MotionModifier
+-fixed bug in Ping module
+-fixed some small bugs
+
+b4.14.4 (13.06.2024):
+-fixed FastBreak bug
+
+b4.14.3 (11.06.2024):
+-added "Entity" and "TabList" mode for health getting at NameTags and TargetHud
+-added Ping display option to NameTags
+-added SmartClicking module (this module replaces all smart clicking options in KillAura and AutoClicker. Now it can be used with external AutoClickers too)
+-added Interval options to Basic Velocity mode
+-added Chance to JumpDelay
+-added StartDistance to Ping BackTrack
+-added Reverse option to TargetArea
+-added NCP BugUp (maybe works on hypixel too, idk)
+-recoded Velocity internally
+-recoded Criticals internally
+-recoded Spammer internally
+-recoded LongJump internally
+-recoded Legit velocity mode
+-recoded StorageESP
+-improved NoSlow interval mode
+-improved performance and memory consumption of the render base
+-improved client performance over all
+-improved FastBreak
+-fixed bug in GommeMode
+-fixed background shader menu selecting and saving
+-fixed a bug in StopBackTrackAtHurtTime
+-fixed several other small bugs
+-removed Huhrensohn detector in NameTags
+
+b4.14.2 (22.05.2024):
+-added AutoPlay for Gamster
+-added more abort criteria for Ping and PulseBlink
+-recoded saving of everything in the client (Proxies, ClickGUI positions and background got reset to default values)
+-recoded ClickGUI module/category export/import
+-fixed MineMen AutoPlay
+-fixed bug in Ping BackTrack
+
+b4.14.1 (08.05.2024):
+-added DeathScreen to GuiMove
+-added "Alert" command
+-added CancelCondition to packets in Disabler
+-added CombatMode to Ping (Outgoing)
+-added Latency Category (moved BackTrack, Ping, LagRange, PacketHandler, Ping, PulseBlink, TimerRange, TimerRangeV2 to Latency category)
+-added PingFix and RealTimeHP to PacketHandler
+-added Hover mode to Disabler
+-added NotWhileEating and InInv to ArrowDodger
+-added OnlyOnLeftClick to InvClicker
+-added Minimal Heart animation to Legacy Animations
+-added Acceleration to BowAimBot
+-added StrafeDegree to Scaffold
+-added Xcarry
+-added HungerSprintOnlyOnGround to Sprint
+-added HypixelTest Velocity ~NoMercy_Sad
+-added KeepArmor to InvManager
+-added StopOnHit to Intave 14.7.7 NowWeb
+-added UseBiggestStackSilent to Scaffold
+-recoded CrossHair module
+-recoded PulseBlink module
+-improved yaw/pitch randomization in scaffold
+-improved config loading time ~DasNeueUpdate
+-improved Noise mode in KillAura ~DasNeueUpdate
+-improved AimAssist
+-fixed random client freezes
+-fixed and updated ViaVersion
+
+b4.14.0 (14.04.2024):
+-added onlyWhileMoving to NoSlow
+-added StealIndicator to ChestStealer mode silent
+-added onlyOnGround option to TimerRangeV2 and LagRange
+-added AimRange to Fucker
+-added ProjectileAimBot
+-added SkinMode to CustomSkin
+-added trackY to Track mode in TargetHUD
+-added "ShowInArrayList" toggling for categories
+-added length and speed option to Sigma TargetESP
+-added Shadow effect to fonts in arraylist if background is disabled
+-added AutoExtinguish
+-added Break only free beds to BedFucker
+-added EnderPearlNotify
+-added Intave 14.7.7 mode to NoWeb
+-added DeathMessage module
+-added AimAssist support to TargetHud
+-added Potion Effects to NameTags
+-added some other LegacyAnimations
+-added SwitchSlot to ArrowDodger
+-added Dynamic option to BackTrack
+-improved TimerRangeV2 / LagRange Prediction
+-improved Noise mode in KillAura ~DasNeueUpdate
+-fixed some crashes
+-fixed BeverageNotify
+-fixed .r command
+-fixed critical bug in AutoArmor in InvManager
+
+b4.13.11 (29.03.2024):
+-added ArrowDodger
+-added InvalidDelay to NoSlow
+-added Line to ArrayList
+-added VerticalSpacing to ArrayList
+-added SneakTick outliers in Scaffold
+-added clickPause option to Scaffold
+-improved AutoEnderPearl ~DasNeueUpdate
+-improved BowAimbot mode New
+-improved Classic Esp in Ping, PulseBlink, Blink
+-fixed stopBacktrackAtHurtTime
+-fixed bug in AutoSoup fill
+-fixed bug in BackTrack
+
+b4.13.10 (25.03.2024):
+-added clickPause to AutoEagle
+-added Outliers to AutoEagle
+-added BeverageNotification
+-fixed client bugs
+
+b4.13.9 (24.03.2024):
+-added custom settings to classic backtrack ESP
+-added "Hover" option to Scaffold
+-added "LoadFromConfig" toggling for categories
+-added Min/Max HurtTimeStrafe to Strafe
+-added InvalidPacket mode to NoSlow
+-added DropBowlsIfYouHaveMoreThan to AutoSoup
+-added .server commands
+-added .r command to IRCChat
+-fixed render bug in account manager
+
+b4.13.8 (16.03.2024):
+-added IRCChat (.irc and .msg) (AquaMessenger has now the abstractCommand .aqua)
+-fixed multiple bugs and client crashes
+
+b4.13.7 (15.03.2024):
+-added AquaChat
+-added detailed information to accounts (if you select them)
+-added ban preview in gui multiplayer
+-added new capes (~dark)
+-added "ButterFly" as default recorded clickpattern
+-recoded account manager login ("External browser login" is the old "Microsoft2FA")
+-recoded Craft option in AutoSoup
+-recoded Craft option in Refill
+-fixed client crash in an edge case
+-fixed moveSpeed at motionOnly sprint modes with speed potions
+-fixed BPS and CPS in DebugInformation
+-fixed bugs in "Craft" in InventoryManager
+
+b4.13.6 (06.03.2024):
+-added SpigotFlyKickBypass to Fly
+-added ArmorEnchantments to NameTags
+-added target options to LagRange / TimerRangeV2
+-added import/export to Categories
+-fixed rare client crash in KillAura and AutoClicker
+
+b4.13.5 (05.03.2024):
+-added noArmorDrop to InvManager
+-added Transparent to NameTags
+-added silent option to ChestStealer
+-added AutoGamblePVPDojo to AutoPlay
+-added ReCraftIfSoupsLowerThan to InvManager
+-added Name-Formatting to CustomName
+-added Name-Formatting to IRC
+-added AirPlaceFly
+-improved AntiStrike
+-fixed bug in ArrayList
+
+b4.13.4 (02.03.2024):
+-added more settings to AntiStrike
+-added RawMouseInput
+-added onlyWhileMove ot Place Disabler
+-added font shadow to FlagDetector
+-added soups to InvManager
+-added reCraft to InvManager (expect bugs)
+-improved InventoryClicker
+-fixed client lags with many custom speeds/flys
+-fixed shadow with armor above hotbar
+-fixed a rare client crash
+
+b4.13.3 (26.02.2024):
+-added Hypixel step (untested)
+-added SwingAnimation module
+-added ExperimentalMacroDelay to PacketHandler
+-added Intave 14.7.3-b2 Noweb
+-added IgnoreDurability and OnlyInHotbar to InvManager Armor mode
+-added OtherRotation to Scaffold
+-added NotWhileInventoryIsFull to ChestAura
+-added NotWhileInventoryIsFull to ChestStealer
+-recoded GuiMove (this breaks all settings, sorry)
+-improved HClip abstractCommand
+-fixed bug in AutoSoup
+-fixed bugs in scaffold
+-fixed double sending slot in some rare cases in Switch NoSlow
+-fixed midClick bug with irc
+-fixed bugs in InventoryManager
+-fixed critical bug with ThroughWalls in KillAura
+-fixed config loading bugs
+-fixed bug in import settings
+-fixed bug in BlockESP
+
+b4.13.2 (22.02.2024):
+-added options to DebugInformation
+-added Pinging option to Multiplayer menu (faster server pinging)
+-added reduceVelocity to Scaffold (key pressing to reduce velocity while bridging)
+-added Min/Max to DelayBetweenBacktrack
+-added Blink mode to NoSlow
+-improved RandomizeYaw / RandomizePitch in Scaffold
+-fixed bug in Scaffold
+-fixed Step mode legit jumping in inventory
+-fixed delay in TimerRangeV2
+-fixed Strafe in ReverseVelocity
+
+b4.13.1 (19.02.2024):
+-added auto unfriend to IRC
+-added ReverseStrafeStart / ReverseStrafeEnd to Reverse velocity
+-added Spam2 NoSlow mode for Food
+-improved memory usage
+-fixed scrolling bug in FriendsManager
+
+b4.13.0 (17.02.2024):
+-added KillAura mode Noise ~DasNeueUpdate
+-added join server option to Friends
+-fixed ViaVersion
+-fixed game freeze bug with NoPlaceDelay
+-fixed InvManager
+-fixed some bugs in IRC
+
+b4.12.0 (16.02.2024):
+-added IRC (Attention: expect bugs!)
+-added AbortBlinkAtBlockPlacement to PulseBlink
+-added Welcome
+-added WhereToSteal to ChestStealer (Replaces OnlyInChest)
+-added own optionsEL.txt and optionsofEL.txt to avoid complications with other versions of minecraft (you have to redo your mc settings)
+-added NoHorizontalMoveWhileUpAndDown to NoWeb
+-added sort mode to AimBot
+-added min/max sliders to Ping module
+-added OpenInInventory to ClickGUI
+-added new Block animations
+-added BreakIndicator
+-added IntaveNew to Jesus (thx to Rahh & Bogi)
+-added Intave to GuiMove (thx to Rahh & Bogi)
+-added IncomingPacketsToDelayAbort and OutGoingPacketsToDelayAbort to PacketHandler
+-added PvpDojo mode to AutoPlay
+-recoded custom sounds in the client (now most of them are dependent from the minecraft sound settings)
+-recoded FixRotations in KillAura
+-recoded StaffDetector
+-improved mlg module performance
+-improved criticals module
+-fixed bug in KillAura with block modes
+-fixed bug in Criticals
+-fixed bug in Fly with EnderDragon
+-fixed some render alpha bugs
+-fixed bug in ArrayList at config loading
+-fixed bug in Proxy Manager
+-fixed bug in InventoryClicker
+
+b4.11.4 (31.01.2024):
+-improved some backend things
+
+b4.11.3 (30.01.2024):
+-added NoReducedDebugInformation to Fixes
+-added Delay to regen mode /heal
+-added ThrowPots module
+-added strafe/forward sliders to Scaffold motion multiplier
+-improved performance of BlockESP
+-improved AutoPot
+-fixed rare client crashes in several modules
+-fixed IntaveNew NoWeb
+-fixed AimBot/AimAssist was not working with silent rotations
+
+b4.11.2 (27.01.2024):
+-added back button to all Augustus screens ~EnZaXD
+-added BungeeHack ~EnZaXD
+-added InventoryClicker
+-added AimAssist to TargetESP
+-added alternative naming mode for settings (in ClickGui) (incomplete)
+-added reduce hits on wall to AutoClicker/KillAura (Advanced mode)
+-added cps on wall in smart mode in AutoClicker/KillAura
+-added BackwardsStrafe to Strafe
+-added automatic backup saving and backup loading to important client setting files
+-added AutoPlatform to Bugup (Blaze rods platforms)
+-added BugUpOnlyIfFallingIntoVoid to BugUp
+-added CloseGuisIfTargetArrives to KillAura
+-added option to disable through walls in NameTags
+-added IgnoreFlowingWaterForce to Jesus
+-added "/heal" mode to regen
+-fixed bug with KillAura in Inv
+-fixed right click fucker bug
+-fixed white screen bug if blur/shadow is enabled
+-fixed render bug in RenderPotion
+
+b4.11.1 (22.01.2024):
+-added separate sliders for Explosions for "Basic" mode in Velocity
+-added "Dual" range mode to KillAura and Range
+-added aim though walls range to KillAura. To hit though walls you have to activate AimThroughWalls from now on.
+-added AimAssist (a refined and more legitimate version compared to AimBot)
+-added DebugInformation ~EnZaXD
+-added perfect hit to NewAutoClicker
+-added Advanced, DragClick, Deviation mode to AutoClicker
+-added some new descriptions to MoreKB
+-fixed bug in AutoClicker and KillAura in smart mode
+-fixed JumpAfterXBlocks in Scaffold
+-fixed bug in Arraylist resizing
+-removed Improve from AimBot
+
+b4.11.0 (18.01.2024):
+-added JumpAfterXBlocks to Scaffold
+-added IntaveFast2 to Scaffold (patched on latest)
+-added Intave mode to Jesus (patched on latest)
+-added Intave2 mode to NoWeb (patched on latest)
+-added IntaveNew mode to NoWeb
+-added Cobweb to Intave Velocity
+-added Fov to MoreKB
+-added BreakBlocks to KillAura
+-added New mode to SmoothBackRotate
+-recoded parts of AimBot
+-recoded MoreKB
+-recoded AutoClicker
+-recoded Smart clicking mode in KillAura
+-improved MoveHelper
+-improved FreeCam ~DasNeueUpdate
+-improved AimBot
+-improved many things behind the scenes
+-fixed various bugs
+
+b4.10.10 (18.12.2023):
+-added new toggle sound
+-added Generated mode to AutoRegister
+-added InvalidName to AntiBot
+-added Grim-1.17 and GrimSpoof-1.17 to Velocity
+-added leaveOnDeath to AutoLeave
+-improved Tablist AntiBot mode
+-fixed item switch bug in InvManager
+-fixed bug in .binds abstractCommand
+-fixed StartDelay in InvManager
+-recoded Radio module
+-recoded ReduceCPSIfYouCanNotHitATarget
+
+b4.10.9 (07.12.2023):
+-added AutoEat
+-added Grim 1.17+ and NewPacket Regen
+-added Grim 1.17+ FastUse
+-added DiggingActions to DetailedPackets in disabler
+-added Place3 disabler and renamed old place disables
+
+b4.10.8 (06.12.2023):
+-added chat messages for config loading/saving/creating/deleting
+-added import/export for modules (right click modules in ClickGUI)
+-added CustomFireHeight
+-added AutoSwap to FastPlace
+-added STap to MoreKB
+-added DisableOnAttack to Blink
+-added JumpChance to Jump in Velocity
+-fixed MoveFix in Fucker
+-fixed item switch bug in InvManager
+-fixed armor priorities in ChestStealer and InvManager
+-fixed transactions not being handled correctly by the client ~EnZaXD
+-fixed various critical protocol hack issues ~EnZaXD
+-fixed a bug where some resource packs were not appearing in the resource pack list
+-fixed bug with description rendering in ClickGUI
+-removed Herobrine ~EnZaXD
+
+b4.10.7 (27.11.2023):
+-added randomizeClientSettings to ClientSpoofer
+-added MaxDeathTime to Killaura
+-added TargetLoseDelay to Killaura
+-added Killaura PreAimRange randomize option
+-added Killaura PreHit randomize option
+-added Godbridge to Scaffold
+-added BedwarsPractice fly ~heritsy
+-added Karhu speed ~heritsy
+-added sneakMotionWhileMovement to GuiMove
+-fixed staticPitchAtJump boolean in Scaffold
+-removed screenshot lag
+
+b4.10.6 (24.11.2023):
+-added requirement for constant internet connection for client usage
+-added PolarTest to KillAura randomization
+-added HideSneakAnimation to MoreKB
+-added LoadKeyDelay to SaveMoveKeys
+-added MMCSemiRange to Disabler
+-added RandomizeYaw to NoFall
+-added NoTerrainDownload to Fixes
+-fixed AutoPlay MineMen
+-fixed some mc bugs
+-fixed bug with movefix in Aimbot
+
+b4.10.5 (04.11.2023):
+-added DCPS to Scaffold, AutoEagle, FastPlace
+-added Experimental mode to ChestStealer
+-added ADHS mode to Scaffold
+-added YawAcceleration and PitchAcceleration to KillAura
+-added RandomizeYaw, RandomizePitch to Scaffold
+-added AutoSort to ChestStealer
+-fixed bug in AntiStrike
+-improved under the hood things
+
+b4.10.4 (17.10.2023):
+-added New mode to BowAimbot
+-added Chestchams (colored or default) to Chams
+-added AspectRatio ~Mistake/EnZaXD
+-added AlwaysOpen to Tablist
+-added Rounded option to Scoreboard
+-added OtherFlick to Scaffold
+-added AntiNoob to ExploitFixer (beta)
+-improved ClickGUI performance
+
+b4.10.3 (11.10.2023):
+-added Transparent mode to Scoreboard
+-added ResourcePackSpoof ~EnZaXD
+-added DisableWhileScaffold to AutoRod
+-added OnlyWhileSneak to AutoEagle
+-added Smoothness to TntESP
+-added TargetHud mode New
+-recoded ReduceCPSIfYouCanNotHitATarget to KillAura and AutoClicker
+-recoded ESP (Multiselection of modes is possible)
+-fixed client crash at config loading in InvisMode
+-fixed FreeCam movement ~DasNeueUpdate
+
+b4.10.2 (27.09.2023):
+-fixed major bug in AutoArmor added in last update
+-fixed bug with critFix in KillAura added in last update
+
+b4.10.1 (26.09.2023):
+-added PerfectHit module
+-added MoreSwing module
+-added Improve to BackTrack
+-added ReduceCPSIfYouCanNotHitATarget to KillAura and AutoClicker
+-fixed bug with SpoofInv in InvManager
+
+b4.10.0 (24.09.2023):
+-added ClientSettings module
+-added Intervals option to NoSlow
+-added OpenAuthMod ~EnZaXD
+-added EnderDragon to Fly
+-added BrightPlayers
+-added HeadHitter
+-added gc (memory clear) abstractCommand
+-added new settings to BackTrack
+-added VerusLowHop ~mistake
+-added Matrix Speed ~mistake
+-added Interact Speed ~mistake
+-added VulcanHop ~mistake
+-added Verus Step ~mistake
+-added Vulcan Step ~mistake
+-added ModifyMotionY to Jesus
+-added Verus & Position mode to Spider
+-added TickDelay to Spider
+-added TickDelay to FastLadder
+-added Verus & Position mode to FastLadder
+-added Timer to FastLadder
+-added new Fonts to ArrayList
+-added GommeHD staff list to StaffDetector
+-added Command HClip
+-added Simple mode to Hud
+-fixed bug in Hud
+-fixed bug in AutoDisable
+-fixed bug with instant in InvManager
+-fixed some other minor bugs
+-removed onlyWhileNeed in BackTrack (replaced it with the new settings)
+-removed Sounds Module (merged to ClientSettings)
+
+b4.9.3 (16.09.2023):
+-added NoScreenClosing
+-added new Cape
+-added cancel option to Basic Velocity
+-added ShadowEntities to Shadow (not working with Vanilla ESP mode)
+-added BlurEntities to Blur (not working with Vanilla ESP mode)
+-added BackGroundColor for blocks in scaffold
+-added BoundingBox mode to Velocity
+-fixed bug with aimThroughWalls walls and throughWalls in KillAura
+-fixed other small bugs
+
+b4.9.2 (05.09.2023):
+-added new BackGrounds
+-added notWhileScaffold to InvManager
+-added notWhileScaffold to BackTrack
+-added onlyAtSneak to AutoTool
+-improved Expand in Scaffold
+-fixed aimThroughWalls bug
+
+b4.9.1 (31.08.2023):
+-added several buttons in uis ~EnZaXD
+-added Box Blur ~EnZaXD
+-added InvManager (new AutoArmor and Cleaner all in one)
+-added Refresh button for online configs
+-added new customCapes
+-added min/max options to all smart clicking settings in AutoClicker and KillAura
+-added ListBased mode to StaffDetector
+-added delay to KillMessage
+-improved AntiAFK
+-fixed bug in TargetESP
+-recoded ChestStealer
+-remove Autoarmor / InventroyCleaner in next update
+
+b4.9.0 (25.08.2023):
+-added more detailed connection status tracker ~EnZaXD
+-added button to download terrain screen to disconnect ~EnZaXD
+-added some new options to Disabler
+-added Intave mode to Strafe
+-added Snow option to Ambiance
+-added MarkMurder to ESP (murder = red)
+-added CancelPacket to ClientSpoofer
+-added bold font mode to ArrayList
+-added Input mode to noSlow
+-added Expand and SilentExploit to Scaffold
+-added strictYaw and moveKeysToRotation (moveKeysToRotation was everytime on before)
+-added placeWhileBreak to fixes (like in BAC)
+-added Only while module rotation to chinaHat
+-added Inventory Flag Detection
+-recoded AutoEagle
+-recoded name generation on random cracked login
+-improved FastUse/Regen
+-fixed bug in AutoTool
+-fixed bug in FreeCam
+-fixed Bug in AimBot
+
+b4.8.7 (10.08.2023):
+-added CorrectMovement option to Speed
+-added MotionBlur (separated it from Blur module (NVIDIA ONLY))
+-fixed Bug in Disabler
+
+b4.8.6 (09.08.2023):
+-added TPAura ~DasNeueUpdate
+-added Refill (Soups) Module
+-added RandomPitch option to Scaffold
+-added ignoreFire to Velocity
+-added Animations to EntityColor
+-added CommandPrefixModule
+-added new customcapes
+-added TP Disabler
+-fixed bug in AutoSoup
+-improved SlotWhiteList in KillAura
+-improved ViaVersion implementation (1.20.1 - c0.0.15a-1) ~EnZaXD
+-fixed other small bugs
+
+b4.8.5 (30.07.2023):
+-added OnGroundSpoof to BugUp
+-added Ejected CustomCape (~Dark)
+-added MoveHelper (not finished)
+-added OnlyOnClick to FastPlace
+-added Smart mode to AutoClicker
+-added DragClick mode to AutoClicker
+-added Smart mode to KillAura
+-improved loading of CustomSpeeds/Flys
+-removed Combo mode
+
+b4.8.4 (27.07.2023):
+-added DoubleReset to MoreKB
+-added PitchOutliersDelay to Advanced Rotation KillAura
+-added IntaveBoatFly (thx to Duca)
+-added IntaveBoatLongJump (thx to Duca)
+-added ThroughWallsRange
+-added MotionMultiplierAir to Scaffold
+-improved pathfinder/autowalk ~DasNeueUpdate
+-recoded Chinahat ~DasNeueUpdate
+-fixed some Bugs
+
+b4.8.3 (16.07.2023):
+-added VulcanNew to Teleport
+-added VulcanLowHop to Speed
+-added IntaveLowHop to Criticals
+-added Outliers to SprintReset duration
+-added scrollbar dragging in ClickGUI
+-added different armor types to NoArmorOverlay
+-fixed Crash in KillAura
+-improved Scrolling in ClickGUI
+-improved MotionModifier
+-improved TargetHud
+-improved AccountManager
+-improved BackTrack
+-improved ChangeLog
+-removed RenderCashing
+
+b4.8.2 (10.07.2023):
+-added more capes
+-fixed event priorities
+-fixed bug in pulseblink
+-fixed bug in hud
+-fixed scrolling bug in descriptions
+-improved Pathfinding is now 3 times faster ~DasNeueUpdate
+
+b4.8.1 (05.07.2023):
+-added Corner ESP
+-added Corner Storage ESP
+-added Outline option to FovArrows
+-added StopNoBlocks to Scaffold
+-added CameraNoClip
+-added NoScreenBobbing to NoBob
+-added AutoClicker debug
+-added Descriptions
+-added Config date / time (while hovering on config)
+-added MotionBlur to Blur (old one, nvidia only)
+-recoded recorded Clicking
+-fixed Command formatting
+-fixed game stuck bug in MoreKB
+-removed JobSystemBreaker
+
+b4.8.0 (27.06.2023):
+-recoded (click patters + background + saved friends saving recode)
+-improved better performance
+-fixed all obfuscation bugs
+-fixed ChestStealer tools bug
+-fixed Language button
+-fixed bug in Arraylist
+
+b4.7.3 (22.06.2023):
+-added Color options to TargetHud
+-added OnGround/InAir to KeepSprint
+-added ReduceYawRotation to Scaffold
+-added onlyWhileKillAura to BlockAnimation
+-added toggleSound option to every module
+-added customXZ to CustomCamera
+-added Interval range to KillAura
+-added KillEffects module
+-added Blink to NoFall
+-added MoreKB Debug
+-added FailDuration to MoreKB
+-improved MoreKB Settings
+-improved Legit Velocity
+-improved RangeDebug
+-fixed bug in BackTrack
+-fixed throughWalls in Range
+-fixed some small bugs
+
+b4.7.2 (10.06.2023):
+-added RenderCaching
+-added LongClicking (for Verus) to Killaura
+-fixed Bugs
+
+b4.7.1 (02.06.2023):
+-added OnlyOnHit to Criticals NoGround
+-added some options to Timer
+-added Blink option to BugUp
+-added PulseBlink
+-recoded Backtrack/Blink/Ping esp
+-fixed NoBlockParticles
+-fixed Blink option in Fly
+-removed FakeLag
+
+b4.7.0 (02.06.2023):
+-added ignoreBackTrack to Debug
+-added "Copy IGN" button to multiplayer
+-added BlockAnimations
+-added AutoOpen to AutoSoup
+-added RemoveCapes to Child module
+-added x/y pos sliders to ArrayList (bad)
+-added x/y pos sliders to HUD (bad)
+-added FallDamage check to velocity
+-added NoBob
+-added NoBlockParticles
+-added Silent option to AutoTool
+-added whileScaffold to NoJumpDelay
+-added .binds abstractCommand
+-fixed ESP with child module
+-fixed CustomGlint on armor (F5)
+-improved Velocity
+-improved towerWhileMoving in scaffold
+-recoded AutoPot
+-recoded Phase
+
+b4.6.8 (25.05.2023):
+-added ClientIcon (can be hidden by InvisMode)
+-added Logo to Hud
+-added abstractCommand for AutoRegister
+-added config button to ClickGUI
+-added VulcanFly
+-fixed Bug in InvCleaner
+
+b4.6.7 (24.05.2023):
+-added Grim TNT Fly
+-added new NoSlow Modes
+-added GoldSpawnTimer (Gomme BW)
+-added CritVisualizer to TargetESP
+-added slot options to InvCleaner
+-added new options to Disabler
+-improved Velocity
+-improved EventSystem ~EnZaXD
+-fixed SprintFov while MotionSprint
+-fixed scaling potion HUD
+-fixed bugs in ClickGUi
+
+b4.6.6 (16.05.2023):
+-improved NoSlow
+-fixed autopot
+-fixed autoTool with fucker
+
+b4.6.5 (15.05.2023):
+-added KarhuClicking Disabler
+-added onGround Disabler
+-added Random to Additional Stop in TimerRange
+-added onlyWhileHurtTime to AutoBlock
+-added Jump to GuiMove
+-added onlyOnGround to GuiMove
+-added Vulcan TP
+-added TowerWhileMoving to Scaffold
+-added BPS to Hotbar
+-added CustomMotion Velocity
+-added Surrounding option to Fucker
+-added BlockTraceESP
+-fixed Advanced Antibots
+
+b4.6.4 (11.05.2023):
+-added scale option to StaffDetector
+-added OtherPingCalculation to HotBar
+-added MinMax option to BackTrackRage
+-added MinMax option to BackTrackTime
+-added CalculateWithPingOption to BackTrack
+-added oneStack option to Scaffold
+-added casing to ArrayList
+-added async config loading
+-fixed AutoPot packetOrder Bug
+
+b4.6.3 (06.05.2023):
+-added backGround option to Chat
+-added Scale option to StaffDetector
+-added MotionModifier to GuiMove
+-added Clan option to Teams
+-fixed Debug in LagRange
+
+b4.6.2 (02.05.2023):
+-added MLG module
+-added Silent option to AutoSoup
+-recoded LagRange
+-improved MoonWalk options in Scaffold/Eagle
+-fixed Bugs (AutoClicker/Coordinates/Proxies)
+-fixed Crash in Scaffold
+
+b4.6.1 (20.04.2023):
+-fixed some render bugs
+-improved SmoothBackRotate settings
+
+b4.6.0 (20.04.2023):
+-added Serverside NoSwing to Scaffold
+-added Background/IgnoreSpeed option to Scaffold
+-added InventoryItems to Hotbar
+-added PingNumbers to Tablist
+-added Visualize to ChestStealer/AutoArmor/InvCleaner
+-added noChatLimit to Chat
+-added Timer option to Spider
+-added ProxyManager
+-added separate color for Chest/EnderChest
+-added grim mode to KillAura
+-added Min/Max to reduceInAir (KillAura/Clicker)
+-added ExplosionModifier
+-added PacketEdit to Criticals
+-added Emojify Module
+-added OnlyBlockFace to BlockOverlay
+-added CritFix to AutoClicker
+-improved MoreKB without KillAura and AimBot
+-improved clicking in AutoEagle and Scaffold
+-fixed CPS counter
+-fixed FreeCam
+-recoded Hypixel AutoBlock
+-recoded Blur ~EnZaXD
+-recoded all abstractModules use shaders
+-removed MotionBlur
+-removed Test in Criticals
+
+b4.5.1 (12.04.2023):
+-added autoTeams / fixed bug in Teams
+-added onlyOnClick to AutoClicker
+-added SilentMurder
+-added AcousticWarning to MurderFinder
+-fixed scaling bug in NameTags (Armor)
+-fixed lightning bug in ItemESP Box mode
+
+b4.5.0 (11.04.2023):
+-added ArrowHitboxes
+-added Sneak/Jump option to Jesus
+-added AdventureMode option to BlockOverlay
+-added MaxTargets option to KillAura Multi Mode
+-added TargetESP abstractModule
+-added MurderFinder
+-added InvisibleTeam option to NameTags
+-added onlyOnRightClick to blocking in AutoClicker
+-added ChinaHat
+-added "Bayern3" to Radio
+-added 2DItems
+-added "Box" mode to ItemESP
+-added BlockCount to Scaffold
+-added scale option to Scoreboard
+-added scale option to HUD
+-added scale option to TabList
+-added scale option to FovArrows
+-added scale option to CrossHair (for Vanilla one Only)
+-added Hotbar abstractModule (now you can custom scale vanilla HotBar)
+-added scale and Pos to MLGHelper
+-added Mouse support for abstractModule toggling
+-added Rotate to GuiMove (to rotate press left/right mouse button)
+-recoded Coordinates
+-fixed "gamefreeze" bug in TimerRangeV2
+
+b4.4.1 (27.03.2023):
+-added Flick option to Scaffold
+-added FovModifier
+-improved Static Pitch in Scaffold
+-improved combination of Blink and Ping
+
+b4.4.0 (25.03.2023):
+-added NotWhileSPressed to Velocity
+-added NotWhileAttack to Place Disabler
+-added Thirdperson option to Crosshair
+-added Child Module
+-added OnEnable/OnDisable to MotionModifier
+-added disableKillAura option Fly
+-added breakBlockDelay to AutoClicker
+-added attackFriends option to AutoClicker
+-recoded AntiBot
+-recoded EventSystem
+-recoded CustomCape (now supports labymod capes)
+-improved VerusCombined Fly
+-fixed MidClick with AutoClicker
+-fixed movement bug in Fucker
+-fixed movement while Scaffold and KillAura
+-fixed bug in micorsoft2fa login (now: timeout after 40 seconds)
+-fixed bug in AutoSoup
+-moved GommeFly to Fly
+
+b4.3.9 (20.03.2023):
+-added SetPosition to SelfDamage
+-added OnlyOnGround to oldVerusFly
+-added VerusCombined to Fly
+-added CustomPacket mode to Criticals
+-added more options to MotionModifier
+-added repeat option to SelfDamage
+-added Item options to FastUse
+-added Sneak mode to SafeWalk
+-added OnlyWhileMoving to FastUse
+-improved AutoDisable
+-fixed CustomCape/CustomSkin
+-fixed bug in Scaffold
+
+b4.3.8 (13.03.2023):
+-improved AutoSoup
+
+b4.3.7 (13.03.2023):
+-added dynamic abstractModule toggling
+-added disableKillAura option Blink
+-added SelfDamage
+-added MotionModifier
+-added support for customFlys
+-added support for customSpeeds
+-added Collision BugUp
+-added Collision NoFall
+-added Deviation AutoClicker mode
+-added airMultiplier to recorded CPS
+-added SneakInInv option to Sneak
+-added StopMovement to InventoryMods
+-improved PingSpoof in Disabler
+-fixed SpoofInv
+
+b4.3.6 (12.03.2023):
+-added TNTBlock
+-added custom mode to ClientSpoofer
+-added CentredInventory
+-added CollisionBox mode to ESP
+-added CollisionY to GroundCollisionFly
+-added Spammer
+-added TntESP
+-added FakeGameMode
+-improved recorded cps
+-improved AutoSoup
+-improved Scaffold while get hitted
+-fixed SpamClick bug in Scaffold
+-fixed bug in coordinates
+-fixed bug in InvCleaner
+
+b4.3.5 (22.02.2023):
+-added SaveMoveKeys
+-added LowFireTexturePack
+-added OtherDrop to AutoSoup
+-fixed Bugs
+
+b4.3.4 (16.02.2023):
+-added FastZoom to CustomZoom
+-fixed AutoSoup bugs
+-fixed customSky
+-fixed Scaffold SneakTickBug
+-fixed NoFall LegitMode
+
+b4.3.3 (10.02.2023):
+-added Ping Module
+-added Ping BackTrack mode
+-added more options to FastBreak
+-added onlyOnRightClick option (NoMiningTrace)
+-improved compas check in ChestStealer
+-improved HotBar AutoArmor
+-improved AutoLeave
+-fixed bug in AutoTool
+
+b4.3.2 (05.02.2023):
+-added midClickRange to MidClick
+-added TellyBridge to Scaffold
+-fixed Debug Module
+-fixed CustomSkin/CustomCape
+
+b4.3.1 (25.01.2023):
+-added CustomClientColor
+-added SprintResetDuration
+-recoded MissClick
+
+b4.3.0 (24.01.2023):
+-added Strafe option to Scaffold
+-added CustomZoom
+-added FreeLook
+-added MoveCircle
+-added ClientSpoofer (idk, if this works)
+-added 6 new Backgrounds
+-improved FlagDetector
+-improved Scaffold Setting order
+-improved SmartAim
+
+b4.2.8 (22.01.2023):
+-added DotSize to Dot
+-improved ClickGui Setting orders
+-fixed Bug in PacketHandler
+-fixed Sprint bug
+-fixed MissClick in KillAura
+-fixed BackTrack ESP
+
+b4.2.7 (21.01.2023):
+-added Dot option to KillAuraESP
+-recoded SilentMoveFix
+-fixed Bugs
+
+b4.2.6 (20.01.2023):
+-added BackSwitchDelay to AutoTool
+-added KickFix to PacketHandler
+-fixed AutoTool
+-improved AutoRegister for MineBlaze
+
+b4.2.5 (19.01.2023):
+-added Silent slot view to HotBar
+-added intaveCPSLimiter to KillAura and AutoClicker
+-improved Scaffold
+-improved InventoryCleaner
+-improved AutoPot
+-fixed AutoSoup Bug
+-fixed FalseFlag in SmoothBackRotate
+
+b4.2.4 (30.12.2022):
+-improved AutoSoup
+-fixed Crash in FastPlace
+
+b4.2.3 (26.12.2022):
+-added FreeCam Speed
+-added Friend Spammer (Gomme)
+-added CPS Limiter to AutoClicker
+-added Random to FakeLag
+-added Dead option to targets in KillAura
+-added new Settings to AutoSoup
+-added LagRange
+-recoded BackTrack
+-fixed Bug in AltManager (finally)
+-fixed client crash with shaders
+
+b4.2.2 (23.12.2022):
+-added CPS Limiter to KillAura
+-added MissClick to KillAura
+-added inventory boolean velocity (legit & intave)
+-added collisionSprint
+-added hungerSprint
+-added new Intave Noweb
+-added IntaveSmart to Velocity
+-improved smartClicking
+-improved anticrash
+-fixed Nofall
+-fixed BlockPane collisions
+-fixed AutoUnfriend in MidClick
+-fixed crash in MoreKB
+-fixed FastMath problem (maybe)
+
+b4.2.1 (08.11.2022):
+-added Single Mode to KillAura
+-improved AutoEagle
+-fixed memory Usage
+-fixed Paralleluniversum in PacketHandler (thx to Sumandora)
+-removed Best mode from KillAura
+
+b4.2.0 (05.11.2022):
+-added new ViaVersion (by EnZaXD)
+-added RotationHandler
+-added smooth option to autowalk
+-added LockView to KillAura
+-added Particles Module
+-added Advanced Mode to Aimbot
+-added improve option to Aimbot (feels like KillAura with this)
+-improved startup
+-fixed lag in TimerRangeV2
+-removed pathfinderdebug
+-removed RotationLimiter
+-removed SmoothBackRotate in KillAura
+
+b4.1.6 (01.11.2022):
+-added Model
+-fixed crash
+
+b4.1.5 (30.10.2022):
+-added DoubleClicks to autoClicker
+-added DoubleClicks to KillAura
+-added Advanced Rotation mode to KillAura
+-added Simple option to MidClick
+-added bot setting to reverse AutoArmor
+-reworked fastplace
+-fixed Hotbar Autoarmor
+-fixed AutoSoup
+-removed ButterFly clickMode in KillAura
+
+b4.1.4 (26.10.2022):
+-added Crafter
+-added Halloween things
+-added new options to InvCleaner, AutoArmor and ChestStealer
+-fixed squid bug in KillAura
+-recoded Protector
+
+b4.1.3 (22.10.2022):
+-added LagTrack
+-added ESP to blink
+-added ForceDelay to BackTrack
+-added Panic
+-fixed Radio
+-fixed other NightVision Mode
+-fixed bug in fly
+
+b4.1.2 (20.10.2022):
+-added ReverseAutoArmor
+-improved AutoArmor delay calculation
+-improved InvCleaner delay calculation
+-fixed AutoBlock in KillAura
+
+b4.1.1 (13.10.2022):
+-added customColor for Fog in Ambiance abstractModule
+-fixed bug in Intave Velocity
+-fixed blockHitting while BlockMode none
+-fixed AutLeave bug
+-fixed AutoGapple bug
+
+b4.1.0 (13.10.2022):
+-added more Sprint modes
+-reworked EventSystem (completely recoded)
+-removed ClientSpoofer
+
+b4.0.4 (12.10.2022):
+-added CPS counter in Hotbar
+
+b4.0.3 (11.10.2022):
+-added new clicker options to AutoClicker and KillAura
+
+b4.0.2 (11.10.2022):
+-added MLG Helper
+-added AntiStrike
+-fixed 2D ESP
+-fixed Nametags in thirdperson
+-fixed pixel bug in Amogus Logo
+-fixed bug in silent (thx to Kroko)
+
+b4.0.1 (07.10.2022):
+-added NoInvPacket To GuiMove
+-added Percentage to Strafe
+-added Timing option to MoreKB
+-reworked FastPlace
+-reworked AutoEagle
+-removed Hypixel Strafe mode
+
+b4.0.0-pre9 (05.10.2022):
+-added AutoDisconnect
+-added myself option for Nametags
+-added CustomCamera
+-improved timerRangeV2
+-removed CustomCameraHeight
+
+b4.0.0-pre8 (03.10.2022):
+-added TimerRangeV2
+-fixed throughWalls hitting
+
+b4.0.0-pre7 (23.09.2022):
+-added noJumpDelay
+-added JumpOnSlime
+-added new NoSlowModes
+-added new AutoBlockModes
+-added health option to NameTags
+-added NoSprint InvMove
+-improved InvCleaner
+-improved AutoArmor
+-improved ChestStealer
+-improved StaffDetector
+
+b4.0.0-pre6 (10.09.2022):
+-added 2FA MicrosoftLogin
+-improved Scaffold
+-improved KillAura
+-improved MoreKB
+
+b4.0.0-pre5 (02.09.2022):
+-reworked clientSideAntiCheat
+-fixed bugfixes
+-improved Pathfinder
+
+b4.0.0-pre4 (23.08.2022):
+-added pathfinder abstractCommand
+-added pathfinder to AutoWalk
+-added TimeManipulation Speed mode
+-added Universocraft Fly mode
+-reworked Disabler
+-improved Timemanipulation
+-fixed bugfixes
+
+b4.0.0-pre3 (16.08.2022):
+-added fade for keystrokes
+-improved bedblink
+-fixed NoFall mode legit
+-fixed onlineconfigs
+
+b4.0.0-pre2 (15.08.2022):
+-fixed bugfixes
+
+b4.0.0-pre1 (14.08.2022):
+-fixed some general bugs with Reconnecting
+-improved Client Menu (Background/Protocol Selection) (by EnZaXD)
+-added GommeFly (by EnZaXD)
+-added 2D ESP mode (ESP and StorageESP)
+-added ChatModule
+-added TablistModule
+-added swingrange for Killaura
+-added Arraylist animations
+-added scalefactor to Arraylist
+-added scalefactor to Hotbar
+-added sneakSlowdown option to Scaffold
+-added startup Logo
+-added new Augstus-Manager
+-added Reconnect button
+-fixed blockPlacing in higher versions
+-fixed broken color alpha slider
+-improved TimeManipulation
+-improved TargetHud
+-improved ExploitFixer
+-improved FakeLag
+-improved Blink
+-improved Bedblink in Bedfucker
+-improved Blur
+-improved Shadow
+-improved added new Option to HUD for Hotbar (by EnZaXD)
+-improved Clientbase
+-improved ConfigSystem
+
+b3.4 (20.07.2022):
+-added JobSystemBreaker
+-fixed bug in AutoSoup
+-fixed bugs in AutoGapple
+
+b3.4 (12.07.2022):
+-added friendsaving (press sneak while midclick to save friend)
+-added Sentry Speed
+-added fix for Intave Entity crasher
+-fixed major Bugs in scaffold and timerrange
+
+b3.3 (11.07.2022):
+-added AntiAFK
+-added AutoReport (Gomme)
+-added WDL (by EnZaXD)
+-added more categories
+-added NoMiningTrace
+-added calculated Trajectory color
+-added cracked Login
+-added CustomCameraHeight
+-improved FreeCam
+-improved TimerRange
+-fixed Autogapple bug
+-fixed Hypixel antibot
+
+b3.3 (07.07.2022):
+-added OnlyRightClick as option to all Autoblock modes (for Gomme)
+-added AntiAchievement
+-added AutoEnderPearl
+-added GommeKit1v1 modes to AutoPlay
+-added Hypixel Anitbots
+-improved legit nofall mode (now silent)
+-improved Aimbot (also more Settings)
+-fixed Bugs
+
+b3.3 (29.06.2022):
+-added CustomSkin
+-added CustomCape
+-added AutoWater
+-added AutoRespawn
+-added AutoBlock to AutoClicker
+-added Startup Music
+-fixed Protector Bugs
+-fixed saving for showInArraylist option
+
+b3.2 (28.06.2022):
+-added TargetHud
+-added more Killaura modes (Autoblock & Rotation)
+-fixed someBugs
+
+b3.2 (23.06.2022):
+-added Noswing option to Killaura
+-added more modes for AutoWalk
+-added reverse mode for MidClick
+-added PartyFriendGomme to Midclick
+-added directions to Blink
+-added BlockCheck mode to Aimbot
+-added friend abstractCommand
+-added smart Vclip
+-added Freecam
+-added Invis Module
+-added Sneak Module
+-added AntiFire
+-improved Bedfucker smartaim
+-improved smartDelay in all inventoryModules
+-fixed AutoGappel bug
+-fixed AutoSoup bug
+
+b3.2 (19.06.2022):
+-added 4. intave noslow
+-added new intave tower mode
+-added more settings for intave velo
+-added hypixel autoMode
+-improved intave water velocity
+-improved germanMode
+-fixed bugs with blur and shadow
+-fixed via blocksounds
+-fixed via blockcollisions
+-fixed bug with autorod and aimbot
+-removed lunar mode in client spoofer
+
+b3.2 (09.06.2022):
+-added invisible option to nametags
+-added Shadow
+-added Blur
+-improved combat mode in autorod
+-fixed norotation mode in killaura
+-fixed toggle abstractModules in main menu
+
+b3.2 (07.06.2022):
+-added Changelog
+-added Itemphysics
+-added rod trajectories
+-added autorod
+-added fastuse
+-added Parkour
+-added HighJump
+-added AntiCactus
+-improved Scaffold block placing
+-improved Aimbot rotation settings
+-fixed colorselection bug in fovarrows
+
+-------------------------------------------

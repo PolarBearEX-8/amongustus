@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            name = 'Wagyourtail'
+            url = uri('https://maven.wagyourtail.xyz/releases')
+        }
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'openaugustus'

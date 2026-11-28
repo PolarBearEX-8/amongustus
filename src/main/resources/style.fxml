@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="launcher.Controller">
+   <children>
+      <TabPane fx:id="clientTabPane" prefHeight="350.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+        <tabs>
+          <Tab text="Clients">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="clientList" layoutX="200.0" layoutY="80.0" prefHeight="125.0" prefWidth="200.0" />
+                        <JFXButton fx:id="startClientButton" layoutX="242.0" layoutY="225.0" mnemonicParsing="false" onMouseClicked="#startSelected" prefHeight="32.0" prefWidth="115.0" styleClass="style.css" text="Start selected" textFill="WHITE" />
+                        <Text layoutX="263.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" text="Clients" />
+                        <Text fx:id="startText" fill="RED" layoutX="50.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="500.0" />
+                        <Text fx:id="infoText" fill="RED" layoutX="131.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="338.0" />
+                        <Text layoutX="267.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select client:" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="License key">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXPasswordField fx:id="activationField" focusColor="#2992de" layoutX="120.0" layoutY="80.0" prefHeight="25.0" prefWidth="365.0" />
+                        <JFXButton fx:id="activateKeyButton" layoutX="242.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#activateClient" prefHeight="32.0" prefWidth="115.0" text="Activate key" textFill="WHITE" />
+                        <Text layoutX="239.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" text="License key" />
+                        <Text fx:id="activateClientResponse" layoutX="23.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="553.9830722808838" />
+                        <Text layoutX="241.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your license key:" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane fx:id="registerPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="350.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab closable="false" text="Login">
+               <content>
+                  <AnchorPane fx:id="loginBox" prefHeight="303.0" prefWidth="249.0">
+                     <children>
+                        <JFXTextField fx:id="usernameLoginField" focusColor="#2992de" layoutX="224.0" layoutY="60.0" promptText="Username" />
+                        <JFXPasswordField fx:id="passwordLoginField" focusColor="#2992de" layoutX="224.0" layoutY="100.0" promptText="Password" />
+                        <JFXCheckBox fx:id="rememberLoginButton" checkedColor="#2992de" layoutX="212.0" layoutY="140.0" onMouseClicked="#onCheckBoxClick" prefHeight="19.0" prefWidth="112.0" selected="true" style="-fx-border-radius: 1; -fx-scale-x: 0.8; -fx-scale-y: 0.8;" text="Remember me" />
+                        <Text layoutX="260.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" text="Login" wrappingWidth="63.8515625" />
+                        <JFXButton fx:id="loginButton" layoutX="234.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#onLogin" prefHeight="32.0" prefWidth="115.0" text="Login" textFill="WHITE" />
+                        <Text fx:id="loginFailedText" fill="RED" layoutX="35.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="531.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab closable="false" text="Register">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="usernameRegisterField" focusColor="#2992de" layoutX="224.0" layoutY="60.0" promptText="Enter username" />
+                        <JFXPasswordField fx:id="passwordRegisterField1" focusColor="#2992de" layoutX="224.0" layoutY="100.0" promptText="Enter password" />
+                        <JFXPasswordField fx:id="passwordRegisterField2" focusColor="#2992de" layoutX="224.0" layoutY="140.0" promptText="Repeat password" />
+                        <JFXPasswordField fx:id="registerActivationKey" focusColor="#2992de" layoutX="224.0" layoutY="176.0" promptText="Enter license key" />
+                        <Text layoutX="247.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" text="Register" />
+                        <JFXButton fx:id="registerButton" layoutX="234.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#onRegister" prefHeight="32.0" prefWidth="115.0" text="Register" textFill="WHITE" />
+                        <Text fx:id="registerFailedText" fill="RED" layoutX="37.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="527.0" />
+                        <Text fx:id="registerUsernameError" fill="RED" layoutX="384.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="180.0" />
+                        <Text fx:id="registerPassword1Error" fill="RED" layoutX="383.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="183.0" />
+                        <Text fx:id="registerPassword2Error" fill="RED" layoutX="384.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="198.0" />
+                        <Text layoutX="37.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By registering your license key, you expressly consent to the immediate execution of the contract and accept our Terms of Service. You acknowledge and confirm that by giving this consent, you will lose your statutory right of withdrawal." textAlignment="CENTER" wrappingWidth="526.2421875">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Hyperlink layoutX="491.0" layoutY="14.0" onAction="#openTOS" text="Terms of Service" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="HWID Reset">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXPasswordField fx:id="hwidActivationKey" focusColor="#2992de" layoutX="224.0" layoutY="140.0" promptText="License key" />
+                        <JFXButton fx:id="hwidResetButton" layoutX="235.0" layoutY="179.0" mnemonicParsing="false" onMouseClicked="#onHwidReset" prefHeight="32.0" prefWidth="115.0" text="Reset HWID" textFill="WHITE" />
+                        <Text layoutX="225.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" text="HWID Reset" />
+                        <Text fx:id="hwidErrorMessage" fill="RED" layoutX="21.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="558.0" />
+                        <JFXTextField fx:id="hwidResetUsername" focusColor="#2992de" layoutX="224.0" layoutY="60.0" promptText="Username" />
+                        <JFXPasswordField fx:id="hwidResetPassword" focusColor="#2992de" layoutX="225.0" layoutY="100.0" promptText="Password" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

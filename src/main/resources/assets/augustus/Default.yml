@@ -1,0 +1,2225 @@
+render:
+  blur:
+    description: Applies a blur effect on selected areas of your screen
+    settings:
+      modesnew: |
+        Selects the blur algorithm used for rendering the effect:
+        - Kawase: High-quality blur with excellent performance and smooth results
+        - Gaussian: Classic bell-curve blur providing natural-looking softness
+        - Box: Simple averaging blur algorithm, fastest but lower quality
+      sigma: Controls the intensity and radius of the blur effect (4 = subtle blur, 30 = very strong blur)
+      inscreens: Also blur areas of screens in the main menu and augustus menu
+      blurentities: Enables blur effect rendering on entities in the game world
+      entities: |
+        Select which entity types should have the blur effect applied:
+        - Myself: Apply blur to your own player model
+        - Players: Apply blur to other players
+        - Mobs: Apply blur to hostile mobs
+        - Animals: Apply blur to passive animals
+        - ArmorStands: Apply blur to armor stands
+        - Villager: Apply blur to villagers
+        - Invisible: Apply blur to invisible entities
+      itemstoblur: |
+        Select which item types should have the blur effect applied:
+        - ItemsOnGround: Apply blur to dropped items on the ground
+        - ItemsInHand: Apply blur to items held in your hand
+        - ItemsInHotbar: Apply blur to items displayed in your hotbar
+  shadow:
+    description: Applies a bloom effect on selected areas of your screen
+    settings:
+      customcolor: Enables custom color for the shadow/bloom effect
+      color: Sets the RGB color applied to the shadow effect
+      sigma: Controls the spread intensity of the shadow (higher = more spread)
+      shadowentities: Applies shadow effect to entities in the game
+      entities: |
+        Selects which entity types receive the shadow effect:
+        - Myself: Apply shadow to your own player
+        - Players: Apply shadow to other players
+        - Mobs: Apply shadow to hostile mobs
+        - Animals: Apply shadow to passive animals
+        - ArmorStands: Apply shadow to armor stands
+        - Villager: Apply shadow to villagers
+        - Invisible: Apply shadow to invisible entities
+      itemstoshadow: |
+        Selects which items receive the shadow effect:
+        - ItemsOnGround: Apply shadow to dropped items
+        - ItemsInHand: Apply shadow to items held in your hand
+        - ItemsInHotbar: Apply shadow to items in your hotbar
+  customclientcolor:
+    description: Allows customization of the client's color scheme for various interface
+      elements
+    settings:
+      colorsetting: Sets the RGB color used as the primary client theme color for various interface elements
+  arraylist:
+    description: Displays a list of all toggled modules
+    settings:
+      x-pos: Sets the horizontal position of the ArrayList on screen (0 = left edge, 100 = right edge)
+      y-pos: Sets the vertical position of the ArrayList on screen (0 = top edge, 100 = bottom edge)
+      side: Determines which side of the screen the ArrayList is aligned to (Left or Right)
+      sorting: Controls how modules are sorted in the list (Alphabet = alphabetically, Length = by text length)
+      suffix: Determines the format of setting suffixes displayed after module names (None, Simple, Dash, Bracket, Colon, Custom)
+      customsuffix: Sets a custom suffix text when Suffix mode is set to Custom
+      suffixcasing: Controls the text casing of the suffix (Default = unchanged, UpperCase = all uppercase, LowerCase = all lowercase)
+      casing: Controls the text casing of module names (Default = unchanged, UpperCase = all uppercase, LowerCase = all lowercase)
+      spacing: Enables additional spacing between characters in the ArrayList text
+      suffixcolor: Sets the RGB color for the suffix text displayed after module names
+      randomcolor: Enables random color mode where each module gets its own color instead of using CustomColor
+      customcolor: Sets the RGB color for module names when RandomColor is disabled
+      backgound: Enables a background rect behind the ArrayList for better visibility
+      backgroundcolor: Sets the RGB color and transparency of the background rect when BackGround is enabled
+      line: Enables a colored line on the side of the ArrayList
+      linewidth: Sets the width of the line in pixels when Line is enabled (0-10)
+      linegap: Sets the gap distance between the line and the module text (0-10)
+      customlinecolor: Enables custom color for the line instead of using module colors
+      linecolor: Sets the RGB color for the line when CustomLineColor is enabled
+      font: Selects the font type for the ArrayList text (Minecraft, Verdana, Arial, Roboto, Comfortaa, Esp, GoldBil, Jello, ProductSans, MuseoSans, Borel, Rubik, RubikBold, Tahoma, TahomaBold, or custom fonts)
+      opencustomfontfolder: Opens the custom font folder where you can add your own .ttf font files
+      bold: Enables bold text rendering when using Minecraft font
+      verticalspacing: Adjusts the vertical spacing between module entries in the list (-5 to 5)
+      scale: Controls the size scaling of the ArrayList when using Minecraft font (0.5 = half size, 4 = quadruple size)
+      fontsize: Sets the font size in points when using custom fonts (16-80)
+      fontshadow: Enables shadow rendering behind the text for better readability
+      toggleanimation: Selects the animation style used when modules are toggled on/off (None or various easing functions like easeInOutBack)
+      animationtime: Sets the duration of toggle animations in milliseconds (0-2000)
+  clickgui:
+    description: Provides a graphical user interface (GUI) for configuring and activating
+      the different modules
+    settings:
+      sorting: |
+        Sorts modules in ClickGui categories:
+        - Random: Modules in their initialization order
+        - Length: Modules sorted by text length descending
+        - Alphabet: Modules sorted alphabetically
+      germanmode: Every module name is in German
+      openininventory: Allows opening the ClickGui even when an inventory screen is open
+      clickguiblur: Add the blur effect to ClickGui. Only works if Blur module is
+        enabled
+      clickguishadow: Add the shadow effect to ClickGui. Only works if Shadow module
+        is enabled
+      clickguicustomshadowcolor: Enables custom shadow color for the ClickGui instead of using the default shadow color
+      clickguicustomshadowcolorvalue: Sets the RGB color for the custom shadow effect when ClickGuiCustomShadowColor is enabled
+      outline: Enables outline rendering in the ClickGui
+      alpha: Set the transparency of the ClickGui
+      dynamickeytime: Set the time for holding a key after you only have to release
+        the key to toggle off the module
+      descriptions: Go to "C:\Users\AppData\Roaming\ElectricLauncher\data\data\augustus\augustus\settings\descriptions"
+        to add different descriptions
+      settingnames: Selects different setting name configurations from the settings/settingnames folder
+      moduledescriptions: Show all available descriptions for modules
+      settingdescriptions: Show all available descriptions for settings
+  attackeffects:
+    description: Renders visual effects to indicate attacks or damage inflicted on
+      entities
+    settings:
+      use explosion normal: Spawns normal explosion particles when attacking entities
+      explosion normal count: Sets the number of normal explosion particles to spawn per attack (1-20)
+      use explosion large: Spawns large explosion particles when attacking entities
+      explosion large count: Sets the number of large explosion particles to spawn per attack (1-20)
+      use explosion huge: Spawns huge explosion particles when attacking entities
+      explosion huge count: Sets the number of huge explosion particles to spawn per attack (1-20)
+      use fireworks spark: Spawns firework spark particles when attacking entities
+      fireworks spark count: Sets the number of firework spark particles to spawn per attack (1-20)
+      use water bubble: Spawns water bubble particles when attacking entities
+      water bubble count: Sets the number of water bubble particles to spawn per attack (1-20)
+      use water splash: Spawns water splash particles when attacking entities
+      water splash count: Sets the number of water splash particles to spawn per attack (1-20)
+      use water wake: Spawns water wake particles when attacking entities
+      water wake count: Sets the number of water wake particles to spawn per attack (1-20)
+      use suspended: Spawns suspended particles when attacking entities
+      suspended count: Sets the number of suspended particles to spawn per attack (1-20)
+      use suspended depth: Spawns depth suspended particles when attacking entities
+      suspended depth count: Sets the number of depth suspended particles to spawn per attack (1-20)
+      use crit: Spawns critical hit particles when attacking entities
+      crit count: Sets the number of critical hit particles to spawn per attack (1-20)
+      use crit magic: Spawns magic critical hit particles when attacking entities
+      crit magic count: Sets the number of magic critical hit particles to spawn per attack (1-20)
+      use smoke normal: Spawns normal smoke particles when attacking entities
+      smoke normal count: Sets the number of normal smoke particles to spawn per attack (1-20)
+      use smoke large: Spawns large smoke particles when attacking entities
+      smoke large count: Sets the number of large smoke particles to spawn per attack (1-20)
+      use spell: Spawns spell particles when attacking entities
+      spell count: Sets the number of spell particles to spawn per attack (1-20)
+      use spell instant: Spawns instant spell particles when attacking entities
+      spell instant count: Sets the number of instant spell particles to spawn per attack (1-20)
+      use spell mob: Spawns mob spell particles when attacking entities
+      spell mob count: Sets the number of mob spell particles to spawn per attack (1-20)
+      use spell mob ambient: Spawns ambient mob spell particles when attacking entities
+      spell mob ambient count: Sets the number of ambient mob spell particles to spawn per attack (1-20)
+      use spell witch: Spawns witch magic particles when attacking entities
+      spell witch count: Sets the number of witch magic particles to spawn per attack (1-20)
+      use drip water: Spawns water drip particles when attacking entities
+      drip water count: Sets the number of water drip particles to spawn per attack (1-20)
+      use drip lava: Spawns lava drip particles when attacking entities
+      drip lava count: Sets the number of lava drip particles to spawn per attack (1-20)
+      use villager angry: Spawns angry villager particles when attacking entities
+      villager angry count: Sets the number of angry villager particles to spawn per attack (1-20)
+      use villager happy: Spawns happy villager particles when attacking entities
+      villager happy count: Sets the number of happy villager particles to spawn per attack (1-20)
+      use town aura: Spawns town aura particles when attacking entities
+      town aura count: Sets the number of town aura particles to spawn per attack (1-20)
+      use note: Spawns musical note particles when attacking entities
+      note count: Sets the number of musical note particles to spawn per attack (1-20)
+      use portal: Spawns portal particles when attacking entities
+      portal count: Sets the number of portal particles to spawn per attack (1-20)
+      use enchantment table: Spawns enchantment table particles when attacking entities
+      enchantment table count: Sets the number of enchantment table particles to spawn per attack (1-20)
+      use flame: Spawns flame particles when attacking entities
+      flame count: Sets the number of flame particles to spawn per attack (1-20)
+      use lava: Spawns lava particles when attacking entities
+      lava count: Sets the number of lava particles to spawn per attack (1-20)
+      use footstep: Spawns footstep particles when attacking entities
+      footstep count: Sets the number of footstep particles to spawn per attack (1-20)
+      use cloud: Spawns cloud particles when attacking entities
+      cloud count: Sets the number of cloud particles to spawn per attack (1-20)
+      use redstone: Spawns redstone particles when attacking entities
+      redstone count: Sets the number of redstone particles to spawn per attack (1-20)
+      use snowball: Spawns snowball poof particles when attacking entities
+      snowball count: Sets the number of snowball poof particles to spawn per attack (1-20)
+      use snow shovel: Spawns snow shovel particles when attacking entities
+      snow shovel count: Sets the number of snow shovel particles to spawn per attack (1-20)
+      use slime: Spawns slime particles when attacking entities
+      slime count: Sets the number of slime particles to spawn per attack (1-20)
+      use heart: Spawns heart particles when attacking entities
+      heart count: Sets the number of heart particles to spawn per attack (1-20)
+      use barrier: Spawns barrier particles when attacking entities
+      barrier count: Sets the number of barrier particles to spawn per attack (1-20)
+      use water drop: Spawns water droplet particles when attacking entities
+      water drop count: Sets the number of water droplet particles to spawn per attack (1-20)
+      use item take: Spawns item take particles when attacking entities
+      item take count: Sets the number of item take particles to spawn per attack (1-20)
+      use mob appearance: Spawns mob appearance particles when attacking entities
+      mob appearance count: Sets the number of mob appearance particles to spawn per attack (1-20)
+  esp:
+    description: Renders an in-game ESP (Extra Sensory Perception) overlay, showing
+      the location of players or entities
+    settings:
+      modes: |
+        Select which ESP rendering modes to use (can enable multiple):
+        - Box: Renders entity bounding box outline
+        - HitBox: Renders entity hit detection box outline
+        - CollisionBox: Renders entity collision box outline
+        - 3DCorner: Renders 3D corner markers at box edges
+        - Real2D: Renders 2D filled boxes with outline on screen
+        - Corner: Renders 2D corner markers on screen
+        - Picture: Renders custom pictures over entities
+        - Vanilla: Uses vanilla Minecraft entity glowing effect
+      markmurderer: Highlights murderers in Murder Mystery gamemode with red color (MurderFinder module requiered)
+      custom murderer alpha: Enables custom transparency for murderer highlighting instead of using the mode's alpha value
+      murderer alpha: Sets the transparency for murderer highlighting when Custom Murderer Alpha is enabled (0-255)
+      boxgroupygroupy: Settings group for configuring Box rendering mode
+      teamcolorbox: Uses entity team colors instead of the custom color for Box mode
+      boxcolor: Sets the RGB color and transparency for Box mode rendering
+      boxhitcolorbool: Enables different color when entity is hurt in Box mode
+      boxhitcolor: Sets the RGB color and transparency when entity is hurt in Box mode
+      boxlinewidth: Sets the line width for Box mode outline rendering (0-15, automatically scales with distance)
+      boxpriority: Sets the 3D rendering priority for Box mode to control layering order (0-3)
+      boxblur: Applies blur post-processing effect to Box mode rendering
+      boxshadow: Applies shadow/bloom post-processing effect to Box mode rendering
+      boxcustomshadowcolor: Enables custom shadow color for Box mode instead of using the default shadow color
+      boxcustomshadowcolorvalue: Sets the RGB color for the custom shadow effect in Box mode when BoxCustomShadowColor is enabled
+      hitboxgroupygroupy: Settings group for configuring HitBox rendering mode
+      hitboxteamcolor: Uses entity team colors instead of the custom color for HitBox mode
+      hitboxcolor: Sets the RGB color and transparency for HitBox mode rendering
+      hitboxhitcolorbool: Enables different color when entity is hurt in HitBox mode
+      hitboxhitcolor: Sets the RGB color and transparency when entity is hurt in HitBox mode
+      hitboxlinewidth: Sets the line width for HitBox mode outline rendering (0-15, automatically scales with distance)
+      hitboxpriority: Sets the 3D rendering priority for HitBox mode to control layering order (0-3)
+      hitboxblur: Applies blur post-processing effect to HitBox mode rendering
+      hitboxshadow: Applies shadow/bloom post-processing effect to HitBox mode rendering
+      hitboxcustomshadowcolor: Enables custom shadow color for HitBox mode instead of using the default shadow color
+      hitboxcustomshadowcolorvalue: Sets the RGB color for the custom shadow effect in HitBox mode when HitBoxCustomShadowColor is enabled
+      collisionboxgroupygroupy: Settings group for configuring CollisionBox rendering mode
+      collisionboxteamcolor: Uses entity team colors instead of the custom color for CollisionBox mode
+      collisionboxcolor: Sets the RGB color and transparency for CollisionBox mode rendering
+      collisionboxhitcolorbool: Enables different color when entity is hurt in CollisionBox mode
+      collisionboxhitcolor: Sets the RGB color and transparency when entity is hurt in CollisionBox mode
+      collisionboxlinewidth: Sets the line width for CollisionBox mode outline rendering (0-15, automatically scales with distance)
+      collisionboxpriority: Sets the 3D rendering priority for CollisionBox mode to control layering order (0-3)
+      collisionboxblur: Applies blur post-processing effect to CollisionBox mode rendering
+      collisionboxshadow: Applies shadow/bloom post-processing effect to CollisionBox mode rendering
+      collisionboxcustomshadowcolor: Enables custom shadow color for CollisionBox mode instead of using the default shadow color
+      collisionboxcustomshadowcolorvalue: Sets the RGB color for the custom shadow effect in CollisionBox mode when CollisionBoxCustomShadowColor is enabled
+      3dcornergroupygroupy: Settings group for configuring 3DCorner rendering mode
+      fakecornerteamcolor: Uses entity team colors instead of the custom color for 3DCorner mode
+      fakecornercolor: Sets the RGB color and transparency for 3DCorner mode rendering
+      fakecornerhitcolorbool: Enables different color when entity is hurt in 3DCorner mode
+      fakecornerhitcolor: Sets the RGB color and transparency when entity is hurt in 3DCorner mode
+      fakecornerpriority: Sets the 3D rendering priority for 3DCorner mode to control layering order (0-3)
+      fakecornerblur: Applies blur post-processing effect to 3DCorner mode rendering
+      fakecornershadow: Applies shadow/bloom post-processing effect to 3DCorner mode rendering
+      fakecornercustomshadowcolor: Enables custom shadow color for 3DCorner mode instead of using the default shadow color
+      fakecornercustomshadowcolorvalue: Sets the RGB color for the custom shadow effect in 3DCorner mode when FakeCornerCustomShadowColor is enabled
+      real2dgroupygroupy: Settings group for configuring Real2D rendering mode
+      real2dteamcolor: Uses entity team colors instead of the custom color for Real2D mode outline
+      real2dcolor1: Sets the RGB color and transparency for Real2D mode fill color
+      real2dcolor2: Sets the RGB color for Real2D mode outline color
+      real2dhitcolorbool: Enables different colors when entity is hurt in Real2D mode
+      real2dhitcolor1: Sets the RGB color and transparency for Real2D mode fill color when entity is hurt
+      real2dhitcolor2: Sets the RGB color for Real2D mode outline color when entity is hurt
+      real2dpriority: Sets the 2D rendering priority for Real2D mode to control layering order (0-2)
+      real2dblur: Applies blur post-processing effect to Real2D mode rendering
+      real2dshadow: Applies shadow/bloom post-processing effect to Real2D mode rendering
+      real2dcustomshadowcolor: Enables custom shadow color for Real2D mode instead of using the default shadow color
+      real2dcustomshadowcolorvalue: Sets the RGB color for the custom shadow effect in Real2D mode when Real2DCustomShadowColor is enabled
+      cornergroupygroupy: Settings group for configuring Corner rendering mode
+      cornerteamcolor: Uses entity team colors instead of the custom color for Corner mode
+      cornercolor: Sets the RGB color for Corner mode rendering
+      cornerhitcolorbool: Enables different color when entity is hurt in Corner mode
+      cornerhitcolor: Sets the RGB color when entity is hurt in Corner mode
+      linewidthcorner: Sets the line width for Corner mode lines (1-5)
+      horizontalpercentage: Sets the horizontal length of corner lines as percentage of entity width (1-100%)
+      verticalpercentage: Sets the vertical length of corner lines as percentage of entity height (1-100%)
+      cornerpriority: Sets the 2D rendering priority for Corner mode to control layering order (0-2)
+      cornerblur: Applies blur post-processing effect to Corner mode rendering
+      cornershadow: Applies shadow/bloom post-processing effect to Corner mode rendering
+      cornercustomshadowcolor: Enables custom shadow color for Corner mode instead of using the default shadow color
+      cornercustomshadowcolorvalue: Sets the RGB color for the custom shadow effect in Corner mode when CornerCustomShadowColor is enabled
+      picturegroupygroupy: Settings group for configuring Picture rendering mode
+      picturepictures: Selects which picture file to display over entities from the pictures folder
+      pictureypositionpercentage: Sets the vertical position of the picture within the entity box (0-100%, where 0 is top and 100 is bottom)
+      picturepicturepriority: Sets the 2D rendering priority for Picture mode to control layering order (0-2)
+      pictureblur: Applies blur post-processing effect to Picture mode rendering
+      pictureshadow: Applies shadow/bloom post-processing effect to Picture mode rendering
+      picturecustomshadowcolor: Enables custom shadow color for Picture mode instead of using the default shadow color
+      picturecustomshadowcolorvalue: Sets the RGB color for the custom shadow effect in Picture mode when PictureCustomShadowColor is enabled
+      picture folder: Opens the pictures folder where you can add custom .png, .jpg, or .jpeg image files
+      vanillagroupygroupy: Settings group for configuring Vanilla rendering mode
+      vanillateamcolor: Uses entity team colors instead of the custom color for Vanilla glowing effect
+      vanillacolor: Sets the RGB color and transparency for Vanilla glowing effect
+      vanillahitcolorbool: Enables different color when entity is hurt in Vanilla mode
+      vanillahitcolor: Sets the RGB color and transparency when entity is hurt in Vanilla mode
+      entities: |
+        Select which entity types should be rendered with ESP:
+        - Players: Render ESP for player entities
+        - Mobs: Render ESP for hostile mobs
+        - Villager: Render ESP for villagers
+        - Animals: Render ESP for passive animals
+        - Invisible: Render ESP for invisible entities
+        - Teammates: Render ESP for Teammates
+        - Friends: Render ESP for Friends
+      maximumrenderdistance: Sets the maximum distance in blocks at which entities are rendered with ESP (0-500)
+  storageesp:
+    description: Provides an ESP overlay specifically for storage containers
+    settings:
+      modes: |
+        Selects which ESP rendering modes should be active:
+        - Box: 3D box outline around chests
+        - BlockBox: 3D box aligned to block grid
+        - 3DCorner: 3D corner indicators
+        - Real2D: 2D overlay with fill and outline
+        - Corner: 2D corner indicators
+      boxgroupygroupy: Settings group for Box mode
+      boxchestcolor: Color for regular chest boxes in Box mode
+      boxenderchestcolor: Color for ender chest boxes in Box mode
+      boxlinewidth: Thickness of box outline lines (0-12)
+      boxexpand: Expands or contracts the box size (-1 to 1)
+      boxpriority: Render priority for Box mode in 3D space (0-2)
+      boxshaderblur: Applies blur post-processing to Box mode
+      boxshadershadow: Applies shadow post-processing to Box mode
+      boxshadercustomshadowcolor: Enables custom shadow color for Box mode
+      boxshadercustomshadowcolorvalue: Sets custom shadow color when enabled
+      blockboxgroupygroupy: Settings group for BlockBox mode
+      blockboxchestcolor: Color for regular chest boxes in BlockBox mode
+      blockboxenderchestcolor: Color for ender chest boxes in BlockBox mode
+      blockboxlinewidth: Thickness of block box outline lines (0-12)
+      blockboxpriority: Render priority for BlockBox mode in 3D space (0-2)
+      blockboxshaderblur: Applies blur post-processing to BlockBox mode
+      blockboxshadershadow: Applies shadow post-processing to BlockBox mode
+      blockboxshadercustomshadowcolor: Enables custom shadow color for BlockBox mode
+      blockboxshadercustomshadowcolorvalue: Sets custom shadow color when enabled
+      3dcornergroupygroupy: Settings group for 3DCorner mode
+      corner3chestcolor: Color for regular chest corners in 3DCorner mode
+      corner3enderchestcolor: Color for ender chest corners in 3DCorner mode
+      corner3dpriority: Render priority for 3DCorner mode in 3D space (0-2)
+      corner3dshaderblur: Applies blur post-processing to 3DCorner mode
+      corner3dshadershadow: Applies shadow post-processing to 3DCorner mode
+      corner3dshadercustomshadowcolor: Enables custom shadow color for 3DCorner mode
+      corner3dshadercustomshadowcolorvalue: Sets custom shadow color when enabled
+      real2dgroupygroupy: Settings group for Real2D mode
+      real2dcolorchest1: Primary fill color for regular chests in Real2D mode
+      real2dcolorchest2: Outline color for regular chests in Real2D mode
+      real2dcolorenderchest1: Primary fill color for ender chests in Real2D mode
+      real2dcolorenderchest2: Outline color for ender chests in Real2D mode
+      real2dpriority: Render priority for Real2D mode in 2D space (0-1)
+      real2dshaderblur: Applies blur post-processing to Real2D mode
+      real2dshadershadow: Applies shadow post-processing to Real2D mode
+      real2dshadercustomshadowcolor: Enables custom shadow color for Real2D mode
+      real2dshadercustomshadowcolorvalue: Sets custom shadow color when enabled
+      cornergroupygroupy: Settings group for Corner mode
+      cornerchestcolor: Color for regular chest corners in Corner mode
+      cornerenderchestcolor: Color for ender chest corners in Corner mode
+      cornerlinewidth: Thickness of corner lines (1-5)
+      cornerhorizontalpercentage: Horizontal length of corner indicators (1-100%)
+      cornerverticalpercentage: Vertical length of corner indicators (1-100%)
+      cornerpriority: Render priority for Corner mode in 2D space (0-1)
+      cornershaderblur: Applies blur post-processing to Corner mode
+      cornershadershadow: Applies shadow post-processing to Corner mode
+      cornershadercustomshadowcolor: Enables custom shadow color for Corner mode
+      cornershadercustomshadowcolorvalue: Sets custom shadow color when enabled
+      maxdistance: Maximum render distance for storage containers in chunks (0-32)
+  blockanimation:
+    description: Changes the animation for blocking
+    settings:
+      blockanimations: |
+        Selects the visual style for block/sword animations:
+        - None: Default vanilla blocking animation
+        - 1.7: Classic 1.7 blocking style
+        - Wiggle, Minimalistic, Swong, Jello, Exhibition, Exhibition2, Forward, Jigsaw, Violence, Sigma, Spin: Various custom animation styles
+      height: Sets the vertical position offset of the blocking animation (-0.5 to 1.5, where 0.1 is slightly raised)
+      fakeblock: Displays blocking animation even when not actually blocking with a sword
+      onlywhilekillaura: Only shows the fake blocking animation while KillAura module is active (requires FakeBlock to be enabled)
+      speed: Controls the speed of the blocking animation (0.1 = very slow, 3 = very fast)
+  fullbright:
+    description: Increases the brightness of the game world, making it easier to see
+      in dark areas
+    settings:
+      mode: Wählt zwischen NightVision (Potion-Effekt) und Gamma (erhöhte Helligkeit)
+      other: Aktiviert zusätzliche Fog-Helligkeit bei NightVision-Modus
+  protector:
+    description: Hides information like skin or name of players. Useful for youtube
+      videos
+    settings:
+      time: Protects the time display by showing randomized coordinate and time values instead of real ones
+      namegeneration: |
+        Selects the method for generating protected player names:
+        - List: Uses predefined names from a list
+        - Esound: Generates names using Esound pattern
+        - Generated: Creates randomly generated names
+  nametags:
+    description: Displays customizable nametags above players or entities in the game
+      world
+    settings:
+      mode: |
+        Selects the nametag rendering mode:
+        - None: Disables nametag rendering completely
+        - Vanilla: Uses Minecraft's default nametag rendering
+        - Custom: Enables custom nametag rendering
+      scale: Controls the size scaling of the nametags (0 = invisible, 3 = triple size)
+      height: Adjusts the vertical offset of nametags relative to the entity (-3 = lower, 3 = higher)
+      armor: Displays the player's equipped armor items above the nametag
+      armordurability: Shows durability bars for armor items when Armor is enabled
+      armorenchantments: Displays enchantment abbreviations on armor items when Armor is enabled
+      potioneffects: Shows active potion effects on the player
+      healthmode: |
+        Selects the health information display mode:
+        - None: No health display
+        - Entity: Shows health from entity data
+        - TabList: Shows health from tab list information
+      ping: Displays the player's network latency in milliseconds
+      throughwalls: Renders nametags even when the player is behind walls
+      ignoreteammates: Hides nametags for players on your team
+      myself: Renders your own nametag in third-person view
+      invisible: Shows nametags for invisible players
+      invisibleteam: Shows nametags for invisible teammates
+      transparent: Removes the background box behind the nametag for a cleaner look
+      shadow: Adds shadow effect to the nametag for better visibility
+      shadowfont: Uses shadow font rendering when both Shadow and Transparent are enabled
+      maximumrenderdistance: Sets the maximum distance in blocks to render nametags (0-500)
+  hud:
+    description: Renders the client name/logo
+    settings:
+      mode: |
+        Selects the rendering style for the HUD logo:
+        - None: No HUD rendering
+        - Basic: Client name with version and time display
+        - Other: Large stylized 'A' with 'ugustus' text
+        - Simple: Clean text-only logo with customizable font size
+        - Ausustus: Basic variant with 'Ausustus' spelling
+        - Xave: Large uppercase text using custom font
+        - Augustus: Full Augustus logo image
+        - Amogus: Alternative logo image
+        - Logo: Alternative logo variant
+        - Fanart: Community fanart logo
+      side: Determines which side of the screen the HUD is aligned to (Left or Right)
+      casing: |
+        Controls the text casing for Simple mode:
+        - Default: Original casing
+        - UpperCase: All uppercase letters
+        - LowerCase: All lowercase letters
+      x-pos: Sets the horizontal position of the HUD on screen (0 = left edge, 100 = right edge)
+      y-pos: Sets the vertical position of the HUD on screen (0 = top edge, 100 = bottom edge)
+      scale: Controls the size scaling of the HUD for non-picture modes (1 = normal, 4 = quadruple size)
+      size: Controls the size scaling for picture-based HUD modes (0.01 = tiny, 2 = double size)
+      newfontsize: Sets the font size in points for Simple mode (16 = small, 80 = very large)
+      color: Sets the RGB color for the HUD text in Basic, Other, Simple, Xave, and Ausustus modes
+      background: Enables a background rectangle behind the HUD for better visibility in Basic, Other, Simple, and Ausustus modes
+      roudedbackground: Enables rounded corners for the background rectangle when BackGround is enabled
+      roundfactor: Sets the corner radius for the rounded background (1 = slightly rounded, 10 = very rounded)
+      backgroundcolor: Sets the RGB color and transparency of the background rectangle when BackGround is enabled
+      hudblur: Applies blur post-processing effect to the HUD background or picture for a softer appearance
+      hudshadow: Applies shadow/bloom post-processing effect to the HUD for enhanced visibility
+      hudcustomshadowcolor: Enables custom shadow color instead of using the default shadow color
+      hudcustomshadowcolorvalue: Sets the RGB color for the shadow when HudCustomShadowColor is enabled
+  tracers:
+    description: Renders lines to enemies
+    settings: {}
+  itemesp:
+    description: Provides an ESP overlay specifically for items
+    settings:
+      mode: |
+        Selects the rendering mode for ItemESP:
+        - Box: Renders a colored box around items
+        - Vanilla: Uses Minecraft's default item highlighting
+      boxcolor: Sets the RGB color for the box rendered around items when using Box mode
+      render custom itemnames: Renders custom names for items on the ground
+      apply nametags rendering: Applies nametag rendering settings to custom item names
+      only show whitelisted items: Only highlights items that are selected in the whitelist
+      whitelisted items: Select which item types should be highlighted by the ESP
+  scoreboard:
+    description: Customizes the in-game scoreboard, which shows player rankings or
+      statistics
+    settings:
+      remove: Completely hides the scoreboard from the screen
+      stick: Keeps the scoreboard at a dynamic position under the HUD and Arraylist
+      transparent: Removes the background panel behind the scoreboard for a cleaner appearance
+      fontshadow: Adds shadow effect to the scoreboard text for better readability
+      rounded: Enables rounded corners for the scoreboard background panel
+      roundfactor: Controls the radius of rounded corners when Rounded is enabled (0-8)
+      positionx: Sets the horizontal position of the scoreboard on screen (0 = left edge, 100 = right edge)
+      positiony: Sets the vertical position of the scoreboard on screen when Stick is disabled (0 = top edge, 100 = bottom edge)
+      scale: Controls the size scaling of the scoreboard (1 = normal, 4 = quadruple size)
+      blur: Applies blur post-processing effect to the scoreboard
+      shadow: Applies shadow/bloom post-processing effect to the scoreboard
+      customshadowcolor: Enables custom shadow color instead of using the default shadow color
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+  blockesp:
+    description: Adds an ESP overlay specifically for blocks, highlighting their location
+    settings:
+      mode: |
+        Selects the rendering mode for BlockESP:
+        - Old: Traditional rendering with customizable line width and distance-based fading
+        - New: Optimized batch rendering for better performance with many blocks
+      color: Sets the RGB color for the ESP overlay highlighting selected blocks
+      linewidth: Sets the width of the lines in the ESP overlay when using Old mode (0-15, automatically fades with distance)
+      blur: Applies blur post-processing effect to the ESP overlay for a softer appearance
+      shadow: Applies shadow/bloom post-processing effect to the ESP overlay for enhanced visibility
+      blocks: Select which block types should be highlighted by the ESP (multiselection from all available Minecraft blocks)
+  barriers:
+    description: Replaces all barriers with a broken texture to make them visible
+    settings: {}
+  line:
+    description: Render a line under you or for Killaura
+    settings:
+      movelinegroupygroupy: Settings group for configuring the movement line trail
+      activatemoveline: Enables rendering a line trail that follows your movement path
+      color: Sets the RGB color and transparency for the movement line trail
+      linewidth: Sets the width of the movement line trail (0.1-4)
+      linetime: Sets how long the movement line trail stays visible in milliseconds (500-20000)
+      resetonteleportmoveline: Clears the movement line trail when you are teleported by the server
+      auralinegroupygroupy: Settings group for configuring the KillAura rotation line
+      activateauraline: Enables rendering a line showing KillAura rotation movements
+      display legitimate rotations: Displays the actual rotation angles instead of smooth interpolation
+      display rotations at current position: Renders rotation lines at your current position instead of where the rotation occurred
+      auracolor: Sets the RGB color and transparency for the KillAura rotation line
+      auralinewidth: Sets the width of the KillAura rotation line (0.1-4)
+      auralinetime: Sets how long the KillAura rotation line stays visible in milliseconds (500-20000)
+      resetonteleportauraline: Clears the KillAura rotation line when you are teleported by the server
+      blur: Applies blur post-processing effect to the line rendering
+      shadow: Applies shadow/bloom post-processing effect to the line rendering
+      customshadowcolor: Enables custom shadow color instead of using the default shadow color
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+  ambiance:
+    description: Change the time, worldcolor, fogcolor and more
+    settings:
+      time: Sets the visual world time (0-24000, where 12000 is approximately sunset)
+      timespeed: Controls how fast the world time changes (0 = static, higher values = faster time progression)
+      rain: Adjusts the rain intensity (0 = no rain, 1 = maximum rain strength)
+      snow: Enables snow particles during rain instead of regular rain particles
+      thunder: Controls the thunder intensity (0 = no thunder, 1 = maximum thunder strength)
+      customworldcolor: Enables custom world lighting color instead of the default lighting
+      worldcolor: Sets the RGB color for the world lighting when CustomWorldColor is enabled
+      customfogcolor: Enables custom fog color instead of the default fog color
+      fogcolor: Sets the RGB color for the fog when CustomFogColor is enabled
+      customfogdistance: Enables custom fog rendering distance control
+      fogdistance: Sets the fog rendering distance in blocks (higher values = fog starts further away)
+  crosshair:
+    description: Provides a customizable crosshair overlay for precise aiming in the
+      game
+    settings:
+      defaultcrosshair: Uses the default Minecraft crosshair instead of a custom one
+      thirdperson: Renders the crosshair even when in third-person view
+      scale: Controls the size scaling of the default crosshair (1 = normal size, 4 = quadruple size, requires DefaultCrossHair enabled)
+      color: Sets the RGB color for the custom crosshair (requires DefaultCrossHair disabled)
+      length: Sets the length of the crosshair lines in pixels (0-40, requires DefaultCrossHair disabled)
+      width: Sets the width/thickness of the crosshair lines in pixels (1-20, requires DefaultCrossHair disabled)
+      margin: Sets the gap distance between the center and the crosshair lines (0-40, requires DefaultCrossHair disabled)
+      dot: Enables a center dot in the middle of the crosshair (requires DefaultCrossHair disabled)
+      t-style: Uses a T-shaped crosshair design without the bottom line (requires DefaultCrossHair disabled)
+      shadow: Applies shadow/bloom post-processing effect to the crosshair for enhanced visibility (requires DefaultCrossHair disabled and Shadow module enabled)
+  arrowhitboxes:
+    description: Renders hitboxes around arrows
+    settings: {}
+  trajectories:
+    description: Displays the trajectory of projectiles you are throwing, such as
+      bows or throwable items
+    settings: {}
+  projectiles:
+    description: Displays the trajectory of projectiles from other players, such as
+      arrows or throwable items
+    settings:
+      color: Sets the RGB color for the projectile trajectory line
+      calculatecolor: Dynamically adjusts the trajectory color based on distance to the player
+      linewidth: Controls the thickness of the projectile trajectory line (1 = thin, 12 = thick)
+      blur: Applies blur post-processing effect to the trajectory rendering
+      shadow: Applies shadow/bloom post-processing effect to the trajectory rendering
+      customshadowcolor: Enables custom shadow color instead of using the default shadow color
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+      items: |
+        Select which projectile types should have their trajectory displayed:
+        - Arrow: Show trajectory for arrows
+        - EnderPearl: Show trajectory for ender pearls
+        - Egg: Show trajectory for thrown eggs
+        - SnowBall: Show trajectory for snowballs
+        - XPBottle: Show trajectory for experience bottles
+        - Potion: Show trajectory for splash potions
+        - FireBall: Show trajectory for fireballs
+  customglint:
+    description: Adds a customized glint effect to items in the game
+    settings:
+      remove: Completely removes the enchantment glint effect from all items
+      brighterenchantments: Makes the enchantment glint effect brighter and more visible
+      customcolor: Enables custom color for the enchantment glint effect instead of the default purple
+      color: Sets the RGB color for the custom enchantment glint when CustomColor is enabled
+      fakeenchant: Select which item types should display a fake enchantment glint (Swords, Tools, Armor, Rest)
+      speed: Controls the animation speed of the glint effect (0.01 = very slow, 10 = very fast)
+  customitempos:
+    description: Allows customization of the position of items in the player's hand
+    settings:
+      x: Sets the horizontal X position offset of the held item (-1 = far left, 1 = far right)
+      y: Sets the vertical Y position offset of the held item (-1 = lower, 1 = higher)
+      z: Sets the depth Z position offset of the held item (-1 = further away, 1 = closer to screen)
+      blockx: Sets the horizontal X position offset when blocking with an item (-1 = far left, 1 = far right)
+      blocky: Sets the vertical Y position offset when blocking with an item (-1 = lower, 1 = higher)
+      blockz: Sets the depth Z position offset when blocking with an item (-1 = further away, 1 = closer to screen)
+      scale: Controls the size scaling of the held item (0 = invisible, 2 = double size)
+      lefthand: Renders the held item in the left hand instead of the right hand
+  oldnotification:
+    description: Displays the old notifications (deprecated)
+    settings:
+      modes: |
+        Selects the notification display style:
+        - Windows: Uses native Windows system notifications
+        - Basic: Custom in-game notification overlay
+      side: Determines which side of the screen notifications appear on (Left or Right, Basic mode only)
+      y: Sets the vertical position of notifications as percentage of screen height (0-100%, Basic mode only)
+      animationtime: Sets the duration of the slide-in/out animation in milliseconds (0-1000, Basic mode only)
+      animationduration: Sets how long the notification stays visible in milliseconds (0-5000, Basic mode only)
+      color: Sets the RGB color for the notification background (Basic mode only)
+      blur: Applies blur post-processing effect to the notification rendering
+      shadow: Applies shadow/bloom post-processing effect to the notification rendering
+      customshadowcolor: Enables custom shadow color instead of using the default shadow color
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+  entitycolor:
+    description: Customizes the color of specific entities in the game world
+    settings:
+      hitcolor: Sets the RGB color and transparency overlay applied to entities when they take damage
+      hitcoloranimation: Selects the easing function for the hit color fade animation (easeInSine, linear, easeInOutCubic, etc.)
+      reverseanimation: Reverses the animation direction from fade-out to fade-in when enabled
+      color: Sets the RGB color and transparency overlay applied to entities when not damaged
+  chams:
+    description: Render entities and chests through walls
+    settings:
+      entities: |
+        Select which entity types should be rendered through walls:
+        - Players: Render players through walls
+        - Mobs: Render hostile mobs through walls
+        - Animals: Render passive animals through walls
+        - ArmorStands: Render armor stands through walls
+        - Villager: Render villagers through walls
+        - Invisible: Render invisible entities through walls
+        - Teammates: Exclude teammates from rendering through walls
+        - Friends: Exclude friends from rendering through walls
+      coloredentitychams: Enables colored overlay rendering for entities instead of default texture-based chams
+      onlythroughwallsentities: Only render the colored entity chams when the entity is behind a wall (requires ColoredEntityChams enabled)
+      rendertextureentity: Renders the default entity texture in addition to the color overlay (requires ColoredEntityChams enabled)
+      colorentity: Sets the RGB color and transparency for the entity chams overlay (requires ColoredEntityChams enabled)
+      chests: Enables chams rendering for chest blocks to see them through walls
+      coloredchestchams: Enables colored overlay rendering for chests instead of default texture-based chams (requires Chests enabled)
+      onlythroughwalls: Only render the colored chest chams when the chest is behind a wall (requires ColoredChestChams enabled)
+      rendertexture: Renders the default chest texture in addition to the color overlay (requires ColoredChestChams enabled)
+      colorchest: Sets the RGB color and transparency for normal chest chams overlay (requires ColoredChestChams enabled)
+      colorenderchest: Sets the RGB color and transparency for ender chest chams overlay (requires ColoredChestChams enabled)
+  chunkanimator:
+    description: Animates the appearance of newly loaded chunks in the world
+    settings:
+      mode: |
+        Selects the direction from which chunks appear:
+        - Below: Chunks rise up from below their final position
+        - Above: Chunks drop down from above their final position
+        - Horizon: Chunks below world horizon rise up, chunks above drop down
+        - Cardinal: Chunks slide in from cardinal directions (North, South, East, West)
+        - Variation: Enhanced variation of the Cardinal animation mode
+      animation: Selects the easing function for smooth chunk animations (easeOutBack, linear, easeInOutCubic, etc.)
+      animationtime: Sets the duration of the chunk appearance animation in milliseconds (0-2000, where 500 is smooth and 0 disables animation)
+      disablearoundplayer: Disables chunk animations within a 64-block radius around the player to reduce visual distraction in nearby areas
+  legacyanimations:
+    description: Reenables legacy animations, providing a nostalgic visual experience
+    settings:
+      heartanimationmode: |
+        Controls the visual style of the health bar animation:
+        - Default: Modern health animation
+        - Legacy: Classic 1.7 health animation
+        - Minimal: Minimal health animation without shaking
+      damageanimation: Reenables the legacy damage animation when taking hits
+      itemheld: Reenables the legacy item holding position and animation
+      swing: Reenables the legacy swing animation when attacking with items
+      debughitbox: Reenables the legacy debug hitbox rendering style
+      rod: Reenables the legacy fishing rod animation
+  blockoverlay:
+    description: Allows custumization of the block overlay
+    settings:
+      color: Sets the RGB color for the block overlay highlighting the targeted block
+      blackline: Renders the outline of the block in black instead of using the custom color
+      blockfill: Enables filling the inside of the targeted block with a semi-transparent overlay
+      linewidth: Sets the width of the outline around the targeted block (0-10, where 0 disables the outline)
+      inadventuremode: Enables the block overlay to work in Adventure mode in addition to Survival and Creative modes
+      onlyblockface: Only renders the overlay on the specific face of the block you are looking at instead of the entire block
+      blur: Applies blur post-processing effect to the block overlay
+      shadow: Applies shadow/bloom post-processing effect to the block overlay
+  coordinates:
+    description: Displays the player's current position in the game world
+    settings:
+      posx: Sets the horizontal position of the coordinates display on screen (0 = left edge, 100 = right edge)
+      posy: Sets the vertical position of the coordinates display on screen (0 = top edge, 100 = bottom edge)
+      scale: Controls the size scaling of the coordinates display (1 = normal size, 4 = quadruple size)
+      color1: Sets the RGB color for coordinate labels (X:, Y:, Z:)
+      color2: Sets the RGB color for the actual coordinate values
+      background: Enables a background rect behind the coordinates display for better visibility
+      backgroundcolor: Sets the RGB color and transparency of the background rect when BackGround is enabled
+      backgroundblur: Applies blur post-processing effect to the coordinates background for a softer appearance
+      backgroundshadow: Applies shadow/bloom post-processing effect to the coordinates background for enhanced visibility
+      backgroundcustomshadowcolor: Enables custom shadow color for the coordinates background instead of using the default shadow color
+      backgroundcustomshadowcolorvalue: Sets the RGB color for the custom shadow effect when BackGroundCustomShadowColor is enabled
+  antihurtcam:
+    description: Prevents camera movements caused by taking damage
+    settings: {}
+  customname:
+    description: Allows customization of your name. You can set it with a abstractCommand
+    settings:
+      modes: |
+        Selects the source for your displayed name:
+        - AugustusName: Uses your Augustus client username
+        - IngameName: Uses your current Minecraft session username
+        - PCName: Uses your computer's system username
+        - Custom: Allows you to set a custom name via the Custom name setting
+      name-formatting: Selects the visual formatting style for the displayed name (Xanax, Xanax2, Centaurus, Centaurus2, Skid, Simple)
+      custom name: Sets the custom name text when Modes is set to Custom
+  antiinvisibles:
+    description: Makes invisible entities visible
+    settings:
+      entities: Select which entity types should be rendered when invisible (Player, Mob, Animal, Villager, ArmorStand)
+  fovarrows:
+    description: Renders arrows at the around the crosshair show the direction of
+      entities
+    settings:
+      maxtargetdistance: Sets the maximum distance in blocks to detect and display targets with arrows (1-30)
+      crosshairdistance: Controls the distance of the arrows from the center crosshair (0-50)
+      scale: Adjusts the size scaling of the rendered arrows (1 = normal, 4 = quadruple size)
+      color: Sets the RGB color for the directional arrows
+      distalpha: Enables distance-based transparency where closer targets are more opaque and distant targets more transparent
+      distcolor: Enables distance-based color gradient where color shifts from green (close) to red (far)
+      rendernames: Displays player names next to the directional arrows
+      outline: Enables outline rendering around the arrows for enhanced visibility
+      differentoutlinecolor: Uses a separate custom color for the arrow outline instead of the arrow color
+      outlinecolor: Sets the RGB color for the arrow outline when DifferentOutlineColor is enabled
+      blur: Applies blur post-processing effect to the arrows
+      shadow: Applies shadow/bloom post-processing effect to the arrows
+      customshadowcolor: Enables custom shadow color for the arrows instead of using the default shadow color
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+  keystrokes:
+    description: Displays the player's keyboard input on the screen
+    settings:
+      backgroundcolor: Sets the background color for unpressed keys
+      backgroundcolorpressed: Sets the background color when a key is pressed
+      keycolor: Sets the text color for unpressed keys
+      keycolorpressed: Sets the text color when a key is pressed
+      scale: Controls the size scaling of the keystroke display (1 = normal, 4 = quadruple size)
+      fadespeed: Sets the duration of the color fade animation when pressing/releasing keys in milliseconds (0 = instant, 1000 = 1 second)
+      x: Sets the horizontal position of the keystroke display on screen (0 = left edge, 100 = right edge)
+      y: Sets the vertical position of the keystroke display on screen (0 = top edge, 100 = bottom edge)
+      blur: Applies blur post-processing effect to the keystroke display
+      shadow: Applies shadow/bloom post-processing effect to the keystroke display
+      customshadowcolor: Enables custom shadow color for the keystroke display instead of using the default shadow color
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+  itemphysics:
+    description: Adds physics-based movements to items in the game world
+    settings:
+      rotate: Enables continuous rotation of items while they are in the air
+  antiblind:
+    description: Removes blindness in the game
+    settings: {}
+  invismode:
+    description: Let the client look more legit
+    settings:
+      disable custom escape menu: Disables the custom Augustus escape menu and uses the vanilla Minecraft pause menu instead
+      disable custom main menu: Disables the custom Augustus main menu and uses the vanilla Minecraft title screen instead
+  targethud:
+    description: Displays information about the targert
+    settings:
+      modes: |
+        Selects the visual style for the target HUD display
+        Minecraft = Traditional style with armor display
+        Modern = Sleek minimalist design
+        LiquidGlass = Glassmorphism design with gradients
+      modesmodevaluesgroupgroupygroupy: Internal mode values group setting
+      healthmode: |
+        Determines how health is calculated
+        Entity = Uses entity's direct health value
+        Scoreboard = Reads health from scoreboard (for servers with custom health display)
+      trackentity: Makes the HUD follow the target entity's position in 3D space instead of using fixed coordinates
+      tracky: Vertical offset adjustment for entity tracking mode (-2 to 2)
+      xcoord: Horizontal screen position when trackentity is disabled (0 = left edge, 100 = right edge)
+      ycoord: Vertical screen position when trackentity is disabled (0 = top edge, 100 = bottom edge)
+      toggleanimation: Animation easing function used when target appears or disappears
+      animationtime: Duration of toggle animation in milliseconds (0-2000ms)
+      blur: Enables blur shader effect on the HUD background
+      shadow: Enables shadow/bloom shader effect on the HUD
+      customshadowcolor: Enables custom color for shadow instead of default black
+      customshadowcolorvalue: RGB color value for custom shadow (requires customshadowcolor enabled)
+      minecraftscale: Size multiplier for Minecraft mode HUD (0.1-2.0, default = 1.0)
+      minecraftbackgroundcolor: Background panel color for Minecraft mode
+      minecrafthealthbackgroundcolor: Health bar background track color for Minecraft mode
+      minecrafthealthcolor: Health bar fill color for Minecraft mode
+      minecrafttextcolor: Player name text color for Minecraft mode
+      modernbackgroundcolor: Background panel color for Modern mode
+      modernhealthbackgroundcolor: Health bar background track color for Modern mode
+      modernhealthcolor: Health bar fill color for Modern mode
+      modernheaddamagecolor: Hurt overlay color that appears on player head when taking damage (Modern mode)
+      moderntextcolor: Player name text color for Modern mode
+      liquidglassglasscolor: Glassmorphism background effect color for LiquidGlass mode
+      liquidglassbordercolor: Border color around the glass panel for LiquidGlass mode
+      liquidglasshealthgradientstart: Health bar gradient start color for LiquidGlass mode
+      liquidglasshealthgradientend: Health bar gradient end color for LiquidGlass mode
+      liquidglasshealthbackgroundcolor: Health bar background track color for LiquidGlass mode
+      liquidglasstextcolor: Player name text color for LiquidGlass mode
+      liquidglassglowcolor: Glow effect color around player head for LiquidGlass mode (turns red when damaged)
+  customskin:
+    description: Allows to replaceme the player's skin
+    settings:
+      skinmode: Selects the skin model type (default = classic model with 4px arms, slim = slim model with 3px arms)
+      skins: Selects which custom skin file to use from the customskins folder (requires 64x64 or 64x32 PNG files)
+      openfolder: Opens the customskins folder where you can add your own .png skin files
+  customcape:
+    description: Allows customization or addition of a custom cape for the player
+      character
+    settings:
+      type: Selects the cape type source (LabyMod = custom cape files, Mojang = official Minecraft capes)
+      labymodcapes: Selects which custom cape design to use from the LabyMod cape folder (requires Type = LabyMod)
+      openfolder: Opens the custom cape folder where you can add your own .png cape files (requires Type = LabyMod)
+      mojangcapes: Selects which official Mojang cape design to use from available Minecraft capes (requires Type = Mojang)
+      physics: Enables realistic physics simulation for cape movement based on player motion
+      gravity: Controls the gravitational force pulling the cape downward (0 = no gravity, 2 = double gravity)
+      stiffness: Controls how rigid the cape fabric behaves (0.1 = very flexible/floppy, 1 = very stiff/rigid)
+      damping: Controls the cape motion dampening to reduce oscillation (0.5 = bouncy movement, 1 = heavily dampened/smooth)
+      turnstrength: Controls how strongly the cape reacts to player rotation and turning movements (0 = no reaction, 1 = maximum reaction)
+      jumpstrength: Controls how strongly the cape reacts to player jumping movements (0 = no reaction, 1 = maximum reaction)
+      walkingstrength: Controls how strongly the cape reacts to player walking movements (0 = no reaction, 1 = maximum reaction)
+      waveatwalking: Enables wave-like motion animation on the cape while walking for more realistic fabric movement
+  customcamera:
+    description: Enables customization of the camera perspective or view in the game
+    settings:
+      customheight: Adjusts the vertical camera eye height position in first-person view (-5 = lower, 10 = higher)
+      customheightf5: Adjusts the vertical camera eye height position in third-person front view/F5 mode (-5 = lower, 10 = higher)
+      customx: Shifts the camera horizontally along the X-axis in first-person view (-5 = left, 5 = right)
+      customxf5: Shifts the camera horizontally along the X-axis in third-person front view/F5 mode (-5 = left, 5 = right)
+      customz: Shifts the camera horizontally along the Z-axis in first-person view (-5 = backward, 5 = forward)
+      customzf5: Shifts the camera horizontally along the Z-axis in third-person front view/F5 mode (-5 = backward, 5 = forward)
+      customthirdpersondistance: Sets the camera distance from the player in third-person view (0 = closest, 30 = farthest, default 4)
+  tablist:
+    description: Customize the in-game tab list, which shows player names and statuses
+    settings:
+      remove: Completely removes the tab list from being rendered on screen
+      scale: Controls the size scaling of the tab list display (1 = normal size, 4 = quadruple size)
+      pingnumber: Displays ping numbers next to player names in the tab list
+      alwaysopen: Keeps the tab list always visible without holding the tab key
+      fontshadow: Enables shadow rendering behind player names for better readability
+      rowsize: Sets the maximum number of rows/players to display in the tab list (10-200)
+      columnsize: Sets the maximum number of columns in the tab list layout (1-200)
+      blur: Applies blur post-processing effect to the tab list background for a softer appearance
+      shadow: Applies shadow/bloom post-processing effect to the tab list for enhanced visibility
+      customshadowcolor: Enables custom shadow color instead of using the default black shadow
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+  chat:
+    description: Customizes the appearance of the in-game chat interface
+    settings:
+      remove: Completely removes the chat from being rendered on screen
+      nochatlimit: Removes the limitation on the number of chat messages that can be displayed (requires Remove disabled)
+      fontshadow: Enables shadow rendering behind chat text for better readability (requires Remove disabled)
+      background: Enables background rendering behind chat messages for better visibility (requires Remove disabled)
+      custombackgroundcolor: Enables custom background color instead of the default color (requires BackGround enabled)
+      backgroundcolor: Sets the RGB color and transparency for the chat background when CustomBackGroundColor is enabled
+      blur: Applies blur post-processing effect to the chat background for a softer appearance (requires BackGround enabled)
+      shadow: Applies shadow/bloom post-processing effect to the chat background for enhanced visibility (requires BackGround enabled)
+      customshadowcolor: Enables custom shadow color for the chat background instead of using the default shadow color
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+  antistrike:
+    description: Provides protection against strikes on social media (hides player
+      names, item names, chat, tablist and more)
+    settings:
+      components to hide: Select which UI components should be hidden or censored (Chat, TabList, Scoreboard, ItemNames, NameTags, ToolTips, Signs, Title, Books, ChestNames, Maps)
+      replace server name: Replaces the server name with a generic placeholder to hide server identity
+      remove color codes: Removes all color codes from displayed text from the server for additional strike protection
+  noarmoroverlay:
+    description: Removes the armor on players
+    settings:
+      armortypes: Selects which armor pieces to hide on players (Helmet, ChestPlate, Trousers, Boots)
+  model:
+    description: Shows a model of yourself on the screen like in the inventory
+    settings:
+      x-coord: Sets the horizontal position of the player model on screen (0 = left edge, 100 = right edge)
+      y-coord: Sets the vertical position of the player model on screen (0 = top edge, 100 = bottom edge)
+      scale: Controls the size scaling of the rendered player model (10 = small, 100 = large)
+      yawrot: Enables dynamic rotation animation based on the player's yaw movement changes
+  renderpotion:
+    description: Displays your current potion effects
+    settings:
+      x-coord: Sets the horizontal position of the potion display on screen (0 = left edge, 100 = right edge)
+      y-coord: Sets the vertical position of the potion display on screen (0 = top edge, 100 = bottom edge)
+      scale: Controls the size scaling of the potion effect display (0.5 = half size, 4 = quadruple size)
+      margin: Sets the vertical spacing between individual potion effects in the list (0-10)
+      backgroundcolor: Sets the RGB color and transparency for the background panel behind each potion effect
+      blur: Applies blur post-processing effect to the potion display
+      shadow: Applies shadow/bloom post-processing effect to the potion display
+      customshadowcolor: Enables custom shadow color instead of using the default shadow color
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+  particle:
+    description: Adds custom particles under you
+    settings: {}
+  customzoom:
+    description: Allows customization of the zoom level and smoothing
+    settings:
+      zoomfactor: Controls the strength of the zoom effect when the zoom key is pressed (1 = no zoom, 10 = maximum zoom)
+      animationmodes: Selects the easing function for smooth zoom-in and zoom-out animations (easeOutQuint, linear, etc.)
+      animationtime: Sets the duration of the zoom animation in milliseconds (0 = instant zoom, 1000 = 1 second animation)
+      fastzoom: Disables the smoothing of the mouse inputs while zooming
+  movecircles:
+    description: Renders circles under you while jumping
+    settings:
+      circleradius: Controls the radius of the rendered circles in blocks (0.1 = small, 3 = large)
+      circlewidth: Sets the line width of the circle outline (0.1 = thin, 7 = thick)
+      circlecolor: Sets the RGB color for the rendered circles
+      circleanimation: Selects the easing function for the circle expansion animation (easeInSine, linear, etc.)
+      animationtime: Sets the duration of the circle expansion animation in milliseconds (50 = fast, 1500 = slow)
+      fadeout: Enables fade-out effect when the circle reaches full size
+      fadeoutanimation: Selects the easing function for the fade-out animation when FadeOut is enabled (easeInSine, linear, etc.)
+      fadeouttime: Sets the duration of the fade-out animation in milliseconds when FadeOut is enabled (50 = fast, 1500 = slow)
+      ticksbetweencircles: Sets the delay in ticks between spawning consecutive circles (0 = every tick, 10 = slower)
+      onlyafterjump: Only spawns circles after landing from a jump instead of continuously while moving
+  centredinventory:
+    description: Centers the player's inventory
+    settings: {}
+  tntesp:
+    description: Provides an ESP overlay specifically for TNT blocks, includes explosion
+      radius and damage
+    settings:
+      color: RGBA color for the main TNT sphere ESP overlay (8-block explosion radius)
+      deathcircle: Enables rendering of a secondary sphere showing the radius at which the explosion would kill the player
+      deathcolor: RGBA color for the death radius sphere (requires deathcircle enabled)
+      smoothness: Controls sphere polygon count and quality (8-60, higher values = smoother spheres but may impact performance)
+      displaydamage: Enables on-screen text display showing total potential damage from all visible TNT entities
+      x-coord: Horizontal screen position for damage display text (0 = left edge, 100 = right edge)
+      y-coord: Vertical screen position for damage display text (0 = top edge, 100 = bottom edge)
+  child:
+    description: Everyone is a child
+    settings:
+      editeyeheight: Lowers camera eye height to 0.85f for a child-like perspective in first person
+      removecapes: Removes cape rendering from all players
+  fovmodifier:
+    description: Modify the field of view (FOV)
+    settings:
+      ignoredynamicfov: Disables vanilla's dynamic FOV changes (sprinting, bow drawing, speed effects)
+      defaultfov: Sets the field of view when in default state (30-150)
+      sprintfov: Sets the field of view when sprinting (30-150)
+      speedfov: Sets the field of view when speed effect is active (30-150)
+      animationmodes: Selects the easing function for smooth FOV transitions (easeOutQuint, linear, etc.)
+      animationtime: Sets the duration of FOV transition animations in milliseconds (1-1000)
+  targetesp:
+    description: Provides an ESP overlay specifically for targeted entitie,
+    settings:
+      modules: Select which modules should trigger the ESP display (KillAura, AimBot, AimAssist, AutoRod, Legit)
+      mode: |
+        Selects the rendering style for the target ESP:
+        - None: Disables ESP rendering
+        - Box: Renders a box above the target's head
+        - Sigma: Renders an animated circular wave around the target
+      targetespcolor: Sets the RGB color for the ESP overlay when target is not hurt
+      hitcolor: Enables different color when target takes damage
+      targetesphitcolor: Sets the RGB color for the ESP overlay when target is hurt (requires HitColor enabled)
+      linewidth: Sets the outline thickness for Box mode bounding box (0-12)
+      adjustwidth: Adjusts the width of the Box mode bounding box (-1 = narrower, 1 = wider)
+      height: Sets the height of the Box mode bounding box (0-0.5)
+      adjustypos: Adjusts the vertical position of the Box relative to target's head (-2 = lower, 2 = higher)
+      speed: Controls the animation wave speed for Sigma mode (0 = static, 2 = fast)
+      length: Controls the vertical wave amplitude for Sigma mode animation (0 = flat, 2 = tall)
+      additionalradius: Adjusts the circle radius size for Sigma mode (-1 = smaller, 2 = larger)
+      blur: Applies blur post-processing effect to the ESP overlay for a softer appearance
+      shadow: Applies shadow/bloom post-processing effect to the ESP for enhanced visibility
+      customshadowcolor: Enables custom shadow color instead of using the default black shadow
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+      critvisualizer: Displays "Crit!" or "Hit!" text at the hit location when attacking
+      critvisualizercolor: Sets the RGB color for the hit text display when CritVisualizer is enabled
+      bestaimpoint: Renders a box at the optimal aiming point on the target entity
+      bestaimpointsize: Sets the size of the best aim point box (0.01 = tiny, 1 = large, requires BestAimPoint enabled)
+      bestaimpointcolor: Sets the RGB color for the best aim point box when BestAimPoint is enabled
+      duration: Sets how long the hit text remains visible in milliseconds (100 = brief, 4000 = long, requires CritVisualizer enabled)
+  chinahat:
+    description: Renders a hat on the player character's head
+    settings:
+      colormode: |
+        Selects the color mode for the hat rendering:
+        - Fade: Smooth gradient between Color1 and Color2
+        - Rainbow: Dynamic rainbow color effect with configurable alpha
+        - Astolfo: Special color gradient effect with configurable alpha
+      color1: Sets the first gradient color when ColorMode is set to Fade
+      color2: Sets the second gradient color when ColorMode is set to Fade
+      rainbow alpha: Controls the transparency of the hat when using Rainbow color mode (0.1 = almost transparent, 255 = fully opaque)
+      astolfo alpha: Controls the transparency of the hat when using Astolfo color mode (0.1 = almost transparent, 255 = fully opaque)
+      hatqualitiy: Sets the rendering quality of the hat by controlling the number of triangles (8 = low quality/better performance, 300 = high quality/smooth appearance)
+      radius: Controls the radius size of the hat (0.1 = very small, 10 = very large)
+      height: Sets the vertical height of the conical hat shape (0.1 = flat, 1 = tall cone)
+      y offset: Adjusts the vertical position offset of the hat relative to the player's head (-0.1 = lower, 1 = higher)
+      rotationspeed: Controls the rotation speed of the color gradient animation in degrees per second (0 = static colors, 360 = one full rotation per second)
+      rotationoffset: Sets the starting angle offset for the color gradient rotation (0-360 degrees)
+      infirstperson: Renders the hat even when in first-person view (normally only visible in third-person)
+      rotate with player: Makes the hat rotate with the player's head rotation and yaw direction
+      rotate with spoof rotations: Uses module rotation angles instead of actual head rotation when available (requires Rotate with player enabled)
+      rotate vertical: Enables vertical tilting of the hat based on the player's pitch angle (requires Rotate with player enabled)
+      only while module rotation: Only applies vertical rotation when module rotations are active (requires Rotate vertical enabled)
+      outlinegroupygroupy: Settings group for configuring the outline effect around the hat edge
+      enabled: Enables rendering of an outline around the outer edge of the hat for enhanced visibility
+      line-width: Sets the thickness of the outline in pixels (0.01 = very thin, 4 = very thick)
+      alpha: Controls the transparency of the outline (0.1 = almost transparent, 255 = fully opaque)
+      red offset: Adjusts the red color channel of the outline relative to the hat color (-255 = darker red, 255 = brighter red)
+      green offset: Adjusts the green color channel of the outline relative to the hat color (-255 = darker green, 255 = brighter green)
+      blue offset: Adjusts the blue color channel of the outline relative to the hat color (-255 = darker blue, 255 = brighter blue)
+  2ditems:
+    description: Renders dropped items as 2D icons on screen for better visibility
+    settings:
+      items: Select which item types should be displayed in 2D (Bronze, Iron, Gold, Diamond, Emerald, Other)
+      remove3ditems: Removes the 3D rendering of items in the world when enabled
+      showstacksize: Displays the stack size number on the 2D item icons
+      onlyatoptifinezoom: Only render items in 2D when Optifine zoom key is pressed
+  hotbar:
+    description: Adds an informative hotbar
+    settings:
+      hotbarscale: Controls the size scaling of the hotbar display (1 = normal size, 4 = quadruple size)
+      armor: Displays your equipped armor pieces above the hotbar
+      armordurability: Shows durability information for each armor piece when Armor is enabled
+      armorshadow: Applies shadow effect to armor display for better visibility
+      customhotbar: Enables the custom hotbar overlay with additional features like CPS, BPS and item highlighting
+      blur: Applies blur post-processing effect to the custom hotbar background for a softer appearance
+      shadow: Applies shadow/bloom post-processing effect to the custom hotbar for enhanced visibility
+      customshadowcolor: Enables custom shadow color for the hotbar instead of using the default black shadow
+      customshadowcolorvalue: Sets the RGB color for the shadow when CustomShadowColor is enabled
+      itemrectangle: Highlights the entire hotbar item area with a colored rectangle background
+      silentslot: Shows both the real selected slot and the silently selected slot with different highlight colors
+      debuginformation: Displays debug information panel on the right side showing CPS, BPS and ping metrics
+      otherpingcalculation: Uses an alternative method to calculate ping values when DebugInformation is enabled
+      inventoryitems: Displays your inventory items (rows 1-3) above the hotbar for quick item overview
+  emojify:
+    description: Renders emojis on players after combo them
+    settings:
+      modes: |
+        Selects the emoji design displayed above players after comboing them:
+        - default1, default2, default3: Various default emoji styles
+        - angry: Angry face emoji
+        - pogchamp: Pogchamp emoji
+        - prettygood: Pretty good emoji
+        - trashmeme: Trash meme emoji
+      combohits: Sets the minimum number of consecutive hits required to trigger the emoji display (0-5)
+      combotime: Sets the time window in seconds during which hits count as a combo (0-5)
+  blocktraceesp:
+    description: Renders the fastest way to the bed
+    settings:
+      block: |
+        Selects the block type to trace and highlight:
+        - Bed: Traces bed blocks (Block ID 26) - useful for BedWars gamemodes
+        - Cake: Traces cake blocks (Block ID 92)
+        - Custom: Allows you to specify a custom block ID
+      customid: Sets the custom block ID to trace when Block mode is set to Custom (0-400, where each number represents a different Minecraft block)
+      blockcolor: Sets the RGB color and transparency for the ESP overlay highlighting the traced blocks
+      blocklinewidth: Sets the width of the lines around the traced blocks (0-15, automatically scales with distance for better visibility)
+      blockdistance: Sets the maximum render distance for traced blocks in blocks (1-300, blocks beyond this distance won't be highlighted)
+      blockblur: Applies blur post-processing effect to the block ESP overlay for a softer, glowing appearance
+      blockshadow: Applies shadow/bloom post-processing effect to the block ESP overlay for enhanced visibility and glow
+      blockcustomshadowcolor: Enables custom shadow color for the block ESP instead of using the default shadow color
+      blockcustomshadowcolorvalue: Sets the RGB color for the custom shadow effect when BlockCustomShadowColor is enabled
+      pathcolor: Sets the RGB color and transparency for the pathfinding overlay that shows the optimal route to the nearest traced block
+      pathblur: Applies blur post-processing effect to the pathfinding overlay for a softer appearance
+      pathshadow: Applies shadow/bloom post-processing effect to the pathfinding overlay for enhanced visibility
+      pathcustomshadowcolor: Enables custom shadow color for the pathfinding overlay instead of using the default shadow color
+      pathcustomshadowcolorvalue: Sets the RGB color for the custom shadow effect on the pathfinding overlay when PathCustomShadowColor is enabled
+      pathsearchrange: Sets the search radius around the player for finding the nearest traced block to calculate the path (1-10 blocks)
+  goldspawntimer:
+    description: Displays a countdown for the next gold spawn on GommeHD bedwars
+    settings:
+      x-coord: Sets the horizontal position of the gold spawn timer on screen (0 = left edge, 100 = right edge)
+      y-coord: Sets the vertical position of the gold spawn timer on screen (0 = top edge, 100 = bottom edge)
+      scale: Controls the size scaling of the timer display (0.5 = half size, 4 = quadruple size)
+      background: Enables a background rectangle behind the timer for better visibility
+      backgroundcolor: Sets the RGB color and transparency of the background rectangle when BackGround is enabled
+      blur: Applies blur post-processing effect to the timer background for a softer appearance
+      shadow: Applies shadow/bloom post-processing effect to the timer for enhanced visibility
+      customshadowcolor: Enables custom shadow color instead of using the default black shadow color
+      customshadowcolorvalue: Sets the RGB color for the shadow when CustomShadowColor is enabled
+  nobob:
+    description: Other View Bobbing animations
+    settings:
+      mode: |
+        Selects the bobbing removal method:
+        - Normal: Removes view bobbing by resetting walk distance
+        - NoScreenBobbing: Prevents screen bobbing animations
+  noblockparticles:
+    description: Removes the block break particles
+    settings: {}
+  killeffects:
+    description: Adds visual/sound effects when the player eliminates opponents or
+      entities
+    settings:
+      executionmode: |
+        Determines when kill effects are triggered:
+        - RemovedEntity: Triggers when the entity is removed from the world
+        - ZeroHealth: Triggers when the entity's health reaches zero
+      flash: Spawns a lightning bolt with thunder and explosion sounds at the target's position
+      dragon death sound: Plays the Ender Dragon death sound when eliminating targets
+      fire sound: Plays the fire charge use sound when eliminating targets
+      use explosion normal: Spawns normal explosion particles when eliminating targets
+      explosion normal count: Sets the number of normal explosion particles to spawn per kill (1-20)
+      use explosion large: Spawns large explosion particles when eliminating targets
+      explosion large count: Sets the number of large explosion particles to spawn per kill (1-20)
+      use explosion huge: Spawns huge explosion particles when eliminating targets
+      explosion huge count: Sets the number of huge explosion particles to spawn per kill (1-20)
+      use fireworks spark: Spawns fireworks spark particles when eliminating targets
+      fireworks spark count: Sets the number of fireworks spark particles to spawn per kill (1-20)
+      use water bubble: Spawns water bubble particles when eliminating targets
+      water bubble count: Sets the number of water bubble particles to spawn per kill (1-20)
+      use water splash: Spawns water splash particles when eliminating targets
+      water splash count: Sets the number of water splash particles to spawn per kill (1-20)
+      use water wake: Spawns water wake particles when eliminating targets
+      water wake count: Sets the number of water wake particles to spawn per kill (1-20)
+      use suspended: Spawns suspended particles when eliminating targets
+      suspended count: Sets the number of suspended particles to spawn per kill (1-20)
+      use suspended depth: Spawns suspended depth particles when eliminating targets
+      suspended depth count: Sets the number of suspended depth particles to spawn per kill (1-20)
+      use crit: Spawns critical hit particles when eliminating targets
+      crit count: Sets the number of critical hit particles to spawn per kill (1-20)
+      use crit magic: Spawns magic critical particles when eliminating targets
+      crit magic count: Sets the number of magic critical particles to spawn per kill (1-20)
+      use smoke normal: Spawns normal smoke particles when eliminating targets
+      smoke normal count: Sets the number of normal smoke particles to spawn per kill (1-20)
+      use smoke large: Spawns large smoke particles when eliminating targets
+      smoke large count: Sets the number of large smoke particles to spawn per kill (1-20)
+      use spell: Spawns spell particles when eliminating targets
+      spell count: Sets the number of spell particles to spawn per kill (1-20)
+      use spell instant: Spawns instant spell particles when eliminating targets
+      spell instant count: Sets the number of instant spell particles to spawn per kill (1-20)
+      use spell mob: Spawns mob spell particles when eliminating targets
+      spell mob count: Sets the number of mob spell particles to spawn per kill (1-20)
+      use spell mob ambient: Spawns ambient mob spell particles when eliminating targets
+      spell mob ambient count: Sets the number of ambient mob spell particles to spawn per kill (1-20)
+      use spell witch: Spawns witch spell particles when eliminating targets
+      spell witch count: Sets the number of witch spell particles to spawn per kill (1-20)
+      use drip water: Spawns dripping water particles when eliminating targets
+      drip water count: Sets the number of dripping water particles to spawn per kill (1-20)
+      use drip lava: Spawns dripping lava particles when eliminating targets
+      drip lava count: Sets the number of dripping lava particles to spawn per kill (1-20)
+      use villager angry: Spawns angry villager particles when eliminating targets
+      villager angry count: Sets the number of angry villager particles to spawn per kill (1-20)
+      use villager happy: Spawns happy villager particles when eliminating targets
+      villager happy count: Sets the number of happy villager particles to spawn per kill (1-20)
+      use town aura: Spawns town aura particles when eliminating targets
+      town aura count: Sets the number of town aura particles to spawn per kill (1-20)
+      use note: Spawns musical note particles when eliminating targets
+      note count: Sets the number of musical note particles to spawn per kill (1-20)
+      use portal: Spawns portal particles when eliminating targets
+      portal count: Sets the number of portal particles to spawn per kill (1-20)
+      use enchantment table: Spawns enchantment table particles when eliminating targets
+      enchantment table count: Sets the number of enchantment table particles to spawn per kill (1-20)
+      use flame: Spawns flame particles when eliminating targets
+      flame count: Sets the number of flame particles to spawn per kill (1-20)
+      use lava: Spawns lava particles when eliminating targets
+      lava count: Sets the number of lava particles to spawn per kill (1-20)
+      use footstep: Spawns footstep particles when eliminating targets
+      footstep count: Sets the number of footstep particles to spawn per kill (1-20)
+      use cloud: Spawns cloud particles when eliminating targets
+      cloud count: Sets the number of cloud particles to spawn per kill (1-20)
+      use redstone: Spawns redstone particles when eliminating targets
+      redstone count: Sets the number of redstone particles to spawn per kill (1-20)
+      use snowball: Spawns snowball poof particles when eliminating targets
+      snowball count: Sets the number of snowball poof particles to spawn per kill (1-20)
+      use snow shovel: Spawns snow shovel particles when eliminating targets
+      snow shovel count: Sets the number of snow shovel particles to spawn per kill (1-20)
+      use slime: Spawns slime particles when eliminating targets
+      slime count: Sets the number of slime particles to spawn per kill (1-20)
+      use heart: Spawns heart particles when eliminating targets
+      heart count: Sets the number of heart particles to spawn per kill (1-20)
+      use barrier: Spawns barrier particles when eliminating targets
+      barrier count: Sets the number of barrier particles to spawn per kill (1-20)
+      use item crack: Spawns item crack particles when eliminating targets
+      item crack count: Sets the number of item crack particles to spawn per kill (1-20)
+      use block crack: Spawns block crack particles when eliminating targets
+      block crack count: Sets the number of block crack particles to spawn per kill (1-20)
+      use block dust: Spawns block dust particles when eliminating targets
+      block dust count: Sets the number of block dust particles to spawn per kill (1-20)
+      use water drop: Spawns water drop particles when eliminating targets
+      water drop count: Sets the number of water drop particles to spawn per kill (1-20)
+      use item take: Spawns item take particles when eliminating targets
+      item take count: Sets the number of item take particles to spawn per kill (1-20)
+      use mob appearance: Spawns mob appearance particles when eliminating targets
+      mob appearance count: Sets the number of mob appearance particles to spawn per kill (1-20)
+  cameranoclip:
+    description: Allows the camera to move through blocks in the game world
+    settings: {}
+  freelook:
+    description: Allows the player to freely move their camera around the viewpoint
+    settings:
+      thirdperson: Aktiviert automatisch Third-Person Ansicht
+      disableitinfistperson: Deaktiviert Freelook in First-Person Ansicht
+  brightplayers:
+    description: Makes all players bright ingame
+    settings: {}
+  moreswing:
+    description: Renders fake swings, so it looks like you click with high cps
+    settings:
+      whilekillaura: Triggers swing animation when KillAura is active and has a target
+      whileautoclicker: Triggers swing animation when AutoClicker is running
+      whileleftclick: Triggers swing animation when left mouse button is pressed
+  aspectratio:
+    description: You want to stretch your game? This module makes it possible
+    settings:
+      aspect: Controls the aspect ratio multiplier for screen stretching (1 = normal, lower values = more stretched)
+      hand: Applies the aspect ratio modification to the player's hand rendering when enabled
+  customfireheight:
+    description: Change the fire height when you are burning
+    settings:
+      removefire: Completely removes the fire overlay from your screen when burning
+      fireheight: Sets the vertical height of the fire overlay when burning (-0.7 = very low, 0 = normal height)
+  xray:
+    description: Allows you to see ores and specific blocks through walls
+    settings: {}
+  armorstatus:
+    description: Displays your current armor durability and items on screen
+    settings:
+      posx: Sets the horizontal position of the armor status display on screen (0 = left edge, 100 = right edge)
+      posy: Sets the vertical position of the armor status display on screen (0 = top edge, 100 = bottom edge)
+      scale: Controls the size scaling of the armor status display (0.5 = half size, 4 = quadruple size)
+      durabilitymode: Determines how armor durability is displayed (None = no durability text, Percentage = shows remaining durability as percentage, Absolute = shows remaining durability points)
+      durabilitycolor: Sets the color for the durability text displayed next to armor items
+      background: Enables a background panel behind the armor status display
+      backgroundcolor: Sets the color of the background panel when BackGround is enabled
+      dynamicarmorrendering: Only displays armor slots that contain armor items. When disabled, all 4 armor slots are always shown (even empty ones)
+  minimap:
+    description: Displays a minimap showing your surroundings in 2d topview
+    settings:
+      height: Sets the Y-level height for map rendering (0-255, blocks above this height are ignored)
+      posx: Sets the horizontal position of the minimap on screen (0 = left edge, 100 = right edge)
+      posy: Sets the vertical position of the minimap on screen (0 = top edge, 100 = bottom edge)
+      size: Sets the size of the minimap display in pixels (10-400)
+      scale: Sets the zoom level of the minimap (50 = zoomed in, 400 = zoomed out)
+      blur: Applies blur post-processing effect to the minimap rendering
+      shadow: Applies shadow/bloom post-processing effect to the minimap rendering
+      customshadowcolor: Enables custom shadow color instead of using the default shadow color
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+  skeletonesp:
+    description: Renders skeleton outlines of players and entities to see their pose
+    settings:
+      entities: |
+        Selects which entity types should have skeleton ESP rendered:
+        - MySelf: Render your own skeleton in third-person view
+        - Players: Render skeletons for other players
+        - Mobs: Render skeletons for hostile mobs
+        - Villager: Render skeletons for villagers
+        - Invisible: Render skeletons for invisible entities
+        - Teammates: Render skeletons for teammates
+        - Friends: Render skeletons for friends
+      headlengthadd: Adjusts the head bone length of the skeleton (-1 to 1)
+      armlengthadd: Adjusts the arm bone length of the skeleton (-1 to 1)
+      leglengthadd: Adjusts the leg bone length of the skeleton (-1 to 1)
+      linewidth: Thickness of the skeleton lines (0.1-10)
+      color: Color of the skeleton lines
+      hurtcolorboolean: Enables alternative color when entity is taking damage
+      hurtcolor: Color for skeleton when entity is hurt
+      markmurderer: Highlights murderers in red in Murder Mystery gamemode (Murderfinder module required)
+      custom murderer alpha: Enables custom transparency for murderer highlighting
+      murderer alpha: Alpha transparency value for murderer highlighting (0-255)
+      blur: Applies blur post-processing effect to skeleton rendering
+      shadow: Applies shadow post-processing effect to skeleton rendering
+      shadowcolorboolean: Enables custom shadow color instead of default
+      shadowcolor: Color for the shadow effect
+      hurtshadowcolorboolean: Enables alternative shadow color when entity is hurt
+      hurtshadowcolor: Shadow color when entity is taking damage
+  breakindicator:
+    description: Shows a visual indicator of block breaking progress
+    settings:
+      decimalplaces: Sets the number of decimal places for the percentage display (0 = whole numbers only, 4 = four decimal places)
+      scale: Controls the size scaling of the break indicator display (1 = normal size, 4 = quadruple size)
+      posx: Sets the horizontal position of the break indicator on screen (0 = left edge, 100 = right edge)
+      posy: Sets the vertical position of the break indicator on screen (0 = top edge, 100 = bottom edge)
+      color: Sets the RGB color for the percentage text displayed in the break indicator
+      background: Enables a background rect behind the break indicator for better visibility
+      backgroundcolor: Sets the RGB color and transparency of the background rect when BackGround is enabled
+      blur: Applies blur post-processing effect to the break indicator for a softer appearance
+      shadow: Applies shadow/bloom post-processing effect to the break indicator for enhanced visibility
+      customshadowcolor: Enables custom shadow color for the break indicator instead of using the default shadow color
+      customshadowcolorvalue: Sets the RGB color for the custom shadow effect when CustomShadowColor is enabled
+      toggleanimation: Selects the animation style used when the break indicator appears/disappears (None or various easing functions like easeInOutCubic)
+      animationtime: Sets the duration of the toggle animation in milliseconds (0-1000)
+  blockmarker:
+    description: Highlights and marks specific blocks in the world based on absolute corrdinates
+    settings:
+      scripts: Selects a previously saved block marker script to load and display the marked block locations
+      rendermode: |
+        Controls when marked blocks should be rendered based on their current state:
+        - Same block: Only render if the block at the marked position is still the same type
+        - Different block (not air): Only render if the block has been replaced with a different non-air block
+        - Different block (air): Only render if the block has been removed (air)
+      render distance: Sets the maximum distance in blocks from the player where marked blocks will be rendered (0-200)
+      color: Sets the RGB color and transparency of the overlay highlighting the marked blocks
+      blur: Applies blur post-processing effect to the marked block overlays for a softer appearance
+      shadow: Applies shadow/bloom post-processing effect to the marked block overlays for enhanced visibility
+      open folder: Opens the blockmarker folder where script files are stored and can be managed
+      name of new script: Sets the name for a new block marker script to be created
+      blocks to add to script: Select which block types should be added to the script when scanning the area (multiselection from all Minecraft blocks)
+      radius to fill: Sets the radius around the player in which blocks will be scanned and added to the script (0-200 blocks)
+      create new script: Creates a new block marker script with the currently selected blocks within the specified radius
+      add to selected script: Adds newly scanned blocks within the radius to the currently selected script file
+      delete selected script: Permanently deletes the currently selected block marker script file
+  centeredpotioninventory:
+    description: Centers the potion inventory display on screen
+    settings: {}
+  clientcolor:
+    description: Manages the main client color theme
+    settings: {}
+  cosmetics:
+    description: Adds cosmetics like wings to the client
+    settings:
+      groupstraw hatgroupygroupy: Settings group for configuring the straw hat cosmetic
+      straw hat: Enables the straw hat cosmetic on your player model
+      straw hatscale: Controls the size of the straw hat (0.5 = half size, 1 = normal, 2 = double size)
+      straw hatheight: Adjusts the vertical position of the straw hat (-2 = lower, 0 = default, 2 = higher)
+      straw hatcolor0: Sets the color for the hat part with support for static color, rainbow, and astolfo modes
+      straw hatcolor1: Sets the color for the band part with support for static color, rainbow, and astolfo modes
+      groupquivergroupygroupy: Settings group for configuring the quiver cosmetic
+      quiver: Enables the quiver cosmetic on your player model
+      quiverscale: Controls the size of the quiver (0.5 = half size, 1 = normal, 2 = double size)
+      quiverheight: Adjusts the vertical position of the quiver (-2 = lower, 0 = default, 2 = higher)
+      quivercolor0: Sets the primary color for the quiver with support for static color, rainbow, and astolfo modes
+      quivercolor1: Sets the secondary color for the quiver with support for static color, rainbow, and astolfo modes
+      quivercolor2: Sets the tertiary color for the quiver with support for static color, rainbow, and astolfo modes
+      groupedgy shieldgroupygroupy: Settings group for configuring the edgy shield cosmetic
+      edgy shield: Enables the edgy shield cosmetic on your player model
+      edgy shieldscale: Controls the size of the edgy shield (0.5 = half size, 1 = normal, 2 = double size)
+      edgy shieldheight: Adjusts the vertical position of the edgy shield (-2 = lower, 0 = default, 2 = higher)
+      edgy shieldcolor0: Sets the primary color for the edgy shield with support for static color, rainbow, and astolfo modes
+      edgy shieldcolor1: Sets the secondary color for the edgy shield with support for static color, rainbow, and astolfo modes
+      edgy shieldcolor2: Sets the tertiary color for the edgy shield with support for static color, rainbow, and astolfo modes
+      groupgas maskgroupygroupy: Settings group for configuring the gas mask cosmetic
+      gas mask: Enables the gas mask cosmetic on your player model
+      gas maskscale: Controls the size of the gas mask (0.5 = half size, 1 = normal, 2 = double size)
+      gas maskheight: Adjusts the vertical position of the gas mask (-2 = lower, 0 = default, 2 = higher)
+      gas maskcolor0: Sets the primary color for the gas mask with support for static color, rainbow, and astolfo modes
+      gas maskcolor1: Sets the secondary color for the gas mask with support for static color, rainbow, and astolfo modes
+      gas maskcolor2: Sets the tertiary color for the gas mask with support for static color, rainbow, and astolfo modes
+      groupknight shieldgroupygroupy: Settings group for configuring the knight shield cosmetic
+      knight shield: Enables the knight shield cosmetic on your player model
+      knight shieldscale: Controls the size of the knight shield (0.5 = half size, 1 = normal, 2 = double size)
+      knight shieldheight: Adjusts the vertical position of the knight shield (-2 = lower, 0 = default, 2 = higher)
+      knight shieldcolor0: Sets the primary color for the knight shield with support for static color, rainbow, and astolfo modes
+      knight shieldcolor1: Sets the secondary color for the knight shield with support for static color, rainbow, and astolfo modes
+      knight shieldcolor2: Sets the tertiary color for the knight shield with support for static color, rainbow, and astolfo modes
+      groupcowboy hatgroupygroupy: Settings group for configuring the cowboy hat cosmetic
+      cowboy hat: Enables the cowboy hat cosmetic on your player model
+      cowboy hatscale: Controls the size of the cowboy hat (0.5 = half size, 1 = normal, 2 = double size)
+      cowboy hatheight: Adjusts the vertical position of the cowboy hat (-2 = lower, 0 = default, 2 = higher)
+      cowboy hatcolor0: Sets the color for the hat part with support for static color, rainbow, and astolfo modes
+      cowboy hatcolor1: Sets the color for the band part with support for static color, rainbow, and astolfo modes
+      grouphard-hatgroupygroupy: Settings group for configuring the hard-hat cosmetic
+      hard-hat: Enables the hard-hat cosmetic on your player model
+      hard-hatscale: Controls the size of the hard-hat (0.5 = half size, 1 = normal, 2 = double size)
+      hard-hatheight: Adjusts the vertical position of the hard-hat (-2 = lower, 0 = default, 2 = higher)
+      hard-hatcolor0: Sets the color for the hard-hat with support for static color, rainbow, and astolfo modes
+      groupmecha wingsgroupygroupy: Settings group for configuring the mecha wings cosmetic
+      mecha wings: Enables the mecha wings cosmetic on your player model
+      mecha wingsscale: Controls the size of the mecha wings (0.5 = half size, 1 = normal, 2 = double size)
+      mecha wingsheight: Adjusts the vertical position of the mecha wings (-2 = lower, 0 = default, 2 = higher)
+      mecha wingscolor0: Sets the primary color for the mecha wings with support for static color, rainbow, and astolfo modes
+      mecha wingscolor1: Sets the secondary color for the mecha wings with support for static color, rainbow, and astolfo modes
+      mecha wingscolor2: Sets the tertiary color for the mecha wings with support for static color, rainbow, and astolfo modes
+      groupski gogglesgroupygroupy: Settings group for configuring the ski goggles cosmetic
+      ski goggles: Enables the ski goggles cosmetic on your player model
+      ski gogglesscale: Controls the size of the ski goggles (0.5 = half size, 1 = normal, 2 = double size)
+      ski gogglesheight: Adjusts the vertical position of the ski goggles (-2 = lower, 0 = default, 2 = higher)
+      ski gogglescolor0: Sets the primary color for the ski goggles with support for static color, rainbow, and astolfo modes
+      ski gogglescolor1: Sets the secondary color for the ski goggles with support for static color, rainbow, and astolfo modes
+      ski gogglescolor2: Sets the tertiary color for the ski goggles with support for static color, rainbow, and astolfo modes
+      groupcow hornsgroupygroupy: Settings group for configuring the cow horns cosmetic
+      cow horns: Enables the cow horns cosmetic on your player model
+      cow hornsscale: Controls the size of the cow horns (0.5 = half size, 1 = normal, 2 = double size)
+      cow hornsheight: Adjusts the vertical position of the cow horns (-2 = lower, 0 = default, 2 = higher)
+      cow hornscolor0: Sets the primary color for the cow horns with support for static color, rainbow, and astolfo modes
+      cow hornscolor1: Sets the secondary color for the cow horns with support for static color, rainbow, and astolfo modes
+      grouptactical shieldgroupygroupy: Settings group for configuring the tactical shield cosmetic
+      tactical shield: Enables the tactical shield cosmetic on your player model
+      tactical shieldscale: Controls the size of the tactical shield (0.5 = half size, 1 = normal, 2 = double size)
+      tactical shieldheight: Adjusts the vertical position of the tactical shield (-2 = lower, 0 = default, 2 = higher)
+      tactical shieldcolor0: Sets the primary color for the tactical shield with support for static color, rainbow, and astolfo modes
+      tactical shieldcolor1: Sets the secondary color for the tactical shield with support for static color, rainbow, and astolfo modes
+      tactical shieldcolor2: Sets the tertiary color for the tactical shield with support for static color, rainbow, and astolfo modes
+      tactical shieldcolor3: Sets the quaternary color for the tactical shield with support for static color, rainbow, and astolfo modes
+      groupheadphonesgroupygroupy: Settings group for configuring the headphones cosmetic
+      headphones: Enables the headphones cosmetic on your player model
+      headphonesscale: Controls the size of the headphones (0.5 = half size, 1 = normal, 2 = double size)
+      headphonesheight: Adjusts the vertical position of the headphones (-2 = lower, 0 = default, 2 = higher)
+      headphonescolor0: Sets the primary color for the headphones with support for static color, rainbow, and astolfo modes
+      headphonescolor1: Sets the secondary color for the headphones with support for static color, rainbow, and astolfo modes
+      headphonescolor2: Sets the tertiary color for the headphones with support for static color, rainbow, and astolfo modes
+      groupbackpackgroupygroupy: Settings group for configuring the backpack cosmetic
+      backpack: Enables the backpack cosmetic on your player model
+      backpackscale: Controls the size of the backpack (0.5 = half size, 1 = normal, 2 = double size)
+      backpackheight: Adjusts the vertical position of the backpack (-2 = lower, 0 = default, 2 = higher)
+      backpackcolor0: Sets the primary color for the backpack with support for static color, rainbow, and astolfo modes
+      backpackcolor1: Sets the secondary color for the backpack with support for static color, rainbow, and astolfo modes
+      backpackcolor2: Sets the tertiary color for the backpack with support for static color, rainbow, and astolfo modes
+      groupdragon wingsgroupygroupy: Settings group for configuring the dragon wings cosmetic
+      dragon wings: Enables the dragon wings cosmetic on your player model
+      dragon wingsscale: Controls the size of the dragon wings (0.5 = half size, 1 = normal, 2 = double size)
+      dragon wingsheight: Adjusts the vertical position of the dragon wings (-2 = lower, 0 = default, 2 = higher)
+      dragon wingscolor0: Sets the primary color for the dragon wings with support for static color, rainbow, and astolfo modes
+      dragon wingscolor1: Sets the secondary color for the dragon wings with support for static color, rainbow, and astolfo modes
+      dragon wingscolor2: Sets the tertiary color for the dragon wings with support for static color, rainbow, and astolfo modes
+      groupshark fingroupygroupy: Settings group for configuring the shark fin cosmetic
+      shark fin: Enables the shark fin cosmetic on your player model
+      shark finscale: Controls the size of the shark fin (0.5 = half size, 1 = normal, 2 = double size)
+      shark finheight: Adjusts the vertical position of the shark fin (-2 = lower, 0 = default, 2 = higher)
+      shark fincolor0: Sets the color for the shark fin with support for static color, rainbow, and astolfo modes
+      groupsatellite dishgroupygroupy: Settings group for configuring the satellite dish cosmetic
+      satellite dish: Enables the satellite dish cosmetic on your player model
+      satellite dishscale: Controls the size of the satellite dish (0.5 = half size, 1 = normal, 2 = double size)
+      satellite dishheight: Adjusts the vertical position of the satellite dish (-2 = lower, 0 = default, 2 = higher)
+      satellite dishcolor0: Sets the primary color for the satellite dish with support for static color, rainbow, and astolfo modes
+      satellite dishcolor1: Sets the secondary color for the satellite dish with support for static color, rainbow, and astolfo modes
+      groupsafety vestgroupygroupy: Settings group for configuring the safety vest cosmetic
+      safety vest: Enables the safety vest cosmetic on your player model
+      safety vestscale: Controls the size of the safety vest (0.5 = half size, 1 = normal, 2 = double size)
+      safety vestheight: Adjusts the vertical position of the safety vest (-2 = lower, 0 = default, 2 = higher)
+      safety vestcolor0: Sets the primary color for the safety vest with support for static color, rainbow, and astolfo modes
+      safety vestcolor1: Sets the secondary color for the safety vest with support for static color, rainbow, and astolfo modes
+      grouprounded shieldgroupygroupy: Settings group for configuring the rounded shield cosmetic
+      rounded shield: Enables the rounded shield cosmetic on your player model
+      rounded shieldscale: Controls the size of the rounded shield (0.5 = half size, 1 = normal, 2 = double size)
+      rounded shieldheight: Adjusts the vertical position of the rounded shield (-2 = lower, 0 = default, 2 = higher)
+      rounded shieldcolor0: Sets the primary color for the rounded shield with support for static color, rainbow, and astolfo modes
+      rounded shieldcolor1: Sets the secondary color for the rounded shield with support for static color, rainbow, and astolfo modes
+      rounded shieldcolor2: Sets the tertiary color for the rounded shield with support for static color, rainbow, and astolfo modes
+      groupbunny earsgroupygroupy: Settings group for configuring the bunny ears cosmetic
+      bunny ears: Enables the bunny ears cosmetic on your player model
+      bunny earsscale: Controls the size of the bunny ears (0.5 = half size, 1 = normal, 2 = double size)
+      bunny earsheight: Adjusts the vertical position of the bunny ears (-2 = lower, 0 = default, 2 = higher)
+      bunny earscolor0: Sets the primary color for the bunny ears with support for static color, rainbow, and astolfo modes
+      bunny earscolor1: Sets the secondary color for the bunny ears with support for static color, rainbow, and astolfo modes
+      groupheadlampgroupygroupy: Settings group for configuring the headlamp cosmetic
+      headlamp: Enables the headlamp cosmetic on your player model
+      headlampscale: Controls the size of the headlamp (0.5 = half size, 1 = normal, 2 = double size)
+      headlampheight: Adjusts the vertical position of the headlamp (-2 = lower, 0 = default, 2 = higher)
+      headlampcolor0: Sets the primary color for the headlamp with support for static color, rainbow, and astolfo modes
+      headlampcolor1: Sets the secondary color for the headlamp with support for static color, rainbow, and astolfo modes
+      headlampcolor2: Sets the tertiary color for the headlamp with support for static color, rainbow, and astolfo modes
+      groupkevler vestgroupygroupy: Settings group for configuring the kevler vest cosmetic
+      kevler vest: Enables the kevler vest cosmetic on your player model
+      kevler vestscale: Controls the size of the kevler vest (0.5 = half size, 1 = normal, 2 = double size)
+      kevler vestheight: Adjusts the vertical position of the kevler vest (-2 = lower, 0 = default, 2 = higher)
+      kevler vestcolor0: Sets the color for the kevler vest with support for static color, rainbow, and astolfo modes
+      grouptactical beltgroupygroupy: Settings group for configuring the tactical belt cosmetic
+      tactical belt: Enables the tactical belt cosmetic on your player model
+      tactical beltscale: Controls the size of the tactical belt (0.5 = half size, 1 = normal, 2 = double size)
+      tactical beltheight: Adjusts the vertical position of the tactical belt (-2 = lower, 0 = default, 2 = higher)
+      tactical beltcolor0: Sets the primary color for the tactical belt with support for static color, rainbow, and astolfo modes
+      tactical beltcolor1: Sets the secondary color for the tactical belt with support for static color, rainbow, and astolfo modes
+      tactical beltcolor2: Sets the tertiary color for the tactical belt with support for static color, rainbow, and astolfo modes
+      tactical beltcolor3: Sets the quaternary color for the tactical belt with support for static color, rainbow, and astolfo modes
+      grouphalogroupygroupy: Settings group for configuring the halo cosmetic
+      halo: Enables the halo cosmetic on your player model
+      haloscale: Controls the size of the halo (0.5 = half size, 1 = normal, 2 = double size)
+      haloheight: Adjusts the vertical position of the halo (-2 = lower, 0 = default, 2 = higher)
+      halocolor0: Sets the color for the halo with support for static color, rainbow, and astolfo modes
+      grouptop hatgroupygroupy: Settings group for configuring the top hat cosmetic
+      top hat: Enables the top hat cosmetic on your player model
+      top hatscale: Controls the size of the top hat (0.5 = half size, 1 = normal, 2 = double size)
+      top hatheight: Adjusts the vertical position of the top hat (-2 = lower, 0 = default, 2 = higher)
+      top hatcolor0: Sets the color for the hat part with support for static color, rainbow, and astolfo modes
+      top hatcolor1: Sets the color for the band part with support for static color, rainbow, and astolfo modes
+  customguibackgroundcolor:
+    description: Customizes the background color of GUI screens
+    settings:
+      guis: |
+        Select which GUI screens should have custom background colors applied:
+        - ClickGui: Apply to the client's ClickGui interface
+        - Inventory: Apply to inventory and creative mode screens
+        - EscapeMenu: Apply to the pause/escape menu
+        - OtherMenus: Apply to all other GUI screens not covered above
+      clickguigroupygroupy: Settings group for configuring ClickGui background customization
+      clickguicolor: Sets the RGB color and transparency for the ClickGui background
+      clickguiblur: Applies blur post-processing effect to the ClickGui background
+      inventorygroupygroupy: Settings group for configuring inventory background customization
+      inventorycolor: Sets the RGB color and transparency for the inventory background
+      inventoryblur: Applies blur post-processing effect to the inventory background
+      escapemenugroupygroupy: Settings group for configuring escape menu background customization
+      escapemenucolor: Sets the RGB color and transparency for the escape menu background
+      escapemenublur: Applies blur post-processing effect to the escape menu background
+      othermenusgroupygroupy: Settings group for configuring other menus background customization
+      othermenuscolor: Sets the RGB color and transparency for other menus backgrounds
+      othermenusblur: Applies blur post-processing effect to other menus backgrounds
+  customhurtcam:
+    description: Customizes the camera shake effect when taking damage
+    settings:
+      removehurtcamatdeath: Disables the hurt camera shake effect when your health reaches zero or you die
+      strength: Controls the intensity of the camera shake when taking damage (-35 = inverted strong shake, 0 = no shake, 35 = very strong shake)
+  debuginformation:
+    description: Displays debug information for development and testing
+    settings:
+      debug information: |
+        Select which debug information should be displayed on screen:
+        - FPS: Frames per second
+        - Ping: Network latency to server
+        - CPS: Clicks per second
+        - PosX: X coordinate position
+        - PosY: Y coordinate position
+        - PosZ: Z coordinate position
+        - BPS: Blocks per second movement speed
+        - RX: Packets received per second
+        - TX: Packets transmitted per second
+        - Download: Download bandwidth usage
+        - Upload: Upload bandwidth usage
+        - Date: Current date
+        - Time: Current time
+      scale: Controls the size scaling of the debug information display (0.5 = half size, 4 = quadruple size)
+      posx: Sets the horizontal position of the debug information on screen (0 = left edge, 100 = right edge)
+      posy: Sets the vertical position of the debug information on screen (0 = top edge, 100 = bottom edge)
+      fontshadow: Enables shadow rendering behind the text for better readability
+      leftcolor: Sets the RGB color for the labels displayed before values (e.g. "FPS:", "Ping:")
+      rightcolor: Sets the RGB color for the actual values displayed after labels (e.g. the numbers)
+  healthdisplay:
+    description: Shows health information of the player on screen
+    settings:
+      scale: Controls the size scaling of the health display (0.5 = half size, 4 = quadruple size)
+      posx: Sets the horizontal position of the health display on screen (0 = left edge, 100 = right edge)
+      posy: Sets the vertical position of the health display on screen (0 = top edge, 100 = bottom edge)
+      decimalplaces: Sets the number of decimal places shown for the health value (0 = whole numbers only, 3 = three decimals)
+      spacing: Controls the horizontal spacing between the health number and the heart icon (0-10)
+      fontshadow: Enables text shadow for both the health value and heart icon for better readability
+      textcolor: Sets the RGB color for the health value text
+      heartcolor: Sets the RGB color for the heart icon (❤)
+  modelrenderer:
+    description: Renders your player model into your gui overlay
+    settings:
+      renderarmor: Enables rendering of armor pieces on the displayed player model
+      targets: |
+        Select which players should have their model replaced:
+        - Me: Replace your own player model
+        - Players: Replace other players' models
+  motionblur:
+    description: Adds motion blur effect to the game for smoother visuals (nvidia only)
+    settings:
+      frame multiplier: Controls the blur intensity by affecting how much previous frames are retained
+      additional frame precision: Adds fine-tuned precision to the frame multiplier calculation
+      brightness: Adjusts the brightness level of the motion blur effect (50 = normal)
+      only when focused: Only applies motion blur when the game window isa ctive
+  particles:
+    description: Spawns particles under you while walking
+    settings: {}
+  pfadfinder:
+    description: Advanced pathfinding module to walk to enemies
+    settings:
+      auto targetgroupygroupy: Group header for automatic target settings
+      auto target: Automatically selects and walks to valid targets
+      targets: |
+        Select which entity types should be considered as valid targets:
+        - Player: Target other players
+        - Mob: Target hostile mobs
+        - Animal: Target passive animals
+        - Villager: Target villagers
+        - Invisible: Target invisible entities
+        - Sleeping: Target sleeping players
+      choose target by path length: Selects the target with the shortest path instead of shortest direct distance
+      max considered targets: Maximum number of targets to evaluate simultaneously when choosing by path length (2-5)
+      murder mystery: Special mode for Murder Mystery minigame that targets gold ingots or murderers
+      max searchtime per tick: Maximum time in milliseconds spent on pathfinding calculations per tick (2-40)
+      max steps: Maximum number of search iterations before giving up on finding a path (1-20)
+      ticks between searches: Number of ticks to wait between pathfinding recalculations (0-20)
+      max fall height: Maximum height in blocks the pathfinder is allowed to fall (1-255)
+      discourage falldamage: Avoids paths that would cause fall damage by increasing their cost
+      discourage falldamage factor: Factor for penalizing paths with fall damage (1 = maximum penalty, 100 = no penalty)
+      pick target: Key binding to manually select a target entity or position by looking at it
+      reset picked target: Key binding to clear the manually selected target and return to automatic targeting
+      path color: Sets the RGB color for rendering the calculated path line
+      target color: Sets the RGB color for highlighting the target entity or position
+  notifications:
+    description: Handles rendering of in-game notifications
+    settings:
+      blur: Applies blur post-processing effect to notification rendering for a softer appearance
+      avoidduplications: Prevents duplicate notifications from appearing, instead showing a counter for repeated messages
+      position: |
+        Sets the screen position where notifications appear:
+        - Top right: Notifications slide in from top-right corner
+        - Top left: Notifications slide in from top-left corner
+        - Bottom right: Notifications slide in from bottom-right corner
+        - Bottom left: Notifications slide in from bottom-left corner
+      duplicatetime: Sets the time window in seconds for grouping duplicate notifications (0-1)
+      showduration: Sets how long notifications remain visible on screen in seconds (0-10)
+      speed: Controls the animation speed of notification slide-in/out transitions (1 = slow, 10 = fast)
+      groupcolormode: |
+        Selects the color mode for notification group text:
+        - Client color: Uses the client's theme color
+        - Notification type: Uses color based on notification type (info, warning, error)
+        - Fade: Color fades from red to green based on time remaining
+        - Blank: Uses gray color
+      progresscolormode: |
+        Selects the color mode for notification progress bar:
+        - Client color: Uses the client's theme color
+        - Notification type: Uses color based on notification type (info, warning, error)
+        - Fade: Color fades from red to green based on time remaining
+        - Blank: Uses gray color
+      notificationtypes: |
+        Select which notification types should be displayed:
+        - ModuleToggles: Show notifications when modules are toggled on/off
+        - LevelSystem: Show level-up and achievement notifications
+        - ConfigSystem: Show config load/save notifications
+        - BeverageNotification: Show notifications for the BeverageNotify module
+        - EnderPearlNotification: Show notifications for the EnderPearlNotify module
+        - VanishNotification: Show notifications for the StaffDetector module
+  swinganimation:
+    description: Customizes the arm swing animation
+    settings: {}
+combat:
+  velocity:
+    description: Modifies the knockback you get
+    settings:
+      mode: Here you can select the diffrent velocity modes
+      xzvelocityinair: Sets your xz-velocity if you are in the air
+      yvelocityinair: Sets your y-velocity if you are in the air
+      cancelair: Cancel you velocity in the air
+      xzvelocityonground: Sets your xz-velocity if you are on ground
+      yvelocityonground: Sets your y-velocity if you are on ground
+      cancelground: Cancel your velocity on the ground
+      explosion: Cancel explosion packets (needed on Hypixel)
+      xzmotioninair: Sets your xz-motion in the air
+      xzmotiononground: Sets your xz-motion on the ground
+      jumpininv: Jump in your inventory or other gui screens
+      lag: Here you can set the delay in milliseconds how long should incoming packets
+        be delayed after hit
+      hitbug: Turns off the damage sound of the opponents
+  antibot:
+    description: Prevents anticheat bots from being attacked
+    settings: {}
+  teams:
+    description: Autofriending your teammates
+    settings: {}
+  autosoup:
+    description: Automatically consumes healing soup/bowls to regenerate health during
+      combat
+    settings: {}
+  autopot:
+    description: Automatically throws health potions during combat to regenerate health
+    settings: {}
+  antifireball:
+    description: Provides protection against fireball attacks
+    settings: {}
+  timerrange:
+    description: Performs mini teleports to increase your range
+    settings: {}
+  criticals:
+    description: Enhances critical hits during combat, increasing damage dealt to
+      opponents
+    settings: {}
+  morekb:
+    description: Amplifies knockback effect on opponents during combat, launching
+      them farther away (W-Tap)
+    settings:
+      modes: Here you can select the mode the MoreKB module is W-Tapping
+      hidesneakanimation: This option hides the sneak animation in first person
+      fov: |
+          180 Fov: W-Tap every time
+          90 Fov: W-Tap only if target is looking on you
+          0 Fov: W-Tap never
+      timinggroupygroupy: You can set here when you want to W-Tap
+      sprintresettime: The tick delay to W-Tap after successful hit on target
+      sprintresettimenotinarow: Don't have the same W-Tap tick delays in a row
+      durationgroupygroupy: Here you can set how long you want to W-Tap
+      sprintresetticks: The ticks how long you W-Tap
+      sprintresetticksnotinarow: Don't have the same W-Tap durations in a row
+      doubleresetgroupygroupy: Here you can adjust whether you want to double W-Tap
+        between two hits
+      doublesprintreset: Enable or disable double W-Taps
+      doubleresettiming: The tick delay to W-Tap after successful hit on target
+      doubleresetdelay: The tick delay between double W-Taps
+      failgroupygroupy: Here you can adjust whether you want to fail W-Tap between
+        two hits
+      failsprintreset: Enable or disable W-Tap misses
+      faildelay: The delay in ticks between the W-Tap fails
+      failduration: The ticks how long you want to fail your W-Tap
+  killaura:
+    description: Automatically attacks nearby entities during combat
+    settings:
+      rangegroupygroupy: This is the range group. Here you can find every setting
+        related to range
+      preaimrange: Here you can set the distance to the target the Killaura starts
+        to aim
+      range: Here you can set the distance for hitting targets
+      rangemode: Here you can select different modes for range calculation
+      yawfov: The horizontal field of view of the KillAura attacking opponents (0
+        - 180)
+      pitchfov: The vertical field of view of the KillAura attacking opponents (0
+        - 180)
+      yawspeed: The horizontal aim speed of the KillAura
+      pitchspeed: The vertical aim speed of the KillAura
+      yawacceleration: The max horizontal acceleration speed of the KillAura
+      pitchacceleration: The max vertical acceleration speed of the KillAura
+      throughwalls: Hits entities through a wall
+      longclick: Makes clicking more legit. To have no disadvantage enable "HitDelayFix"
+        in "Fixes" module
+  autogapple:
+    description: Automatically consumes golden apples during combat for regeneration
+      and damage reduction
+    settings: {}
+  bowaimbot:
+    description: Aims automatically with the bow
+    settings: {}
+  timerrangev2:
+    description: Second version on timerrange with better prediction
+    settings: {}
+  keepsprint:
+    description: Automatically maintains the sprinting state during combat
+    settings: {}
+  lagrange:
+    description: Performs mini teleports to increase your range, but in the other
+      way around as Timerrange/TimerrangeV2
+    settings: {}
+  backtrack:
+    description: Allows the player to attack opponents in the past by temporarily
+      delaying their positions
+    settings: {}
+  tntblock:
+    description: Automatically blocks with your sword when TNT is about to explode near you
+    settings: {}
+  gommemode:
+    description: Automatically switches to the best sword in your hotbar after hitting an enemy (pickenswitch)
+    settings: {}
+  silentmurder:
+    description: Kills players without the others noticing (Hypixel)
+    settings: {}
+  tpaura:
+    description: Teleports to nearby targets and attacks them automatically within a large distance
+    settings: {}
+  targetarea:
+    description: Defines a specific coordinate area where targets can not be attacked
+    settings: {}
+  movehelper:
+    description: Assists with movement optimization during combat including combo breaker and auto jump
+    settings: {}
+  projectileaimbot:
+    description: Automatically aims projectiles like snowballs and eggs at targets
+    settings: {}
+legit:
+  hitbox:
+    description: Modifies hitbox size of players and entities
+    settings: {}
+  aimbot:
+    description: Assists with aiming at opponents in a legitimate manner, providing
+      slight aim assistance
+    settings: {}
+  aimassist:
+    description: Assists with aiming at opponents in a legitimate manner, providing
+      slight aim assistance
+    settings: {}
+  range:
+    description: Sets the attack or build range
+    settings: {}
+  autorod:
+    description: Thorws a rod automatically on enemies to knock them back
+    settings: {}
+  autowater:
+    description: Automatically places water if you are looking under you and you are
+      burning or falling
+    settings: {}
+  autoeagle:
+    description: Automatically uses the Eagle Tacktik
+    settings: {}
+  mlghelper:
+    description: Assists the player in performing successful MLG (Major League Gaming)
+      water bucket jumps
+    settings: {}
+  inventoryclicker:
+    description: Automatically clicks in your inventory with customizable CPS to manage items quickly
+    settings: {}
+  autoblock:
+    description: Automatically blocks with your sword when enemies are nearby for protection
+    settings: {}
+  newautorod:
+    description: Advanced automatic fishing rod throwing system with prediction and targeting
+    settings: {}
+  throwrod:
+    description: Throws fishing rods at enemies automatically based on distance and timing
+    settings: {}
+  throwpot:
+    description: Automatically throws potions by pressing configured hotkeys for each potion type
+    settings: {}
+  perfecthit:
+    description: Only clicks when you can actually hit a target for optimal hit registration
+    settings: {}
+  smartclicking:
+    description: Intelligently manages click timing based on hurt time and combat situations for reduced velocity
+    settings: {}
+  refill:
+    description: Refills soups
+    settings: {}
+  autoclicker:
+    description: Automatically clicks for you
+    settings:
+      mode: Here you can select the AutoClicker mode you want to use
+      cpslimiter: Limits your cps to a specific maximum value
+      cpslimiterintave: Limits your cps, so that intave does not detect it. Disables
+        the CPSLimiter slider above
+      deviationdoubleclick: Enables or disables the ability to perform a double click
+        on a target
+      advancedcps: The clicks per second the autoclicker clicks
+      advancedcpsrecalculatedelay: The delay the CPS gets recalculated
+      spikes: Enable CPS spikes in your cps for a specific durations with a specific
+        delay
+      drops: Enable CPS drops in your cps for a specific durations with a specific
+        delay
+      reducehitsinair: Reduce the CPS if you are on no entity. This multiplier applies
+        on the CPS
+      reducerecalculatedelay: The delay the ReduceMultiplier gets recalculated
+      reducemultiplier: The reduce multiplier of the CPS if you are on no entity
+      hurttimestohit: Here you can select the different HurtTimes of the target you
+        want to hit. I recommend to let all enabled
+      smartclicking: Smart clicking pauses to reduce CPS without any disadvantage
+      clickpattern: Here you can select your click pattern. You can record patterns
+        with ".clicker" in chat
+      recordedmode: Use "TimeMillis" for randomization and "Ticks" for an accurate
+        replay of your clicks
+      multiplier: Multiply your recorded CPS to increase or decrease them
+      recordedairmultiplier: Multiply your recorded CPS only in air to increase or
+        decrease them
+      critfix: Hits if you can get a crit hit
+      longclick: Makes clicking more legit. To have no disadvantage enable "HitDelayFix"
+        in "Fixes" module
+movement:
+  sprint:
+    description: Enables automatic sprinting while moving in the game
+    settings: {}
+  jesus:
+    description: Allows the player to walk on water or other liquid surfaces
+    settings: {}
+  noslow:
+    description: Prevents or reduces the slowdown effect caused by certain actions
+    settings: {}
+  speed:
+    description: Increases the player's movement speed, allowing them to travel faster
+    settings: {}
+  timer:
+    description: Modifies the in-game timer to speed up or slow down the game
+    settings: {}
+  strafe:
+    description: Optimizing the player's lateral movement
+    settings: {}
+  blink:
+    description: Fakes internet lag
+    settings: {}
+  fly:
+    description: Fly wie ein Pelikan
+    settings: {}
+  bugup:
+    description: Setbacks you to your last onground position
+    settings: {}
+  targetstrafe:
+    description: Let you strafe around the target in a circle
+    settings: {}
+  fastladder:
+    description: Increases the player's climbing speed on ladders or other climbable
+      surfaces
+    settings: {}
+  spider:
+    description: Allows the player to climb walls like a spider
+    settings: {}
+  noweb:
+    description: Disables or prevents the slowing effect caused by cobwebs or spider
+      webs
+    settings: {}
+  booster:
+    description: Usable in combination with Timemanipulation module
+    settings: {}
+  step:
+    description: Allows the player to step up blocks higher than the usual limit
+    settings: {}
+  longjump:
+    description: Increases the jumping distance of the player so that he can overcome
+      greater distances
+    settings: {}
+  vclip:
+    description: Allows the player to clip through blocks
+    settings: {}
+  safewalk:
+    description: Provides the sneak stop without sneaking
+    settings: {}
+  highjump:
+    description: Increases the player's jumping height, enabling them to reach higher
+      places
+    settings: {}
+  parkour:
+    description: Automatically jumps at edges of blocks
+    settings: {}
+  freecam:
+    description: Enables the player to detach from their character and freely navigate
+      the game world as a spectator or observer
+    settings: {}
+  sneak:
+    description: Removes slowdown from sneaking
+    settings: {}
+  nojumpdelay:
+    description: Removes the delay between consecutive jumps, allowing the player
+      to jump rapidly
+    settings: {}
+  jumponslime:
+    description: Jumps on a slime
+    settings: {}
+  clip:
+    description: Old intave Clip (Fixed right now)
+    settings: {}
+  savemovekeys:
+    description: Automatically retoggles your movekeys after closing the inventory
+    settings: {}
+  motionmodifier:
+    description: Modifies the player's movement speed, acceleration, or other attributes
+      for enhanced maneuverability. You can create custom speeds/flys with that
+    settings: {}
+  explosionmodifier:
+    description: Modifies the player's movement when affected by explosions
+    settings: {}
+  pulseblink:
+    description: Same like blink, but in intervalls
+    settings: {}
+  headhitter:
+    description: Automatically jumps for you under a block to increase movement speed
+    settings: {}
+  movementrecorder:
+    description: Records and replays your movement patterns for automation or analysis
+    settings: {}
+  autowalk:
+    description: Automatically moves the player character forward without the need
+      for continuous input
+    settings: {}
+  arrowdodger:
+    description: Automatically dodges incoming arrows by predicting their trajectory
+    settings: {}
+  autojump:
+    description: Automatically jumps when encountering specific blocks like stairs or slabs
+    settings: {}
+  faststop:
+    description: Stops player movement faster than normal for better control
+    settings: {}
+  snaptap:
+    description: Simulates snap tap keyboard functionality for movement optimization
+    settings: {}
+player:
+  nofall:
+    description: Prevents/reduces fall damage to the player when landing from heights
+    settings: {}
+  cheststealer:
+    description: Automatically steals items from chests
+    settings: {}
+  guimove:
+    description: Allows the player to move in guis
+    settings: {}
+  autotool:
+    description: Automatically selects the best tool or weapon from the player's inventory
+      breaking blocks or attacking
+    settings: {}
+  teleport:
+    description: Enables the player character to teleport to specific locations or
+      coordinates within the game world
+    settings: {}
+  phase:
+    description: Allows the player character to pass through block
+    settings: {}
+  regen:
+    description: Increases the player character's health or regeneration rate for
+      faster healing
+    settings: {}
+  norotationset:
+    description: Prevents the server from setting the player's rotation
+    settings: {}
+  airstuck:
+    description: Allows the player character to remain suspended in the air without
+      falling
+    settings: {}
+  chestaura:
+    description: Automatically opens nearby chests within a certain range
+    settings: {}
+  fastuse:
+    description: Speeds up the player's item usage, such as eating food or drinking
+      potions
+    settings: {}
+  anticactus:
+    description: Prevents the player character from taking damage when touching cactus
+      blocks
+    settings: {}
+  antifire:
+    description: Protects the player character from fire damage
+    settings: {}
+  autorespawn:
+    description: Automatically respawns the player character upon death without the
+      need for manual intervention
+    settings: {}
+  autoenderpearl:
+    description: Automatically throws an ender pearl for teleportation when falling
+      into void (buggy and laggy)
+    settings: {}
+  reverseautoarmor:
+    description: Removes armor from the players armorslots
+    settings: {}
+  crafter:
+    description: Automates the crafting process from armor and swords
+    settings: {}
+  selfdamage:
+    description: Let's hurt yourself
+    settings: {}
+  invmanager:
+    description: Automatically manages and organizes your inventory by sorting and dropping items
+    settings: {}
+  noscreenclosing:
+    description: Prohibits the sever from closing your screen
+    settings: {}
+  autoeat:
+    description: Automatically eats food for you when you are hungry
+    settings: {}
+  xcarry:
+    description: Allows you to carry items in crafting slots without losing them
+    settings: {}
+  antihunger:
+    description: Reduces hunger consumption by modifying ground state packets
+    settings: {}
+  stealer:
+    description: Automatically steals items from chests with various modes and customizable delays (new version of ChestStealer)
+    settings: {}
+  autouse:
+    description: Automatically uses items based on missing potion effects
+    settings: {}
+  autowater:
+    description: Automatically places water buckets if you look at a block under you if needed
+    settings: {}
+  autoextinguish:
+    description: Automatically extinguishes fire on the player
+    settings: {}
+  combatpearl:
+    description: Automatically throws ender pearls if the enemie throws one the the enemies pearl location
+    settings: {}
+  norotateset:
+    description: Prevents the server from forcing rotation changes on the player
+    settings: {}
+world:
+  fastbreak:
+    description: Increases the speed at which blocks can be broken
+    settings: {}
+  fucker:
+    description: Breaks blocks
+    settings: {}
+  fastplace:
+    description: Autoclicker for rightclicking
+    settings: {}
+  scaffold:
+    description: Automatically places blocks under you
+    settings: {}
+  nominingtrace:
+    description: Mine through entities
+    settings: {}
+  noplacedelay:
+    description: Allow you to place more than one block per tick
+    settings: {}
+  smartraytrace:
+    description: Apply the raytracing between ticks to get impossible block placements
+    settings: {}
+misc:
+  radio:
+    description: Time to listen to radio
+    settings: {}
+  midclick:
+    description: The friends module. Add and remove friends with midclick
+    settings: {}
+  autoplay:
+    description: Automatically performs certain actions without user input
+    settings: {}
+  autoregister:
+    description: Automatically registers on cracked servers
+    settings: {}
+  fixes:
+    description: Implements fixes for various issues within the game for a better
+      ingame experience
+    settings: {}
+  debug:
+    description: Provides some information for debug purposes
+    settings: {}
+  staffdetector:
+    description: Detects staff members or moderators on servers
+    settings: {}
+  flagdetector:
+    description: Detects server teleports and marks them as anticheat flags
+    settings: {}
+  clientanticheat:
+    description: Dont use it!
+    settings: {}
+  autodisable:
+    description: Automatically disables modules after respawning
+    settings: {}
+  antiachievement:
+    description: Hide the achievement popups
+    settings: {}
+  timemanipulation:
+    description: Manipulates the flow of time within the game environment
+    settings: {}
+  antiafk:
+    description: Prevents the player character from being flagged as AFK (Away From
+      Keyboard) or idle
+    settings: {}
+  exploitfixer:
+    description: Fixes some exploits in Minecraft
+    settings: {}
+  packethandler:
+    description: Handles incoming and outgoing network packets for Blink, Pulseblink,
+      Backtrack, etc.
+    settings: {}
+  disabler:
+    description: Some exploits to disable anticheats
+    settings: {}
+  autoleave:
+    description: Automatically leaves servers or lobbies after a certain condition
+    settings: {}
+  panic:
+    description: Disables all modules
+    settings: {}
+  nodiscordrpc:
+    description: Disables the Discord Rich Presence integration
+    settings: {}
+  openauthmod:
+    description: Enables OpenAuth authentication system for cracked servers
+    settings: {}
+  clientspoofer:
+    description: Spoofs the player's client to appear as a different client
+    settings: {}
+  ping:
+    description: Creates a constant latency between the player and the game server
+    settings: {}
+  fakegamemode:
+    description: Sets you to a clientside only gamemode
+    settings: {}
+  murdererfinder:
+    description: Finds murders on Hypixel in the gamemode "Murder Mystery"
+    settings: {}
+  rotationhandler:
+    description: Change mousesenitivity fix and provides an option for smooth back
+      rotation
+    settings: {}
+  commandprefix:
+    description: Change the abstractCommand prefix
+    settings: {}
+  clientsettings:
+    description: Change settings from the client behavior
+    settings: {}
+  irc:
+    description: Enables IRC functionality to to see other client users
+    settings: {}
+  ircchat:
+    description: Enables the ability to chat with other client users (.irc command)
+    settings: {}
+  baritone:
+    description: Integration with Baritone pathfinding bot for automated navigation
+    settings: {}
+  protocolversion:
+    description: Allows you to load ViaVersion Minecraft protocol versions from configs
+    settings: {}
+  aquamessenger:
+    description: Messaging system for communication between client users with LCAs Aqua IRC
+    settings: {}
+  autoreconnect:
+    description: Automatically reconnects to servers after disconnect or timeout
+    settings: {}
+  beveragenotification:
+    description: Sends notifications related to beverage consumption in-game
+    settings: {}
+  enderpearlnotification:
+    description: Notifies you when ender pearls are thrown or land
+    settings: {}
+  murderfinder:
+    description: Identifies murderers in Murder Mystery games on Hypixel
+    settings: {}
+  portalscreens:
+    description: Allowes you to open your inventory or other guis in portals
+    settings: {}
+  rawmouseinput:
+    description: Enables raw mouse input for more precise aiming (Does not work with track pads)
+    settings: {}
+  serverpinger:
+    description: Proviedes more information about servers in the server connecting gui
+    settings:
+      serverwidgetgroupygroupy: Group containing server widget display settings
+      serverwidgetenabled: Enables the server ping display widget
+      pingdelay: Sets the delay between server pings in milliseconds
+      color: Sets the text color for the server widget
+      backgroundcolor: Sets the background color for the server widget
+      ipinfogroupygroupy: Group containing IP information display settings
+      ipinfoenabled: Enables the IP information display
+      textcolor: Sets the text color for IP information
+      boxcolor: Sets the background color for IP information box
+      backend: Selects the backend service used for IP lookups
+      playergraphgroupygroupy: Group containing player count graph settings
+      playergraphenabled: Enables the player count graph display
+      maxentries: Sets the maximum number of data points stored in the player graph
+      keepplayerdata: Keeping the player count data for the graph after closing the multiplayer menu
+fun:
+  autojumpandrun:
+    description: Automatically completes the gomme jump and run with the wool blocks
+      in the waiting lobbies
+    settings: {}
+  partyspammer:
+    description: Disturb others with unnecessary party requests.
+    settings: {}
+  shufflemode:
+    description: Time to turn on the shufflemode that never ends...
+    settings: {}
+  autoreport:
+    description: Automatically reports all of your last round (GommeHD)
+    settings: {}
+  spinbot:
+    description: Spin me right now baby right now
+    settings: {}
+  killmessage:
+    description: Sends a message after killing another player
+    settings: {}
+  friendfinder:
+    description: Let's find friends on GommeHD
+    settings:
+      invitedelay: The friend invite delay
+      hidefriendmessage: Hide the friend add message in ingame chat
+  lag:
+    description: Old GommeHD server lagger (patched right now)
+    settings:
+      lagtogglekey: The key you start the lag
+  spammer:
+    description: Spamms messages
+    settings:
+      tickdelay: The delay between the spammer message
+  mlg:
+    description: Turn on MLG mode and get crazy in the game
+    settings: {}
+  deathcommand:
+    description: Automatically executes configured commands when you die
+    settings: {}
+  friendspammer:
+    description: Spams friend requests to players (made for gomme)
+    settings: {}
+  hotkeys:
+    description: Allows you to bind custom chat messages or commands to hotkeys
+    settings: {}
+  skinderp:
+    description: Automatically switches between different skins or blinks skin layers rapidly
+    settings: {}

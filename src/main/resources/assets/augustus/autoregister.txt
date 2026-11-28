@@ -1,0 +1,4 @@
+# Add your accounts for autoregister here if you don't want Augustus to generate them for you
+# If a username can't be found here, Augustus will still generate a password for you
+# Use username:password as format (use \: if you want to use : in your password)
+# This file will be reloaded everytime autoregister gets enabled (including on clientstart)

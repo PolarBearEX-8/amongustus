@@ -1,0 +1,43 @@
+# Gradle
+/.gradle/
+/.jvmdg/
+/build/
+/out/
+/target/
+
+# Minecraft / Client runtime
+/run/
+/ViaVersion/
+/augustus/
+/logs/
+/crash-reports/
+/screenshots/
+/saves/
+/config/
+options.txt
+optionsof.txt
+
+# Logs & crash dumps
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS / Temp
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Reference copies may contain client certificate/key stores; keep them local.
+/reference/**/certificates/

@@ -1,0 +1,1660 @@
+[
+  {
+    "name": "Teams",
+    "category": "COMBAT",
+    "original_class": "net/47C2",
+    "readable_class": "augustus/modules/combat/Teams",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "TntBlock",
+    "category": "COMBAT",
+    "original_class": "net/47C8",
+    "readable_class": "augustus/modules/combat/TntBlock",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "TimerRange",
+    "category": "LATENCY",
+    "original_class": "net/47CE",
+    "readable_class": "augustus/modules/latency/TimerRange",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "SpinBot",
+    "category": "FUN",
+    "original_class": "net/47CR",
+    "readable_class": "augustus/modules/fun/SpinBot",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "KeepSprint",
+    "category": "COMBAT",
+    "original_class": "net/47CS",
+    "readable_class": "augustus/modules/combat/KeepSprint",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Range",
+    "category": "LEGIT",
+    "original_class": "net/47CT",
+    "readable_class": "augustus/modules/legit/Range",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "HitBox",
+    "category": "LEGIT",
+    "original_class": "net/47CX",
+    "readable_class": "augustus/modules/legit/HitBox",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "SilentMurder",
+    "category": "COMBAT",
+    "original_class": "net/47Cj",
+    "readable_class": "augustus/modules/combat/SilentMurder",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Criticals",
+    "category": "COMBAT",
+    "original_class": "net/47Co",
+    "readable_class": "augustus/modules/combat/Criticals",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "DeathCommand",
+    "category": "FUN",
+    "original_class": "net/47Cp",
+    "readable_class": "augustus/modules/fun/DeathCommand",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "GommeMode",
+    "category": "COMBAT",
+    "original_class": "net/47Cr",
+    "readable_class": "augustus/modules/combat/GommeMode",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "TargetArea",
+    "category": "COMBAT",
+    "original_class": "net/47Cs",
+    "readable_class": "augustus/modules/combat/TargetArea",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "HUD",
+    "category": "RENDER",
+    "original_class": "net/47H2",
+    "readable_class": "augustus/modules/render/HUD",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CustomItemPos",
+    "category": "RENDER",
+    "original_class": "net/47H4",
+    "readable_class": "augustus/modules/render/CustomItemPos",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "SwingAnimation",
+    "category": "RENDER",
+    "original_class": "net/47H6",
+    "readable_class": "augustus/modules/render/SwingAnimation",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "InvisMode",
+    "category": "RENDER",
+    "original_class": "net/47H8",
+    "readable_class": "augustus/modules/render/InvisMode",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "FastBreak",
+    "category": "WORLD",
+    "original_class": "net/47HA",
+    "readable_class": "augustus/modules/world/FastBreak",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoBob",
+    "category": "RENDER",
+    "original_class": "net/47HB",
+    "readable_class": "augustus/modules/render/NoBob",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "TntESP",
+    "category": "RENDER",
+    "original_class": "net/47HC",
+    "readable_class": "augustus/modules/render/TntESP",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CustomGlint",
+    "category": "RENDER",
+    "original_class": "net/47HD",
+    "readable_class": "augustus/modules/render/CustomGlint",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Protector",
+    "category": "RENDER",
+    "original_class": "net/47HE",
+    "readable_class": "augustus/modules/render/Protector",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "EntityColor",
+    "category": "RENDER",
+    "original_class": "net/47HF",
+    "readable_class": "augustus/modules/render/EntityColor",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CustomFireHeight",
+    "category": "RENDER",
+    "original_class": "net/47HG",
+    "readable_class": "augustus/modules/render/CustomFireHeight",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Notifications",
+    "category": "RENDER",
+    "original_class": "net/47HJ",
+    "readable_class": "augustus/modules/render/Notifications",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "2DItems",
+    "category": "RENDER",
+    "original_class": "net/47HL",
+    "readable_class": "augustus/modules/render/Items2D",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoArmorOverlay",
+    "category": "RENDER",
+    "original_class": "net/47HM",
+    "readable_class": "augustus/modules/render/NoArmorOverlay",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "RenderPotion",
+    "category": "RENDER",
+    "original_class": "net/47HN",
+    "readable_class": "augustus/modules/render/RenderPotion",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Model",
+    "category": "RENDER",
+    "original_class": "net/47HP",
+    "readable_class": "augustus/modules/render/Model",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NameTags",
+    "category": "RENDER",
+    "original_class": "net/47HR",
+    "readable_class": "augustus/modules/render/NameTags",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Emojify",
+    "category": "RENDER",
+    "original_class": "net/47HU",
+    "readable_class": "augustus/modules/render/Emojify",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CustomSkin",
+    "category": "RENDER",
+    "original_class": "net/47HV",
+    "readable_class": "augustus/modules/render/CustomSkin",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Shadow",
+    "category": "RENDER",
+    "original_class": "net/47HW",
+    "readable_class": "augustus/modules/render/Shadow",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoBlockParticles",
+    "category": "RENDER",
+    "original_class": "net/47Ha",
+    "readable_class": "augustus/modules/render/NoBlockParticles",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CustomCamera",
+    "category": "RENDER",
+    "original_class": "net/47Hb",
+    "readable_class": "augustus/modules/render/CustomCamera",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "FullBright",
+    "category": "RENDER",
+    "original_class": "net/47Hh",
+    "readable_class": "augustus/modules/render/FullBright",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CustomHurtCam",
+    "category": "RENDER",
+    "original_class": "net/47Hi",
+    "readable_class": "augustus/modules/render/CustomHurtCam",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Freelook",
+    "category": "RENDER",
+    "original_class": "net/47Hj",
+    "readable_class": "augustus/modules/render/Freelook",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Tracers",
+    "category": "RENDER",
+    "original_class": "net/47Hk",
+    "readable_class": "augustus/modules/render/Tracers",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoMiningTrace",
+    "category": "WORLD",
+    "original_class": "net/47Hl",
+    "readable_class": "augustus/modules/world/NoMiningTrace",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Scoreboard",
+    "category": "RENDER",
+    "original_class": "net/47Hm",
+    "readable_class": "augustus/modules/render/Scoreboard",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CustomName",
+    "category": "RENDER",
+    "original_class": "net/47Ho",
+    "readable_class": "augustus/modules/render/CustomName",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "KeyStrokes",
+    "category": "RENDER",
+    "original_class": "net/47Hp",
+    "readable_class": "augustus/modules/render/KeyStrokes",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Particle",
+    "category": "RENDER",
+    "original_class": "net/47Hq",
+    "readable_class": "augustus/modules/render/Particle",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CustomZoom",
+    "category": "RENDER",
+    "original_class": "net/47Hr",
+    "readable_class": "augustus/modules/render/CustomZoom",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "FovArrows",
+    "category": "RENDER",
+    "original_class": "net/47Ht",
+    "readable_class": "augustus/modules/render/FovArrows",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "LegacyAnimations",
+    "category": "RENDER",
+    "original_class": "net/47Hu",
+    "readable_class": "augustus/modules/render/LegacyAnimations",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "FovModifier",
+    "category": "RENDER",
+    "original_class": "net/47Hv",
+    "readable_class": "augustus/modules/render/FovModifier",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ModelRenderer",
+    "category": "RENDER",
+    "original_class": "net/47Hw",
+    "readable_class": "augustus/modules/render/ModelRenderer",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MoreSwing",
+    "category": "RENDER",
+    "original_class": "net/47Hx",
+    "readable_class": "augustus/modules/render/MoreSwing",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MiniMap",
+    "category": "RENDER",
+    "original_class": "net/47Hy",
+    "readable_class": "augustus/modules/render/MiniMap",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "FastPlace",
+    "category": "WORLD",
+    "original_class": "net/47Hz",
+    "readable_class": "augustus/modules/world/FastPlace",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AntiFireBall",
+    "category": "COMBAT",
+    "original_class": "net/47Oz",
+    "readable_class": "augustus/modules/combat/AntiFireBall",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AspectRatio",
+    "category": "RENDER",
+    "original_class": "net/47Q0",
+    "readable_class": "augustus/modules/render/AspectRatio",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Timer",
+    "category": "MOVEMENT",
+    "original_class": "net/47Q1",
+    "readable_class": "augustus/modules/movement/Timer",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Barriers",
+    "category": "RENDER",
+    "original_class": "net/47Q5",
+    "readable_class": "augustus/modules/render/Barriers",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "BrightPlayers",
+    "category": "RENDER",
+    "original_class": "net/47Q6",
+    "readable_class": "augustus/modules/render/BrightPlayers",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CameraNoClip",
+    "category": "RENDER",
+    "original_class": "net/47Q7",
+    "readable_class": "augustus/modules/render/CameraNoClip",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoRotationSet",
+    "category": "PLAYER",
+    "original_class": "net/47Q9",
+    "readable_class": "augustus/modules/player/NoRotationSet",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CustomClientColor",
+    "category": "RENDER",
+    "original_class": "net/47QA",
+    "readable_class": "augustus/modules/render/CustomClientColor",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Chat",
+    "category": "RENDER",
+    "original_class": "net/47QC",
+    "readable_class": "augustus/modules/render/Chat",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "BlockAnimation",
+    "category": "RENDER",
+    "original_class": "net/47QE",
+    "readable_class": "augustus/modules/render/BlockAnimation",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoExtinguish",
+    "category": "PLAYER",
+    "original_class": "net/47QF",
+    "readable_class": "augustus/modules/player/AutoExtinguish",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Xcarry",
+    "category": "PLAYER",
+    "original_class": "net/47QK",
+    "readable_class": "augustus/modules/player/Xcarry",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AntiInvisibles",
+    "category": "RENDER",
+    "original_class": "net/47QM",
+    "readable_class": "augustus/modules/render/AntiInvisibles",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Chams",
+    "category": "RENDER",
+    "original_class": "net/47QO",
+    "readable_class": "augustus/modules/render/Chams",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AntiBlind",
+    "category": "RENDER",
+    "original_class": "net/47QR",
+    "readable_class": "augustus/modules/render/AntiBlind",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ClickGui",
+    "category": "RENDER",
+    "original_class": "net/47QT",
+    "readable_class": "augustus/modules/render/ClickGui",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AntiFire",
+    "category": "PLAYER",
+    "original_class": "net/47QV",
+    "readable_class": "augustus/modules/player/AntiFire",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Blur",
+    "category": "RENDER",
+    "original_class": "net/47QW",
+    "readable_class": "augustus/modules/render/Blur",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CenteredPotionInventory",
+    "category": "RENDER",
+    "original_class": "net/47QX",
+    "readable_class": "augustus/modules/render/CenteredPotionInventory",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AntiStrike",
+    "category": "RENDER",
+    "original_class": "net/47Qa",
+    "readable_class": "augustus/modules/render/AntiStrike",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Sprint",
+    "category": "MOVEMENT",
+    "original_class": "net/47Qb",
+    "readable_class": "augustus/modules/movement/Sprint",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Ambiance",
+    "category": "RENDER",
+    "original_class": "net/47Qd",
+    "readable_class": "augustus/modules/render/Ambiance",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Child",
+    "category": "RENDER",
+    "original_class": "net/47Qk",
+    "readable_class": "augustus/modules/render/Child",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "BreakIndicator",
+    "category": "RENDER",
+    "original_class": "net/47Qn",
+    "readable_class": "augustus/modules/render/BreakIndicator",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AntiCactus",
+    "category": "PLAYER",
+    "original_class": "net/47Qo",
+    "readable_class": "augustus/modules/player/AntiCactus",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ArrowHitboxes",
+    "category": "RENDER",
+    "original_class": "net/47Qq",
+    "readable_class": "augustus/modules/render/ArrowHitboxes",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AntiHunger",
+    "category": "PLAYER",
+    "original_class": "net/47Qr",
+    "readable_class": "augustus/modules/player/AntiHunger",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoRespawn",
+    "category": "PLAYER",
+    "original_class": "net/47Qt",
+    "readable_class": "augustus/modules/player/AutoRespawn",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoScreenClosing",
+    "category": "PLAYER",
+    "original_class": "net/47Qu",
+    "readable_class": "augustus/modules/player/NoScreenClosing",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Coordinates",
+    "category": "RENDER",
+    "original_class": "net/47Qz",
+    "readable_class": "augustus/modules/render/Coordinates",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "SmartRaytrace",
+    "category": "WORLD",
+    "original_class": "net/47TG",
+    "readable_class": "augustus/modules/world/SmartRaytrace",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoLeave",
+    "category": "MISC",
+    "original_class": "net/47k1",
+    "readable_class": "augustus/modules/misc/AutoLeave",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "FastLadder",
+    "category": "MOVEMENT",
+    "original_class": "net/47k5",
+    "readable_class": "augustus/modules/movement/FastLadder",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "LongJump",
+    "category": "MOVEMENT",
+    "original_class": "net/47k6",
+    "readable_class": "augustus/modules/movement/LongJump",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MotionModifier",
+    "category": "MOVEMENT",
+    "original_class": "net/47k7",
+    "readable_class": "augustus/modules/movement/MotionModifier",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Panic",
+    "category": "MISC",
+    "original_class": "net/47k9",
+    "readable_class": "augustus/modules/misc/Panic",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "SnapTap",
+    "category": "MOVEMENT",
+    "original_class": "net/47kA",
+    "readable_class": "augustus/modules/movement/SnapTap",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "SafeWalk",
+    "category": "MOVEMENT",
+    "original_class": "net/47kH",
+    "readable_class": "augustus/modules/movement/SafeWalk",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Booster",
+    "category": "MOVEMENT",
+    "original_class": "net/47kI",
+    "readable_class": "augustus/modules/movement/Booster",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "FreeCam",
+    "category": "MOVEMENT",
+    "original_class": "net/47kJ",
+    "readable_class": "augustus/modules/movement/FreeCam",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoDiscordRPC",
+    "category": "MISC",
+    "original_class": "net/47kL",
+    "readable_class": "augustus/modules/misc/NoDiscordRPC",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "HeadHitter",
+    "category": "MOVEMENT",
+    "original_class": "net/47kN",
+    "readable_class": "augustus/modules/movement/HeadHitter",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoJumpDelay",
+    "category": "MOVEMENT",
+    "original_class": "net/47kO",
+    "readable_class": "augustus/modules/movement/NoJumpDelay",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "RotationHandler",
+    "category": "MISC",
+    "original_class": "net/47kP",
+    "readable_class": "augustus/modules/misc/RotationHandler",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Parkour",
+    "category": "MOVEMENT",
+    "original_class": "net/47kQ",
+    "readable_class": "augustus/modules/movement/Parkour",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ClientAntiCheat",
+    "category": "MISC",
+    "original_class": "net/47kS",
+    "readable_class": "augustus/modules/misc/ClientAntiCheat",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "BeverageNotify",
+    "category": "MISC",
+    "original_class": "net/47kV",
+    "readable_class": "augustus/modules/misc/BeverageNotify",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Jesus",
+    "category": "MOVEMENT",
+    "original_class": "net/47kW",
+    "readable_class": "augustus/modules/movement/Jesus",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ExplosionModifier",
+    "category": "MOVEMENT",
+    "original_class": "net/47kZ",
+    "readable_class": "augustus/modules/movement/ExplosionModifier",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoJump",
+    "category": "MOVEMENT",
+    "original_class": "net/47ka",
+    "readable_class": "augustus/modules/movement/AutoJump",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AntiAchievement",
+    "category": "MISC",
+    "original_class": "net/47kb",
+    "readable_class": "augustus/modules/misc/AntiAchievement",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AquaMessenger",
+    "category": "MISC",
+    "original_class": "net/47ke",
+    "readable_class": "augustus/modules/misc/AquaMessenger",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "FakeGamemode",
+    "category": "MISC",
+    "original_class": "net/47kh",
+    "readable_class": "augustus/modules/misc/FakeGamemode",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "HighJump",
+    "category": "MOVEMENT",
+    "original_class": "net/47km",
+    "readable_class": "augustus/modules/movement/HighJump",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Baritone",
+    "category": "MISC",
+    "original_class": "net/47ko",
+    "readable_class": "augustus/modules/misc/Baritone",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "OpenAuthMod",
+    "category": "MISC",
+    "original_class": "net/47kp",
+    "readable_class": "augustus/modules/misc/OpenAuthMod",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Fixes",
+    "category": "MISC",
+    "original_class": "net/47ks",
+    "readable_class": "augustus/modules/misc/Fixes",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ProtocolVersion",
+    "category": "MISC",
+    "original_class": "net/47ku",
+    "readable_class": "augustus/modules/misc/ProtocolVersion",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "EnderPearlNotify",
+    "category": "MISC",
+    "original_class": "net/47kv",
+    "readable_class": "augustus/modules/misc/EnderPearlNotify",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "RawMouseInput",
+    "category": "MISC",
+    "original_class": "net/47ky",
+    "readable_class": "augustus/modules/misc/RawMouseInput",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CustomCape",
+    "category": "RENDER",
+    "original_class": "net/47He",
+    "readable_class": "augustus/modules/render/CustomCape",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "KillAura",
+    "category": "COMBAT",
+    "original_class": "net/47CY",
+    "readable_class": "augustus/modules/combat/KillAura",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Scaffold",
+    "category": "WORLD",
+    "original_class": "net/47Te",
+    "readable_class": "augustus/modules/world/Scaffold",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "TargetHud",
+    "category": "RENDER",
+    "original_class": "net/47HO",
+    "readable_class": "augustus/modules/render/TargetHud",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AimAssist",
+    "category": "LEGIT",
+    "original_class": "net/47Cm",
+    "readable_class": "augustus/modules/legit/AimAssist",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AimBot",
+    "category": "LEGIT",
+    "original_class": "net/47O_",
+    "readable_class": "augustus/modules/legit/AimBot",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AirStuck",
+    "category": "PLAYER",
+    "original_class": "net/47Q4",
+    "readable_class": "augustus/modules/player/AirStuck",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AntiAFK",
+    "category": "MISC",
+    "original_class": "net/47Cl",
+    "readable_class": "augustus/modules/misc/AntiAFK",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AntiBot",
+    "category": "COMBAT",
+    "original_class": "net/47CG",
+    "readable_class": "augustus/modules/combat/AntiBot",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ArmorStatus",
+    "category": "RENDER",
+    "original_class": "net/47QB",
+    "readable_class": "augustus/modules/render/ArmorStatus",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ArrayList",
+    "category": "RENDER",
+    "original_class": "net/47QI",
+    "readable_class": "augustus/modules/render/ArrayList",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ArrowDodger",
+    "category": "MOVEMENT",
+    "original_class": "net/47kM",
+    "readable_class": "augustus/modules/movement/ArrowDodger",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AttackEffects",
+    "category": "RENDER",
+    "original_class": "net/47QZ",
+    "readable_class": "augustus/modules/render/AttackEffects",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoBlock",
+    "category": "LEGIT",
+    "original_class": "net/47CW",
+    "readable_class": "augustus/modules/legit/AutoBlock",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoClicker",
+    "category": "LEGIT",
+    "original_class": "net/47Cn",
+    "readable_class": "augustus/modules/legit/AutoClicker",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoDisable",
+    "category": "MISC",
+    "original_class": "net/47kG",
+    "readable_class": "augustus/modules/misc/AutoDisable",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoEagle",
+    "category": "LEGIT",
+    "original_class": "net/47C6",
+    "readable_class": "augustus/modules/legit/AutoEagle",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoEat",
+    "category": "PLAYER",
+    "original_class": "net/47QY",
+    "readable_class": "augustus/modules/player/AutoEat",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoEnderPearl",
+    "category": "PLAYER",
+    "original_class": "net/47QU",
+    "readable_class": "augustus/modules/player/AutoEnderPearl",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoGapple",
+    "category": "COMBAT",
+    "original_class": "net/47CD",
+    "readable_class": "augustus/modules/combat/AutoGapple",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoJumpAndRun",
+    "category": "FUN",
+    "original_class": "net/47Cg",
+    "readable_class": "augustus/modules/fun/AutoJumpAndRun",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoPlay",
+    "category": "MISC",
+    "original_class": "net/47ki",
+    "readable_class": "augustus/modules/misc/AutoPlay",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoPot",
+    "category": "COMBAT",
+    "original_class": "net/47C1",
+    "readable_class": "augustus/modules/combat/AutoPot",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoRegister",
+    "category": "MISC",
+    "original_class": "net/47k4",
+    "readable_class": "augustus/modules/misc/AutoRegister",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoReport",
+    "category": "FUN",
+    "original_class": "net/47CL",
+    "readable_class": "augustus/modules/fun/AutoReport",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoRod",
+    "category": "LEGIT",
+    "original_class": "net/47C7",
+    "readable_class": "augustus/modules/legit/AutoRod",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoRodNew",
+    "category": "LEGIT",
+    "original_class": "net/47Ck",
+    "readable_class": "augustus/modules/legit/AutoRodNew",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoSoup",
+    "category": "COMBAT",
+    "original_class": "net/47Ci",
+    "readable_class": "augustus/modules/combat/AutoSoup",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoTool",
+    "category": "PLAYER",
+    "original_class": "net/47Qv",
+    "readable_class": "augustus/modules/player/AutoTool",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoWalk",
+    "category": "MOVEMENT",
+    "original_class": "net/47Cb",
+    "readable_class": "augustus/modules/movement/AutoWalk",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "AutoWater",
+    "category": "LEGIT",
+    "original_class": "net/47Qj",
+    "readable_class": "augustus/modules/legit/AutoWater",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "BackTrack",
+    "category": "LATENCY",
+    "original_class": "net/47Ca",
+    "readable_class": "augustus/modules/latency/BackTrack",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Blink",
+    "category": "LATENCY",
+    "original_class": "net/47CB",
+    "readable_class": "augustus/modules/latency/Blink",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "BlockESP",
+    "category": "RENDER",
+    "original_class": "net/47QJ",
+    "readable_class": "augustus/modules/render/BlockESP",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "BlockOverlay",
+    "category": "RENDER",
+    "original_class": "net/47QN",
+    "readable_class": "augustus/modules/render/BlockOverlay",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "BlockTraceESP",
+    "category": "RENDER",
+    "original_class": "net/47Qm",
+    "readable_class": "augustus/modules/render/BlockTraceESP",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "BowAimbot",
+    "category": "COMBAT",
+    "original_class": "net/47C4",
+    "readable_class": "augustus/modules/combat/BowAimbot",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "BugUp",
+    "category": "MOVEMENT",
+    "original_class": "net/47kq",
+    "readable_class": "augustus/modules/movement/BugUp",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ChestAura",
+    "category": "PLAYER",
+    "original_class": "net/47Qh",
+    "readable_class": "augustus/modules/player/ChestAura",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ChestStealer",
+    "category": "PLAYER",
+    "original_class": "net/47Qs",
+    "readable_class": "augustus/modules/player/ChestStealer",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ChinaHat",
+    "category": "RENDER",
+    "original_class": "net/47QQ",
+    "readable_class": "augustus/modules/render/ChinaHat",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ChunkAnimator",
+    "category": "RENDER",
+    "original_class": "net/47QH",
+    "readable_class": "augustus/modules/render/ChunkAnimator",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ClientSettings",
+    "category": "MISC",
+    "original_class": "net/47kr",
+    "readable_class": "augustus/modules/misc/ClientSettings",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ClientSpoofer",
+    "category": "MISC",
+    "original_class": "net/47kY",
+    "readable_class": "augustus/modules/misc/ClientSpoofer",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Clip",
+    "category": "MOVEMENT",
+    "original_class": "net/47k0",
+    "readable_class": "augustus/modules/movement/Clip",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CombatPearl",
+    "category": "PLAYER",
+    "original_class": "net/47Q2",
+    "readable_class": "augustus/modules/player/CombatPearl",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Cosmetics",
+    "category": "RENDER",
+    "original_class": "net/47Q_",
+    "readable_class": "augustus/modules/render/Cosmetics",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Crafter",
+    "category": "PLAYER",
+    "original_class": "net/47Qf",
+    "readable_class": "augustus/modules/player/Crafter",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Crosshair",
+    "category": "RENDER",
+    "original_class": "net/47Ql",
+    "readable_class": "augustus/modules/render/Crosshair",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "CustomGuiBGColor",
+    "category": "RENDER",
+    "original_class": "net/47H1",
+    "readable_class": "augustus/modules/render/CustomGuiBGColor",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Debug",
+    "category": "MISC",
+    "original_class": "net/47kF",
+    "readable_class": "augustus/modules/misc/Debug",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "DebugInformation",
+    "category": "RENDER",
+    "original_class": "net/47HS",
+    "readable_class": "augustus/modules/render/DebugInformation",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Disabler",
+    "category": "MISC",
+    "original_class": "net/47kt",
+    "readable_class": "augustus/modules/misc/Disabler",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ESP",
+    "category": "RENDER",
+    "original_class": "net/47HY",
+    "readable_class": "augustus/modules/render/ESP",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ExploitFixer",
+    "category": "MISC",
+    "original_class": "net/47kj",
+    "readable_class": "augustus/modules/misc/ExploitFixer",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "FastUse",
+    "category": "PLAYER",
+    "original_class": "net/47Q8",
+    "readable_class": "augustus/modules/player/FastUse",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "FlagDetector",
+    "category": "MISC",
+    "original_class": "net/47k2",
+    "readable_class": "augustus/modules/misc/FlagDetector",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Fly",
+    "category": "MOVEMENT",
+    "original_class": "net/47kE",
+    "readable_class": "augustus/modules/movement/Fly",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "FriendFinder",
+    "category": "FUN",
+    "original_class": "net/47C9",
+    "readable_class": "augustus/modules/fun/FriendFinder",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Fucker",
+    "category": "WORLD",
+    "original_class": "net/47Ce",
+    "readable_class": "augustus/modules/world/Fucker",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "GoldSpawnTimer",
+    "category": "RENDER",
+    "original_class": "net/47Hs",
+    "readable_class": "augustus/modules/render/GoldSpawnTimer",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "GuiMove",
+    "category": "PLAYER",
+    "original_class": "net/47Qc",
+    "readable_class": "augustus/modules/player/GuiMove",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Hotbar",
+    "category": "RENDER",
+    "original_class": "net/47Hf",
+    "readable_class": "augustus/modules/render/Hotbar",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "InvManager",
+    "category": "PLAYER",
+    "original_class": "net/47QL",
+    "readable_class": "augustus/modules/player/InvManager",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "InventoryClicker",
+    "category": "LEGIT",
+    "original_class": "net/47CO",
+    "readable_class": "augustus/modules/legit/InventoryClicker",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ItemESP",
+    "category": "RENDER",
+    "original_class": "net/47Hc",
+    "readable_class": "augustus/modules/render/ItemESP",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ItemPhysics",
+    "category": "RENDER",
+    "original_class": "net/47Hg",
+    "readable_class": "augustus/modules/render/ItemPhysics",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "KillEffects",
+    "category": "RENDER",
+    "original_class": "net/47H9",
+    "readable_class": "augustus/modules/render/KillEffects",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "KillMessage",
+    "category": "FUN",
+    "original_class": "net/47C3",
+    "readable_class": "augustus/modules/fun/KillMessage",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Lag",
+    "category": "FUN",
+    "original_class": "net/47Cy",
+    "readable_class": "augustus/modules/fun/Lag",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "LagRange",
+    "category": "LATENCY",
+    "original_class": "net/47CI",
+    "readable_class": "augustus/modules/latency/LagRange",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Line",
+    "category": "RENDER",
+    "original_class": "net/47H3",
+    "readable_class": "augustus/modules/render/Line",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MLG",
+    "category": "FUN",
+    "original_class": "net/47CP",
+    "readable_class": "augustus/modules/fun/MLG",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MLGHelper",
+    "category": "LEGIT",
+    "original_class": "net/47CC",
+    "readable_class": "augustus/modules/legit/MLGHelper",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MidClick",
+    "category": "MISC",
+    "original_class": "net/47kc",
+    "readable_class": "augustus/modules/misc/MidClick",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MoreKB",
+    "category": "COMBAT",
+    "original_class": "net/47CU",
+    "readable_class": "augustus/modules/combat/MoreKB",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MotionBlur",
+    "category": "RENDER",
+    "original_class": "net/47HK",
+    "readable_class": "augustus/modules/render/MotionBlur",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MoveCircles",
+    "category": "RENDER",
+    "original_class": "net/47Hd",
+    "readable_class": "augustus/modules/render/MoveCircles",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MoveHelper",
+    "category": "COMBAT",
+    "original_class": "net/47CF",
+    "readable_class": "augustus/modules/combat/MoveHelper",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MovementRecorder",
+    "category": "MOVEMENT",
+    "original_class": "net/47kX",
+    "readable_class": "augustus/modules/movement/MovementRecorder",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MurdererFinder",
+    "category": "MISC",
+    "original_class": "net/47kg",
+    "readable_class": "augustus/modules/misc/MurdererFinder",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "MysteryBox",
+    "category": "MISC",
+    "original_class": "net/47kD",
+    "readable_class": "augustus/modules/misc/MysteryBox",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoFall",
+    "category": "PLAYER",
+    "original_class": "net/47Qp",
+    "readable_class": "augustus/modules/player/NoFall",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoPlaceDelay",
+    "category": "WORLD",
+    "original_class": "net/47Tb",
+    "readable_class": "augustus/modules/world/NoPlaceDelay",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoSlow",
+    "category": "MOVEMENT",
+    "original_class": "net/47kC",
+    "readable_class": "augustus/modules/movement/NoSlow",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "NoWeb",
+    "category": "MOVEMENT",
+    "original_class": "net/47kk",
+    "readable_class": "augustus/modules/movement/NoWeb",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "OldNotification",
+    "category": "RENDER",
+    "original_class": "net/47HI",
+    "readable_class": "augustus/modules/render/OldNotification",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "PacketHandler",
+    "category": "LATENCY",
+    "original_class": "net/47Cq",
+    "readable_class": "augustus/modules/latency/PacketHandler",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "PartySpammer",
+    "category": "FUN",
+    "original_class": "net/47Cw",
+    "readable_class": "augustus/modules/fun/PartySpammer",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Pathfinder",
+    "category": "RENDER",
+    "original_class": "net/47HZ",
+    "readable_class": "augustus/modules/render/Pathfinder",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "PerfectHit",
+    "category": "LEGIT",
+    "original_class": "net/47CH",
+    "readable_class": "augustus/modules/legit/PerfectHit",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Phase",
+    "category": "PLAYER",
+    "original_class": "net/47Q3",
+    "readable_class": "augustus/modules/player/Phase",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Ping",
+    "category": "LATENCY",
+    "original_class": "net/47C0",
+    "readable_class": "augustus/modules/latency/Ping",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ProjectileAimBot",
+    "category": "COMBAT",
+    "original_class": "net/47Ct",
+    "readable_class": "augustus/modules/combat/ProjectileAimBot",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Projectiles",
+    "category": "RENDER",
+    "original_class": "net/47H5",
+    "readable_class": "augustus/modules/render/Projectiles",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "PulseBlink",
+    "category": "LATENCY",
+    "original_class": "net/47CZ",
+    "readable_class": "augustus/modules/latency/PulseBlink",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Refill",
+    "category": "LEGIT",
+    "original_class": "net/47CA",
+    "readable_class": "augustus/modules/legit/Refill",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Regen",
+    "category": "PLAYER",
+    "original_class": "net/47Qy",
+    "readable_class": "augustus/modules/player/Regen",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ReverseAutoArmor",
+    "category": "PLAYER",
+    "original_class": "net/47QP",
+    "readable_class": "augustus/modules/player/ReverseAutoArmor",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "RotationRecorder",
+    "category": "MISC",
+    "original_class": "net/47kw",
+    "readable_class": "augustus/modules/misc/RotationRecorder"
+  },
+  {
+    "name": "RotationRenderer",
+    "category": "MISC",
+    "original_class": "net/47kx",
+    "readable_class": "augustus/modules/misc/RotationRenderer",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "SaveMoveKeys",
+    "category": "MOVEMENT",
+    "original_class": "net/47kT",
+    "readable_class": "augustus/modules/movement/SaveMoveKeys",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "SelfDamage",
+    "category": "PLAYER",
+    "original_class": "net/47Qw",
+    "readable_class": "augustus/modules/player/SelfDamage",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ServerPinger",
+    "category": "RENDER",
+    "original_class": "net/47kK",
+    "readable_class": "augustus/modules/render/ServerPinger",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ShuffleMode",
+    "category": "FUN",
+    "original_class": "net/47CK",
+    "readable_class": "augustus/modules/fun/ShuffleMode",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "SmartClicking",
+    "category": "LEGIT",
+    "original_class": "net/47Cz",
+    "readable_class": "augustus/modules/legit/SmartClicking",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Sneak",
+    "category": "MOVEMENT",
+    "original_class": "net/47kz",
+    "readable_class": "augustus/modules/movement/Sneak",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Spammer",
+    "category": "FUN",
+    "original_class": "net/47Cd",
+    "readable_class": "augustus/modules/fun/Spammer",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Speed",
+    "category": "MOVEMENT",
+    "original_class": "net/47k_",
+    "readable_class": "augustus/modules/movement/Speed",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Spider",
+    "category": "MOVEMENT",
+    "original_class": "net/47kl",
+    "readable_class": "augustus/modules/movement/Spider",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "StaffDetector",
+    "category": "MISC",
+    "original_class": "net/47kd",
+    "readable_class": "augustus/modules/misc/StaffDetector",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Step",
+    "category": "MOVEMENT",
+    "original_class": "net/47Qe",
+    "readable_class": "augustus/modules/movement/Step",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "StorageESP",
+    "category": "RENDER",
+    "original_class": "net/47Hn",
+    "readable_class": "augustus/modules/render/StorageESP",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Strafe",
+    "category": "MOVEMENT",
+    "original_class": "net/47QG",
+    "readable_class": "augustus/modules/movement/Strafe",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "TPAura",
+    "category": "COMBAT",
+    "original_class": "net/47Ch",
+    "readable_class": "augustus/modules/combat/TPAura",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "TabList",
+    "category": "RENDER",
+    "original_class": "net/47H7",
+    "readable_class": "augustus/modules/render/TabList",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "TargetESP",
+    "category": "RENDER",
+    "original_class": "net/47HX",
+    "readable_class": "augustus/modules/render/TargetESP",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "TargetStrafe",
+    "category": "MOVEMENT",
+    "original_class": "net/47QD",
+    "readable_class": "augustus/modules/movement/TargetStrafe",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Teleport",
+    "category": "PLAYER",
+    "original_class": "net/47Qx",
+    "readable_class": "augustus/modules/player/Teleport",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "ThrowPots",
+    "category": "LEGIT",
+    "original_class": "net/47C_",
+    "readable_class": "augustus/modules/legit/ThrowPots",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "TimeManipulation",
+    "category": "MISC",
+    "original_class": "net/47kR",
+    "readable_class": "augustus/modules/misc/TimeManipulation",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "TimerRangeV2",
+    "category": "LATENCY",
+    "original_class": "net/47CJ",
+    "readable_class": "augustus/modules/latency/TimerRangeV2",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Trajectories",
+    "category": "RENDER",
+    "original_class": "net/47HQ",
+    "readable_class": "augustus/modules/render/Trajectories",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "VClip",
+    "category": "MOVEMENT",
+    "original_class": "net/47Qi",
+    "readable_class": "augustus/modules/movement/VClip",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "Velocity",
+    "category": "COMBAT",
+    "original_class": "net/47Cc",
+    "readable_class": "augustus/modules/combat/Velocity",
+    "source_implemented_bridge_methods": []
+  },
+  {
+    "name": "XRay",
+    "category": "RENDER",
+    "original_class": "net/47HH",
+    "readable_class": "augustus/modules/render/XRay",
+    "source_implemented_bridge_methods": []
+  }
+]

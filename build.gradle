@@ -1,0 +1,711 @@
+import org.gradle.internal.os.OperatingSystem
+
+plugins {
+    id 'java'
+    id 'idea'
+    id 'eclipse'
+}
+
+group = 'net.augustus'
+version = 'b4.23.3'
+
+def currentOs = OperatingSystem.current()
+def osClassifier = currentOs.isWindows() ? 'windows' : (currentOs.isMacOsX() ? 'osx' : 'linux')
+def jfxClassifier = currentOs.isWindows() ? 'win' : (currentOs.isMacOsX() ? 'mac' : 'linux')
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Minecraft'
+        url = uri('https://libraries.minecraft.net/')
+        content {
+            includeGroup 'com.mojang'
+            includeGroup 'com.ibm.icu'
+            includeGroup 'com.paulscode'
+            includeGroup 'org.lwjgl.lwjgl'
+        }
+    }
+    maven {
+        name = 'ViaVersion'
+        url = uri('https://repo.viaversion.com')
+    }
+    maven {
+        name = 'Lenni0451'
+        url = uri('https://maven.lenni0451.net/releases')
+    }
+    maven {
+        name = 'Wagyourtail'
+        url = uri('https://maven.wagyourtail.xyz/releases')
+    }
+}
+
+configurations {
+    natives
+    jvmdgTool {
+        canBeResolved = true
+        canBeConsumed = false
+        attributes {
+            attribute(TargetJvmVersion.TARGET_JVM_VERSION_ATTRIBUTE, 21)
+        }
+    }
+    java8Downgrade {
+        canBeResolved = true
+        canBeConsumed = false
+        attributes {
+            attribute(TargetJvmVersion.TARGET_JVM_VERSION_ATTRIBUTE, 21)
+        }
+    }
+}
+
+def downgradedDepsDir = layout.buildDirectory.dir('downgraded-deps')
+
+def downgradeJava8Deps = tasks.register('downgradeJava8Deps') {
+    group = 'build'
+    description = 'Downgrades Java 11+/17+ Gradle dependencies (ViaVersion, OpenJFX) to Java 8 bytecode.'
+    inputs.files(configurations.java8Downgrade)
+    outputs.dir(downgradedDepsDir)
+
+    doLast {
+        def outDir = downgradedDepsDir.get().asFile
+        outDir.mkdirs()
+        def jvmdgWorkDir = layout.buildDirectory.dir('tmp/jvmdg').get().asFile
+        jvmdgWorkDir.mkdirs()
+
+        def inputFiles = configurations.java8Downgrade.resolve()
+        def extraCp = configurations.compileClasspath.resolve().findAll { !it.absolutePath.startsWith(outDir.absolutePath) }
+        def allCp = (inputFiles + extraCp).unique()
+        def expectedNames = new HashSet<String>()
+        def cpString = allCp.collect { it.absolutePath }.join(File.pathSeparator)
+
+        inputFiles.each { File jarFile ->
+            if (!jarFile.name.endsWith('.jar')) {
+                return
+            }
+            def outName = jarFile.name.replace('.jar', '-java8.jar')
+            expectedNames.add(outName)
+            def outFile = new File(outDir, outName)
+            if (!outFile.exists() || outFile.lastModified() < jarFile.lastModified()) {
+                javaexec {
+                    workingDir = jvmdgWorkDir
+                    classpath = configurations.jvmdgTool
+                    mainClass = 'xyz.wagyourtail.jvmdg.compile.ZipDowngrader'
+                    jvmArgs '-Djava.util.concurrent.ForkJoinPool.common.parallelism=1'
+                    args '52', jarFile.absolutePath, outFile.absolutePath, cpString
+                }
+            }
+        }
+
+        outDir.listFiles()?.each { File existing ->
+            if (!expectedNames.contains(existing.name)) {
+                existing.delete()
+            }
+        }
+    }
+}
+
+dependencies {
+    // Compile-time annotations & Lombok
+    compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
+    compileOnly 'org.jetbrains:annotations:24.0.1'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+    // Minecraft 1.8.9 standard libraries
+    implementation 'com.mojang:authlib:1.5.21'
+    implementation 'com.ibm.icu:icu4j-core-mojang:51.2'
+    implementation 'com.paulscode:codecjorbis:20101023'
+    implementation 'com.paulscode:codecwav:20101023'
+    implementation 'com.paulscode:libraryjavasound:20101123'
+    implementation 'com.paulscode:librarylwjglopenal:20100824'
+    implementation 'com.paulscode:soundsystem:20120107'
+    implementation 'org.jcraft:jorbis:0.0.17'
+
+    implementation 'org.lwjgl.lwjgl:lwjgl:2.9.4-nightly-20150209'
+    implementation 'org.lwjgl.lwjgl:lwjgl_util:2.9.4-nightly-20150209'
+    natives "org.lwjgl.lwjgl:lwjgl-platform:2.9.4-nightly-20150209:natives-${osClassifier}"
+    runtimeOnly "org.lwjgl.lwjgl:lwjgl-platform:2.9.4-nightly-20150209:natives-${osClassifier}"
+
+    implementation('net.java.jinput:jinput:2.0.9') {
+        exclude group: 'net.java.jinput', module: 'jinput-platform'
+    }
+    natives "net.java.jinput:jinput:2.0.9:natives-all"
+    runtimeOnly "net.java.jinput:jinput:2.0.9:natives-all"
+    implementation 'net.java.jutils:jutils:1.0.0'
+
+    implementation 'javax.vecmath:vecmath:1.5.2'
+    implementation 'net.sf.jopt-simple:jopt-simple:5.0.4'
+    implementation 'com.google.guava:guava:33.6.0-jre'
+    implementation 'com.google.code.gson:gson:2.13.1'
+    implementation 'commons-io:commons-io:2.18.0'
+    implementation 'commons-codec:commons-codec:1.18.0'
+    implementation 'commons-logging:commons-logging:1.2'
+    implementation 'org.apache.commons:commons-lang3:3.17.0'
+    implementation 'org.apache.commons:commons-compress:1.27.1'
+    implementation 'org.apache.commons:commons-math3:3.6.1'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.14'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.16'
+    implementation 'org.apache.logging.log4j:log4j-api:2.24.3'
+    implementation 'org.apache.logging.log4j:log4j-core:2.24.3'
+    implementation 'org.slf4j:slf4j-api:2.0.17'
+    implementation 'org.slf4j:slf4j-simple:2.0.17'
+
+    implementation 'io.netty:netty-all:4.1.118.Final'
+    implementation 'com.github.oshi:oshi-core:6.6.3'
+    implementation 'net.java.dev.jna:jna:5.15.0'
+    implementation 'net.java.dev.jna:jna-platform:5.15.0'
+    implementation 'it.unimi.dsi:fastutil:8.5.15'
+    implementation 'org.jctools:jctools-core:4.0.5'
+
+    // Client libraries
+    implementation 'com.microsoft.onnxruntime:onnxruntime:1.20.0'
+    implementation 'org.yaml:snakeyaml:2.5'
+    implementation 'org.json:json:20160810'
+    implementation 'io.jsonwebtoken:jjwt-api:0.13.0'
+    implementation 'io.jsonwebtoken:jjwt-impl:0.13.0'
+    runtimeOnly 'io.jsonwebtoken:jjwt-gson:0.13.0'
+    implementation('org.slick2d:slick2d-core:1.0.2') {
+        exclude group: 'javax.jnlp', module: 'jnlp-api'
+        exclude group: 'org.lwjgl.lwjgl'
+        exclude group: 'org.jcraft'
+    }
+
+    // JvmDowngrader CLI tool & Java 8 runtime stubs for downgraded ViaVersion / OpenJFX bytecode
+    jvmdgTool 'xyz.wagyourtail.jvmdowngrader:jvmdowngrader:2.0.1'
+    jvmdgTool 'xyz.wagyourtail.jvmdowngrader:jvmdowngrader-java-api:2.0.1'
+    implementation 'xyz.wagyourtail.jvmdowngrader:jvmdowngrader-java-api:2.0.1:downgraded-8'
+
+    // Java 11+/17+ dependencies downgraded automatically to Java 8 bytecode via downgradeJava8Deps
+    java8Downgrade('com.viaversion:viaversion-common:5.7.1') { transitive = false }
+    java8Downgrade('com.viaversion:viabackwards-common:5.7.1') { transitive = false }
+    java8Downgrade('com.viaversion:viarewind-common:4.0.14') { transitive = false }
+    java8Downgrade('com.viaversion:viaaprilfools-common:4.0.8') { transitive = false }
+    java8Downgrade('com.viaversion:nbt:5.1.2') { transitive = false }
+
+    java8Downgrade("org.openjfx:javafx-base:11.0.2:${jfxClassifier}") { transitive = false }
+    java8Downgrade("org.openjfx:javafx-graphics:11.0.2:${jfxClassifier}") { transitive = false }
+    java8Downgrade("org.openjfx:javafx-controls:11.0.2:${jfxClassifier}") { transitive = false }
+    java8Downgrade("org.openjfx:javafx-fxml:11.0.2:${jfxClassifier}") { transitive = false }
+    java8Downgrade("org.openjfx:javafx-media:11.0.2:${jfxClassifier}") { transitive = false }
+    java8Downgrade("org.openjfx:javafx-swing:11.0.2:${jfxClassifier}") { transitive = false }
+    java8Downgrade("org.openjfx:javafx-web:11.0.2:${jfxClassifier}") { transitive = false }
+
+    implementation files(fileTree(downgradedDepsDir) { include '*.jar' }).builtBy(downgradeJava8Deps)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    dependsOn downgradeJava8Deps
+    options.encoding = 'UTF-8'
+    options.fork = true
+    options.forkOptions.memoryInitialSize = '1g'
+    options.forkOptions.memoryMaximumSize = '4g'
+    options.warnings = false
+}
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+// --- Standard MCP Gradle tasks ---
+
+def nativesDir = layout.buildDirectory.dir('natives')
+def runDir = file("${projectDir}/run")
+def defaultAssetsDir = project.hasProperty('assetsDir')
+        ? file(project.property('assetsDir'))
+        : new File(runDir, 'assets')
+
+def extractNatives = tasks.register('extractNatives', Sync) {
+    group = 'minecraft'
+    description = 'Extracts LWJGL and JInput native libraries for the current OS.'
+    into nativesDir
+    from {
+        configurations.natives.resolve().collect { zipTree(it) }
+    }
+    exclude 'META-INF/**'
+}
+
+tasks.named('classes') {
+    dependsOn extractNatives
+}
+
+def downloadAssets = tasks.register('downloadAssets') {
+    group = 'minecraft'
+    description = 'Downloads the Minecraft 1.8 asset index and missing asset objects into run/assets.'
+    onlyIf { !project.hasProperty('skipAssets') }
+
+    doLast {
+        def assetsDir = defaultAssetsDir
+        def indexesDir = new File(assetsDir, 'indexes')
+        def objectsDir = new File(assetsDir, 'objects')
+        indexesDir.mkdirs()
+        objectsDir.mkdirs()
+
+        def indexFile = new File(indexesDir, '1.8.json')
+        if (!indexFile.exists()) {
+            logger.lifecycle('Downloading Minecraft 1.8 asset index...')
+            def manifestUrl = new URL('https://piston-meta.mojang.com/mc/game/version_manifest_v2.json')
+            def manifest = new groovy.json.JsonSlurper().parse(manifestUrl)
+            def v189 = manifest.versions.find { it.id == '1.8.9' }
+            if (v189 == null) {
+                throw new GradleException('Could not locate Minecraft 1.8.9 in Mojang version manifest.')
+            }
+            def versionMeta = new groovy.json.JsonSlurper().parse(new URL(v189.url))
+            def assetIndexUrl = new URL(versionMeta.assetIndex.url)
+            indexFile.bytes = assetIndexUrl.bytes
+        }
+
+        def indexJson = new groovy.json.JsonSlurper().parse(indexFile)
+        def objects = indexJson.objects as Map<String, Map>
+        def missing = []
+        objects.each { name, info ->
+            String hash = info.hash
+            String prefix = hash.substring(0, 2)
+            File target = new File(objectsDir, "${prefix}/${hash}")
+            if (!target.exists() || target.length() != (info.size as long)) {
+                missing << [hash: hash, prefix: prefix, target: target]
+            }
+        }
+
+        if (!missing.isEmpty()) {
+            logger.lifecycle("Downloading ${missing.size()} missing Minecraft 1.8 assets...")
+            missing.each { entry ->
+                File target = entry.target
+                target.parentFile.mkdirs()
+                def url = new URL("https://resources.download.minecraft.net/${entry.prefix}/${entry.hash}")
+                url.withInputStream { input ->
+                    target.withOutputStream { output -> output << input }
+                }
+            }
+        }
+    }
+}
+
+def prepareRunDir = tasks.register('prepareRunDir') {
+    group = 'minecraft'
+    description = 'Prepares the MCP run/ working directory.'
+    doLast {
+        runDir.mkdirs()
+        defaultAssetsDir.mkdirs()
+    }
+}
+
+tasks.register('runClient', JavaExec) {
+    group = 'minecraft'
+    description = 'Runs the Minecraft 1.8.9 OpenAugustus client.'
+    dependsOn tasks.named('classes'), extractNatives, prepareRunDir, downloadAssets
+
+    javaLauncher = javaToolchains.launcherFor {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+
+    mainClass = 'net.minecraft.client.main.Main'
+    classpath = sourceSets.main.runtimeClasspath
+    workingDir = runDir
+
+    jvmArgs "-Djava.library.path=${nativesDir.get().asFile.absolutePath}",
+            "-Dorg.lwjgl.librarypath=${nativesDir.get().asFile.absolutePath}",
+            "-Dnet.java.games.input.librarypath=${nativesDir.get().asFile.absolutePath}",
+            '-Xms512m',
+            '-Xmx2g'
+
+    args '--version', '1.8.9',
+         '--accessToken', '0',
+         '--gameDir', runDir.absolutePath,
+         '--assetsDir', defaultAssetsDir.absolutePath,
+         '--assetIndex', '1.8',
+         '--userProperties', '{}'
+
+    if (project.hasProperty('username')) {
+        args '--username', project.property('username').toString()
+    }
+}
+
+tasks.register('runClientMinecraftDir', JavaExec) {
+    group = 'minecraft'
+    description = 'Runs OpenAugustus using the system .minecraft game and assets directory.'
+    dependsOn tasks.named('classes'), extractNatives
+
+    javaLauncher = javaToolchains.launcherFor {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+
+    mainClass = 'StartMinecraftDirectory'
+    classpath = sourceSets.main.runtimeClasspath
+    workingDir = runDir
+
+    jvmArgs "-Djava.library.path=${nativesDir.get().asFile.absolutePath}",
+            "-Dorg.lwjgl.librarypath=${nativesDir.get().asFile.absolutePath}",
+            "-Dnet.java.games.input.librarypath=${nativesDir.get().asFile.absolutePath}",
+            '-Xms512m',
+            '-Xmx2g'
+
+    if (project.hasProperty('username')) {
+        args '--username', project.property('username').toString()
+    }
+}
+
+tasks.register('prepareIde') {
+    group = 'ide'
+    description = 'Prepares downgraded dependencies, natives, and compiles the client for IDE import.'
+    dependsOn downgradeJava8Deps, extractNatives, tasks.named('compileJava')
+}
+
+tasks.named('jar') {
+    manifest {
+        attributes 'Main-Class': 'Start'
+    }
+}
+
+def mergeServiceFiles = { Collection<File> jars, File outDir ->
+    if (outDir.exists()) {
+        outDir.deleteDir()
+    }
+    def merged = new LinkedHashMap<String, LinkedHashSet<String>>()
+    jars.each { File jarFile ->
+        if (!jarFile.isFile() || !jarFile.name.endsWith('.jar')) {
+            return
+        }
+        new java.util.zip.ZipFile(jarFile).withCloseable { zf ->
+            zf.entries().each { entry ->
+                if (!entry.isDirectory() && entry.name.startsWith('META-INF/services/')) {
+                    def set = merged.computeIfAbsent(entry.name) { new LinkedHashSet<String>() }
+                    zf.getInputStream(entry).withReader('UTF-8') { reader ->
+                        reader.eachLine { line ->
+                            def trimmed = line.trim()
+                            if (!trimmed.isEmpty() && !trimmed.startsWith('#')) {
+                                set.add(trimmed)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    merged.each { String path, Set<String> lines ->
+        File target = new File(outDir, path)
+        target.parentFile.mkdirs()
+        target.setText(lines.join('\n') + '\n', 'UTF-8')
+    }
+}
+
+def fatJarServicesDir = layout.buildDirectory.dir('tmp/fatJar-services')
+
+def mergeFatJarServices = tasks.register('mergeFatJarServices') {
+    dependsOn downgradeJava8Deps
+    inputs.files(configurations.runtimeClasspath)
+    outputs.dir(fatJarServicesDir)
+    doLast {
+        mergeServiceFiles(configurations.runtimeClasspath.resolve(), fatJarServicesDir.get().asFile)
+    }
+}
+
+def fatJar = tasks.register('fatJar', Jar) {
+    group = 'build'
+    description = 'Builds a standalone runnable fat JAR (java -jar) with all dependencies and natives bundled.'
+    dependsOn tasks.named('classes'), downgradeJava8Deps, mergeFatJarServices
+
+    archiveClassifier = 'all'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    zip64 = true
+
+    manifest {
+        attributes(
+            'Main-Class': 'Start',
+            'Multi-Release': 'true'
+        )
+    }
+
+    from(sourceSets.main.output)
+    from(fatJarServicesDir)
+    from({
+        configurations.runtimeClasspath.resolve().collect { File f ->
+            f.isDirectory() ? f : zipTree(f)
+        }
+    }) {
+        exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/services/**'
+        exclude '**/module-info.class'
+    }
+}
+
+tasks.named('assemble') {
+    dependsOn fatJar
+}
+
+def compatibilityClientName = 'OpenAugustus'
+def compatibilityDir = layout.buildDirectory.dir("compatibility/${compatibilityClientName}")
+def compatibilityServicesDir = layout.buildDirectory.dir('tmp/compatibilityJar-services')
+
+def isLauncherProvidedNativeDep = { File f ->
+    String n = f.name
+    return n.startsWith('lwjgl-') || n.startsWith('lwjgl_util-') || n.startsWith('jinput-') || n.startsWith('jutils-')
+}
+
+def mergeCompatibilityJarServices = tasks.register('mergeCompatibilityJarServices') {
+    dependsOn downgradeJava8Deps
+    inputs.files(configurations.runtimeClasspath)
+    outputs.dir(compatibilityServicesDir)
+    doLast {
+        def bundledJars = configurations.runtimeClasspath.resolve().findAll { !isLauncherProvidedNativeDep(it) }
+        mergeServiceFiles(bundledJars, compatibilityServicesDir.get().asFile)
+    }
+}
+
+def compatibilityJar = tasks.register('compatibilityJar', Jar) {
+    group = 'minecraft'
+    description = "Builds launcher-compatible ${compatibilityClientName}.jar and ${compatibilityClientName}.json in build/compatibility/${compatibilityClientName}/."
+    dependsOn tasks.named('classes'), downgradeJava8Deps, mergeCompatibilityJarServices
+
+    destinationDirectory = compatibilityDir
+    archiveFileName = "${compatibilityClientName}.jar"
+    outputs.file(compatibilityDir.map { it.file("${compatibilityClientName}.json") })
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    zip64 = true
+
+    manifest {
+        attributes(
+            'Main-Class': 'net.minecraft.client.main.Main',
+            'Multi-Release': 'true'
+        )
+    }
+
+    from(sourceSets.main.output)
+    from(compatibilityServicesDir)
+    from({
+        configurations.runtimeClasspath.resolve().findAll { !isLauncherProvidedNativeDep(it) }.collect { File f ->
+            f.isDirectory() ? f : zipTree(f)
+        }
+    }) {
+        exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/services/**'
+        exclude '**/module-info.class'
+    }
+
+    doLast {
+        def outDir = compatibilityDir.get().asFile
+        outDir.mkdirs()
+        def versionJson = [
+            id                    : compatibilityClientName,
+            type                  : 'release',
+            time                  : '2015-12-03T09:24:39+00:00',
+            releaseTime           : '2015-12-03T09:24:39+00:00',
+            mainClass             : 'net.minecraft.client.main.Main',
+            minecraftArguments    : '--username ${auth_player_name} --version ${version_name} --gameDir ${game_directory} --assetsDir ${assets_root} --assetIndex ${assets_index_name} --uuid ${auth_uuid} --accessToken ${auth_access_token} --userProperties ${user_properties} --userType ${user_type}',
+            minimumLauncherVersion: 14,
+            assets                : '1.8',
+            javaVersion           : [
+                component   : 'jre-legacy',
+                majorVersion: 8
+            ],
+            assetIndex            : [
+                id       : '1.8',
+                sha1     : 'f6ad102bcaa53b1a58358f16e376d548d44933ec',
+                size     : 78494,
+                totalSize: 114885064,
+                url      : 'https://launchermeta.mojang.com/v1/packages/f6ad102bcaa53b1a58358f16e376d548d44933ec/1.8.json'
+            ],
+            libraries             : [
+                [
+                    name     : 'net.java.jinput:jinput:2.0.5',
+                    downloads: [
+                        artifact: [
+                            path: 'net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar',
+                            sha1: '39c7796b469a600f72380316f6b1f11db6c2c7c4',
+                            size: 208338,
+                            url : 'https://libraries.minecraft.net/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar'
+                        ]
+                    ]
+                ],
+                [
+                    name     : 'net.java.jutils:jutils:1.0.0',
+                    downloads: [
+                        artifact: [
+                            path: 'net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar',
+                            sha1: 'e12fe1fda814bd348c1579329c86943d2cd3c6a6',
+                            size: 7508,
+                            url : 'https://libraries.minecraft.net/net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar'
+                        ]
+                    ]
+                ],
+                [
+                    name     : 'org.lwjgl.lwjgl:lwjgl:2.9.4-nightly-20150209',
+                    downloads: [
+                        artifact: [
+                            path: 'org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209.jar',
+                            sha1: '697517568c68e78ae0b4544145af031c81082dfe',
+                            size: 1047168,
+                            url : 'https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209.jar'
+                        ]
+                    ],
+                    rules    : [
+                        [action: 'allow'],
+                        [action: 'disallow', os: [name: 'osx']]
+                    ]
+                ],
+                [
+                    name     : 'org.lwjgl.lwjgl:lwjgl_util:2.9.4-nightly-20150209',
+                    downloads: [
+                        artifact: [
+                            path: 'org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209.jar',
+                            sha1: 'd51a7c040a721d13efdfbd34f8b257b2df882ad0',
+                            size: 173887,
+                            url : 'https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209.jar'
+                        ]
+                    ],
+                    rules    : [
+                        [action: 'allow'],
+                        [action: 'disallow', os: [name: 'osx']]
+                    ]
+                ],
+                [
+                    name     : 'org.lwjgl.lwjgl:lwjgl-platform:2.9.4-nightly-20150209',
+                    natives  : [
+                        linux  : 'natives-linux',
+                        osx    : 'natives-osx',
+                        windows: 'natives-windows'
+                    ],
+                    extract  : [exclude: ['META-INF/']],
+                    downloads: [
+                        classifiers: [
+                            'natives-linux'  : [
+                                path: 'org/lwjgl/lwjgl/lwjgl-platform/2.9.4-nightly-20150209/lwjgl-platform-2.9.4-nightly-20150209-natives-linux.jar',
+                                sha1: '931074f46c795d2f7b30ed6395df5715cfd7675b',
+                                size: 578680,
+                                url : 'https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl-platform/2.9.4-nightly-20150209/lwjgl-platform-2.9.4-nightly-20150209-natives-linux.jar'
+                            ],
+                            'natives-osx'    : [
+                                path: 'org/lwjgl/lwjgl/lwjgl-platform/2.9.4-nightly-20150209/lwjgl-platform-2.9.4-nightly-20150209-natives-osx.jar',
+                                sha1: 'bcab850f8f487c3f4c4dbabde778bb82bd1a40ed',
+                                size: 426822,
+                                url : 'https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl-platform/2.9.4-nightly-20150209/lwjgl-platform-2.9.4-nightly-20150209-natives-osx.jar'
+                            ],
+                            'natives-windows': [
+                                path: 'org/lwjgl/lwjgl/lwjgl-platform/2.9.4-nightly-20150209/lwjgl-platform-2.9.4-nightly-20150209-natives-windows.jar',
+                                sha1: 'b84d5102b9dbfabfeb5e43c7e2828d98a7fc80e0',
+                                size: 613748,
+                                url : 'https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl-platform/2.9.4-nightly-20150209/lwjgl-platform-2.9.4-nightly-20150209-natives-windows.jar'
+                            ]
+                        ]
+                    ],
+                    rules    : [
+                        [action: 'allow'],
+                        [action: 'disallow', os: [name: 'osx']]
+                    ]
+                ],
+                [
+                    name     : 'org.lwjgl.lwjgl:lwjgl:2.9.2-nightly-20140822',
+                    downloads: [
+                        artifact: [
+                            path: 'org/lwjgl/lwjgl/lwjgl/2.9.2-nightly-20140822/lwjgl-2.9.2-nightly-20140822.jar',
+                            sha1: '7707204c9ffa5d91662de95f0a224e2f721b22af',
+                            size: 1045632,
+                            url : 'https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl/2.9.2-nightly-20140822/lwjgl-2.9.2-nightly-20140822.jar'
+                        ]
+                    ],
+                    rules    : [
+                        [action: 'allow', os: [name: 'osx']]
+                    ]
+                ],
+                [
+                    name     : 'org.lwjgl.lwjgl:lwjgl_util:2.9.2-nightly-20140822',
+                    downloads: [
+                        artifact: [
+                            path: 'org/lwjgl/lwjgl/lwjgl_util/2.9.2-nightly-20140822/lwjgl_util-2.9.2-nightly-20140822.jar',
+                            sha1: 'f0e612c840a7639c1f77f68d72a28dae2f0c8490',
+                            size: 173887,
+                            url : 'https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl_util/2.9.2-nightly-20140822/lwjgl_util-2.9.2-nightly-20140822.jar'
+                        ]
+                    ],
+                    rules    : [
+                        [action: 'allow', os: [name: 'osx']]
+                    ]
+                ],
+                [
+                    name     : 'org.lwjgl.lwjgl:lwjgl-platform:2.9.2-nightly-20140822',
+                    natives  : [
+                        linux  : 'natives-linux',
+                        osx    : 'natives-osx',
+                        windows: 'natives-windows'
+                    ],
+                    extract  : [exclude: ['META-INF/']],
+                    downloads: [
+                        classifiers: [
+                            'natives-linux'  : [
+                                path: 'org/lwjgl/lwjgl/lwjgl-platform/2.9.2-nightly-20140822/lwjgl-platform-2.9.2-nightly-20140822-natives-linux.jar',
+                                sha1: 'd898a33b5d0a6ef3fed3a4ead506566dce6720a5',
+                                size: 578539,
+                                url : 'https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl-platform/2.9.2-nightly-20140822/lwjgl-platform-2.9.2-nightly-20140822-natives-linux.jar'
+                            ],
+                            'natives-osx'    : [
+                                path: 'org/lwjgl/lwjgl/lwjgl-platform/2.9.2-nightly-20140822/lwjgl-platform-2.9.2-nightly-20140822-natives-osx.jar',
+                                sha1: '79f5ce2fea02e77fe47a3c745219167a542121d7',
+                                size: 468116,
+                                url : 'https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl-platform/2.9.2-nightly-20140822/lwjgl-platform-2.9.2-nightly-20140822-natives-osx.jar'
+                            ],
+                            'natives-windows': [
+                                path: 'org/lwjgl/lwjgl/lwjgl-platform/2.9.2-nightly-20140822/lwjgl-platform-2.9.2-nightly-20140822-natives-windows.jar',
+                                sha1: '78b2a55ce4dc29c6b3ec4df8ca165eba05f9b341',
+                                size: 613680,
+                                url : 'https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl-platform/2.9.2-nightly-20140822/lwjgl-platform-2.9.2-nightly-20140822-natives-windows.jar'
+                            ]
+                        ]
+                    ],
+                    rules    : [
+                        [action: 'allow', os: [name: 'osx']]
+                    ]
+                ],
+                [
+                    name     : 'net.java.jinput:jinput-platform:2.0.5',
+                    natives  : [
+                        linux  : 'natives-linux',
+                        osx    : 'natives-osx',
+                        windows: 'natives-windows'
+                    ],
+                    extract  : [exclude: ['META-INF/']],
+                    downloads: [
+                        classifiers: [
+                            'natives-linux'  : [
+                                path: 'net/java/jinput/jinput-platform/2.0.5/jinput-platform-2.0.5-natives-linux.jar',
+                                sha1: '7ff832a6eb9ab6a767f1ade2b548092d0fa64795',
+                                size: 10362,
+                                url : 'https://libraries.minecraft.net/net/java/jinput/jinput-platform/2.0.5/jinput-platform-2.0.5-natives-linux.jar'
+                            ],
+                            'natives-osx'    : [
+                                path: 'net/java/jinput/jinput-platform/2.0.5/jinput-platform-2.0.5-natives-osx.jar',
+                                sha1: '53f9c919f34d2ca9de8c51fc4e1e8282029a9232',
+                                size: 12186,
+                                url : 'https://libraries.minecraft.net/net/java/jinput/jinput-platform/2.0.5/jinput-platform-2.0.5-natives-osx.jar'
+                            ],
+                            'natives-windows': [
+                                path: 'net/java/jinput/jinput-platform/2.0.5/jinput-platform-2.0.5-natives-windows.jar',
+                                sha1: '385ee093e01f587f30ee1c8a2ee7d408fd732e16',
+                                size: 155179,
+                                url : 'https://libraries.minecraft.net/net/java/jinput/jinput-platform/2.0.5/jinput-platform-2.0.5-natives-windows.jar'
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+
+        File jsonFile = new File(outDir, "${compatibilityClientName}.json")
+        jsonFile.setText(groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(versionJson)) + '\n', 'UTF-8')
+    }
+}
+
+idea {
+    project {
+        languageLevel = '1.8'
+        targetBytecodeVersion = JavaVersion.VERSION_1_8
+    }
+    module {
+        downloadJavadoc = false
+        downloadSources = true
+    }
+}

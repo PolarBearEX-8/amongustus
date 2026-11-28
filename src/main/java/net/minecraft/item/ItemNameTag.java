@@ -1,0 +1,27 @@
+package net.minecraft.item;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+
+public class ItemNameTag extends Item {
+   public ItemNameTag() {
+      this.setCreativeTab(CreativeTabs.tabTools);
+   }
+
+   @Override
+   public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer player, EntityLivingBase entity) {
+      if (!stack.hasDisplayName()) {
+         return false;
+      } else if (entity instanceof EntityLiving) {
+         EntityLiving entityLiving = (EntityLiving)entity;
+         entityLiving.setCustomNameTag(stack.getDisplayName());
+         entityLiving.enablePersistence();
+         stack.stackSize--;
+         return true;
+      } else {
+         return super.itemInteractionForEntity(stack, player, entity);
+      }
+   }
+}
